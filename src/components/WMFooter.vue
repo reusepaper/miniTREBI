@@ -3,8 +3,9 @@
   <v-footer dark height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <v-icon>{{weather}}</v-icon>
         <v-spacer></v-spacer>
+        <strong class="subheading">Get connected with us on social networks!</strong>
 
         <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
           <v-icon size="24px">{{ icon }}</v-icon>
@@ -31,7 +32,8 @@ export default {
       "fab fa-google-plus",
       "fab fa-linkedin",
       "fab fa-instagram"
-    ]
+    ],
+    weather: "wb_sunny"
   }),
   beforeMount() {
     fetch(API + KEY)
@@ -40,6 +42,11 @@ export default {
         const weather = json.weather[0].main;
         const temp = Math.floor(json.main.temp - 273.15);
         const place = json.name;
+        if (weather === "Clouds") {
+          this.weather = "wb_cloudys";
+        } else if (weather === "Clear") {
+          this.weather = "wb_sunny";
+        }
         console.log(temp, place, weather);
       });
   }
