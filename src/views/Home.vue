@@ -1,7 +1,9 @@
 <template>
   <div>
     <WMHeader></WMHeader>
-    <HelloWorld />
+    <v-container>
+      <HelloWorld/>
+    </v-container>
     <WMSidebar></WMSidebar>
     <WMFooter></WMFooter>
   </div>
