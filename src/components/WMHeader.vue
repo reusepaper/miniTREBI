@@ -1,5 +1,5 @@
 <template>
-  <div class="hide-overflow" style="position: relative;">
+  <div style="position: relative;">
     <v-toolbar fixed>
       <v-btn flat icon>
           <v-icon>home</v-icon>
@@ -21,10 +21,6 @@
 
 <script>
 export default {
-  name: 'WMHeader',
-  props: {},
-  data(){
-
-  }
+  name: 'WMHeader'
 }
 </script>
