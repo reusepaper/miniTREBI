@@ -1,7 +1,9 @@
 <template>
   <div>
     <WMHeader></WMHeader>
-    <MarkdownEditor></MarkdownEditor>
+    <v-container mt-5>
+      <MarkdownEditor></MarkdownEditor>
+    </v-container>
 
     <WMFooter></WMFooter>
   </div>
