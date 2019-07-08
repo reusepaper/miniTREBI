@@ -1,8 +1,17 @@
 <template>
   <div>
     <WMHeader></WMHeader>
-    <HelloWorld />
-    <WMSidebar></WMSidebar>
+    <v-container>
+      <v-layout>
+        <v-flex xs3>
+          <WMSidebar></WMSidebar>
+        </v-flex>
+        <v-flex xs9>
+          <HelloWorld />
+        </v-flex>
+      </v-layout>
+    </v-container>
+
     <WMFooter></WMFooter>
   </div>
 </template>
