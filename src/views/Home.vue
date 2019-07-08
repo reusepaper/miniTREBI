@@ -1,13 +1,23 @@
 <template>
-  <HelloWorld />
+  <div>
+    <WMHeader></WMHeader>
+    <HelloWorld />
+    <WMSidebar></WMSidebar>
+    <WMFooter></WMFooter>
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
-  export default {
-    components: {
-      HelloWorld
-    }
+import HelloWorld from "../components/HelloWorld";
+import WMHeader from "../components/WMHeader";
+import WMFooter from "../components/WMFooter";
+import WMSidebar from "../components/WMSidebar";
+export default {
+  components: {
+    HelloWorld,
+    WMHeader,
+    WMFooter,
+    WMSidebar
   }
+};
 </script>
