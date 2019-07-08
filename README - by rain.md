@@ -1,6 +1,6 @@
 # README - by rain
 
-## 0-4 markdown editor
+## markdown editor
 
 ### router 설정 및 views vue 생성
 
@@ -124,6 +124,27 @@
    components에서 만든 MarkdownEditor를 import 해준다.
 
    ![1562566607800](img/1562566607800.png)
+
+
+
+
+
+
+
+## firebase login
+
+### vue와 firebase 바인딩
+
+[github](<https://github.com/vuejs/vuefire/tree/v1>)
+
+1. 사용할 것은 v1. 사용할 firebase 버전을 5.8로 올린다.
+
+   ```html
+     <!-- Firebase -->
+     <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+     <!-- VueFire -->
+     <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+   ```
 
    
 
