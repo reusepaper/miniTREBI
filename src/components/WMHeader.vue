@@ -2,7 +2,7 @@
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed>
       <v-btn flat icon>
-          <v-icon>home</v-icon>
+        <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title>TREVI</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -21,10 +21,8 @@
 
 <script>
 export default {
-  name: 'WMHeader',
+  name: "WMHeader",
   props: {},
-  data(){
-
-  }
-}
+  data() {}
+};
 </script>
