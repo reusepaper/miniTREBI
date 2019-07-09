@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 <nav class="navbar shadow fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
     <img src="../assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -27,6 +28,40 @@
     <span class="navbar-text">
       Navbar text with an inline element
     </span>
+=======
+  <div style="position: relative;">
+    <v-toolbar fixed dense>
+      <v-btn flat icon>
+        <v-icon>home</v-icon>
+      </v-btn>
+      <v-toolbar-title>TREVI</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat @click.stop="dialog = true">LOGIN</v-btn>
+        <v-dialog v-model="dialog" max-width="290">
+          <v-card>
+            <v-card-title class="headline">Log in</v-card-title>
+
+            <v-card-text>
+              <SignIn></SignIn>
+              <!-- SignIn template -->
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on" flat>Writer</v-btn>
+          </template>
+          <v-list>
+            <v-list-tile v-for="(item, index) in items" :key="index" @click>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
+        <v-btn flat>Search</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+>>>>>>> 28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc
   </div>
 </nav>
 </template>
@@ -45,12 +80,8 @@ export default {
       { title: "yeon" },
       { title: "mansub" },
       { title: "rain" }
-    ]
-  }),
-  data() {
-    return {
-      dialog: false
-    };
-  }
+    ],
+    dialog: false
+  })
 };
 </script>
