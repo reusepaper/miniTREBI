@@ -27,6 +27,7 @@
     <span class="navbar-text">
       Navbar text with an inline element
     </span>
+  </div>
   <div style="position: relative;">
     <v-toolbar fixed dense>
       <v-btn flat icon>
