@@ -3,7 +3,7 @@
   <v-footer dark height="auto">
     <WMCommitGraph></WMCommitGraph>
     <v-card class="flex" flat tile>
-      <v-card-title class="grey darken-3 footer-info-container">
+      <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
         <div class="button">
           <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
             <!-- <v-icon size="24px">{{ icon }}</v-icon> -->

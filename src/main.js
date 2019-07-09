@@ -8,6 +8,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import browserDetect from "vue-browser-detect-plugin";
+import BackToTop from 'vue-backtotop';
+ 
+Vue.use(BackToTop);
 Vue.use(browserDetect);
 Vue.config.productionTip = false;
 
