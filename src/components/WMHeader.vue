@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 <nav class="navbar shadow fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
     <img src="../assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -8,7 +7,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  
+
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       
@@ -28,7 +27,6 @@
     <span class="navbar-text">
       Navbar text with an inline element
     </span>
-=======
   <div style="position: relative;">
     <v-toolbar fixed dense>
       <v-btn flat icon>
@@ -61,7 +59,6 @@
         <v-btn flat>Search</v-btn>
       </v-toolbar-items>
     </v-toolbar>
->>>>>>> 28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc
   </div>
 </nav>
 </template>
