@@ -1,17 +1,39 @@
 <template>
   <v-app>
-    <router-view></router-view>
+    <v-content>
+      <Header></Header>
+      <router-view/>
+      <back-to-top text="Back to top">
+        <button type='button' class='v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--dark red'>
+          <i aria-hidden='true' class='v-icon material-icons theme--dark'>keyboard_arrow_up</i>
+        </button>
+      </back-to-top>
+      <Footer></Footer>
+    </v-content>
   </v-app>
 </template>
 
 <script>
-export default {
-  name: "App",
+import store from './store'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-  data() {
-    return {
-      //
-    };
-  }
-};
+export default {
+	name: 'App',
+  components:{
+    Header,
+    Footer
+  },
+	store,
+	data() {
+		return {
+			//
+		}
+	},
+  beforeCreate() {
+ if(browser !== 'Chrome'){
+  alert("본 사이트는 크롬버전에 최적화되어있습니다.")
+ }
+}
+}
 </script>

@@ -1,32 +1,30 @@
 <template>
   <div>
-    <WMHeader></WMHeader>
     <v-container>
       <v-layout>
-        <v-flex xs3>
+        <!-- <v-flex xs3>
           <WMSidebar></WMSidebar>
-        </v-flex>
-        <v-flex xs9>
-          <HelloWorld />
+        </v-flex> -->
+        <v-flex xs12>
+          <ImgBanner imgSrc="https://source.unsplash.com/featured/?macbook,coffee/1600x900">
+            <div style="line-height:1.2em; color:white; font-weight:900;" slot="text">안녕하세요</div>
+            <div style="line-height:1.2em; margin-top:20px; color:white;" slot="text">팀 트래비 취미블로그입니다.</div>
+          </ImgBanner>
+          <HelloWorld></HelloWorld>
         </v-flex>
       </v-layout>
     </v-container>
-
-    <WMFooter></WMFooter>
   </div>
 </template>
 
 <script>
+import ImgBanner from "../components/ImgBanner";
 import HelloWorld from "../components/HelloWorld";
-import WMHeader from "../components/WMHeader";
-import WMFooter from "../components/WMFooter";
-import WMSidebar from "../components/WMSidebar";
+
 export default {
   components: {
+    ImgBanner,
     HelloWorld,
-    WMHeader,
-    WMFooter,
-    WMSidebar
   }
 };
 </script>
