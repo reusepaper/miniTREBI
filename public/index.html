@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Material+Icons"
     />
+
     <!-- Firebase -->
     <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
     <!-- VueFire -->
@@ -51,6 +52,28 @@
       >
     </noscript>
     <div id="app"></div>
+
     <!-- built files will be auto injected -->
+    <!-- Firebase 배포 -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
+        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
+        databaseURL: "https://webmobile-sub2-510fa.firebaseio.com",
+        projectId: "webmobile-sub2-510fa",
+        storageBucket: "",
+        messagingSenderId: "69251272917",
+        appId: "1:69251272917:web:922ef7e36db6d210"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
