@@ -1,6 +1,7 @@
 
 <template>
   <v-footer dark height="auto">
+    <WMCommitGraph></WMCommitGraph>
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 footer-info-container">
         <div class="button">
@@ -29,6 +30,12 @@
             <template v-if="weather ==='Rain'">
               <Rainy></Rainy>
             </template>
+            <template v-if="weather ==='Mist'">
+              <Cloudy></Cloudy>
+            </template>
+            <template v-if="weather ==='Dust'">
+              <Cloudy></Cloudy>
+            </template>
           </div>
         </div>
         <!-- <strong class="subheading">Get connected with us on social networks!</strong> -->
@@ -47,6 +54,7 @@
 import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
+import WMCommitGraph from "./WMCommitGraph";
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 export default {
   name: "WMFooter",
@@ -59,7 +67,8 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy
+    Rainy,
+    WMCommitGraph
   },
   mounted() {
     this.getPosition();
@@ -84,7 +93,8 @@ export default {
           if (json.name === "Taejŏn-gwangyŏksi") {
             this.place = "대전광역시";
           }
-          // console.log(this.weather);
+          /*eslint-disable*/
+          console.log(this.weather);
           // console.log(this.temp, this.place, this.weather);
         });
     }

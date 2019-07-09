@@ -48,12 +48,8 @@ export default {
       { title: "yeon" },
       { title: "mansub" },
       { title: "rain" }
-    ]
-  }),
-  data() {
-    return {
-      dialog: false
-    };
-  }
+    ],
+    dialog: false
+  })
 };
 </script>
