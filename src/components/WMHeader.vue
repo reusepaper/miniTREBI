@@ -21,7 +21,7 @@
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">fucking</a>
+        <a href="#" class="nav-link hi" title="즐겨찾기 등록" onclick="alert('ctrl+d버튼을 눌러 저장할 수 있습니다.')"><img src="../assets/bookmark-black-shape.svg" style="width:10px;"/></a>
       </li>
     </ul>
     <span class="navbar-text">

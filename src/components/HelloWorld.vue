@@ -2,7 +2,6 @@
   <v-container>
     <v-layout text-xs-center wrap>
       <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3">PJT2 트래비 블로그에 오신것을 환영합니다.</h1>
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br />please join our online
