@@ -16,6 +16,11 @@ export default {
     return {
       //
     };
-  }
+  },
+  beforeCreate() {
+ if(browser !== 'Chrome'){
+  alert("본 사이트는 크롬버전에 최적화되어있습니다.")
+ }
+}
 };
 </script>
