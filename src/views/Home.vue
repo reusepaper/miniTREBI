@@ -12,7 +12,6 @@
             <!-- <v-flex xs1>
               <WMSidebar></WMSidebar>
             </v-flex> -->
-
             <v-flex xs12>
               <HelloWorld></HelloWorld>
             </v-flex>
