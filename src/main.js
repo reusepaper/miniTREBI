@@ -7,7 +7,8 @@ import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-
+import browserDetect from "vue-browser-detect-plugin";
+Vue.use(browserDetect);
 Vue.config.productionTip = false;
 
 Vue.use(Vuetify);
