@@ -2,9 +2,8 @@
   <div>
     <WMHeader></WMHeader>
     <v-container mt-5>
-      <WMCreatePost></WMCreatePost>
+      <WMPost></WMPost>
     </v-container>
-
     <WMFooter></WMFooter>
   </div>
 </template>
@@ -12,12 +11,12 @@
 <script>
 import WMHeader from "../components/WMHeader";
 import WMFooter from "../components/WMFooter";
-import WMCreatePost from "../components/WMCreatePost";
+import WMPost from "../components/WMPost";
 export default {
   components: {
     WMHeader,
     WMFooter,
-    WMCreatePost
+    WMPost
   }
 };
 </script>
