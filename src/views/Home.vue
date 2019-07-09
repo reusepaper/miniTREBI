@@ -1,6 +1,5 @@
 <template>
   <div>
-    <WMHeader></WMHeader>
     <v-container>
       <v-layout>
         <v-flex xs1>
@@ -11,22 +10,17 @@
         </v-flex>
       </v-layout>
     </v-container>
-
-    <WMFooter></WMFooter>
   </div>
 </template>
 
 <script>
+import ImgBanner from "../components/ImgBanner";
 import HelloWorld from "../components/HelloWorld";
-import WMHeader from "../components/WMHeader";
-import WMFooter from "../components/WMFooter";
-import WMSidebar from "../components/WMSidebar";
+
 export default {
   components: {
+    ImgBanner,
     HelloWorld,
-    WMHeader,
-    WMFooter,
-    WMSidebar
   }
 };
 </script>
