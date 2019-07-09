@@ -27,6 +27,7 @@
     <span class="navbar-text">
       Navbar text with an inline element
     </span>
+  </div>
   <div style="position: relative;">
     <v-toolbar fixed dense>
       <v-btn flat icon>
@@ -35,7 +36,9 @@
       <v-toolbar-title>TREVI</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat v-if="isLogin" @click.stop="dialog = true">LOGOUT</v-btn>
         <v-btn flat @click.stop="dialog = true">LOGIN</v-btn>
+        
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
             <v-card-title class="headline">Log in</v-card-title>
@@ -79,6 +82,10 @@ export default {
       { title: "rain" }
     ],
     dialog: false
-  })
+  }),
+  mounted: function(){
+    console.log(sessionStorage['length'])
+    let isLogin = sessionStorage['length']
+  }
 };
 </script>
