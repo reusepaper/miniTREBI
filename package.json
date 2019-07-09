@@ -15,7 +15,10 @@
     "circular-json": "^0.3.3",
     "core-js": "^2.6.5",
     "firebase": "^6.2.4",
+<<<<<<< HEAD
     "firebaseui": "^4.0.0",
+=======
+>>>>>>> 9a4a8370045e1b1b14beb290f22d2c9c6ba296a4
     "vue": "^2.6.10",
     "vue-browser-detect-plugin": "^0.1.2",
     "vue-router": "^3.0.3",
