@@ -3,10 +3,10 @@
     <WMHeader></WMHeader>
     <v-container>
       <v-layout>
-        <v-flex xs3>
+        <v-flex xs1>
           <WMSidebar></WMSidebar>
         </v-flex>
-        <v-flex xs9>
+        <v-flex xs11>
           <HelloWorld />
         </v-flex>
       </v-layout>
