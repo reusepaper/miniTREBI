@@ -16,47 +16,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-<<<<<<< HEAD
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
-            Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a
-            href="#"
-            class="nav-link hi"
-            title="즐겨찾기 등록"
-            onclick="alert('ctrl+d버튼을 눌러 저장할 수 있습니다.')"
-          >
-            <img src="../assets/bookmark-black-shape.svg" style="width:10px;" />
-          </a>
-        </li>
-      </ul>
-      <span class="navbar-text">Navbar text with an inline element</span>
-    </div>
-    <div style="position: relative;">
-      <v-toolbar fixed dense>
-        <v-btn flat icon>
-          <v-icon>home</v-icon>
-        </v-btn>
-        <v-toolbar-title>TREVI</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-xs-only">
-          <v-btn flat @click.stop="dialog = true">LOGIN</v-btn>
-          <v-dialog v-model="dialog" max-width="290">
-            <v-card>
-              <v-card-title class="headline">Log in</v-card-title>
-=======
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
 
@@ -91,7 +50,6 @@
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
             <v-card-title class="headline">Log in</v-card-title>
->>>>>>> d618d41405c4d458e19b4d92a5ec56e9f0db583b
 
               <v-card-text>
                 <SignIn></SignIn>
