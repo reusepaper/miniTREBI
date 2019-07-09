@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar shadow fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
     <img src="../assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     TREVI

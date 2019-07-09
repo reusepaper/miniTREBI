@@ -1,7 +1,6 @@
 <template>
-  <v-container>
     <v-layout text-xs-center wrap>
-      <v-flex mb-4>
+      <v-flex>
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br />please join our online
@@ -54,7 +53,6 @@
         </v-layout>
       </v-flex>
     </v-layout>
-  </v-container>
 </template>
 
 <script>

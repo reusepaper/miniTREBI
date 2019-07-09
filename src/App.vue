@@ -3,7 +3,11 @@
     <v-content>
       <WMHeader></WMHeader>
       <router-view />
-      <back-to-top text="Back to top" visibleoffset="100"></back-to-top>
+      <back-to-top text="Back to top" visibleoffset="100">
+        <button type='button' class='v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--dark red'>
+          <i aria-hidden='true' class='v-icon material-icons theme--dark'>keyboard_arrow_up</i>
+        </button>
+      </back-to-top>
       <WMFooter></WMFooter>
     </v-content>
   </v-app>
