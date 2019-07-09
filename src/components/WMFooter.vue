@@ -21,8 +21,7 @@
 </template>
 
 <script>
-const API = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139";
-const KEY = "&APPID=abbc68919e6b6d4296b60cafacd58803";
+const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 export default {
   name: "WMFooter",
   data: () => ({
@@ -35,20 +34,37 @@ export default {
     ],
     weather: "wb_sunny"
   }),
-  beforeMount() {
-    fetch(API + KEY)
-      .then(response => response.json())
-      .then(json => {
-        const weather = json.weather[0].main;
-        const temp = Math.floor(json.main.temp - 273.15);
-        const place = json.name;
-        if (weather === "Clouds") {
-          this.weather = "wb_cloudys";
-        } else if (weather === "Clear") {
-          this.weather = "wb_sunny";
-        }
-        console.log(temp, place, weather);
+  mounted() {
+    this.getPosition();
+  },
+  methods: {
+    getPosition: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        const lat = position.coords.latitude;
+        const log = position.coords.longitude;
+        this.getWeather(lat, log);
       });
+    },
+    getWeather: function(lat, log) {
+      // open weather map
+      fetch(
+        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&APPID=${APPKEY}`
+      )
+        .then(response => response.json())
+        .then(json => {
+          const weather = json.weather[0].main;
+          const temp = Math.floor(json.main.temp - 273.15);
+          const place = json.name;
+          if (weather === "Clouds") {
+            this.weather = "wb_cloudys";
+          } else if (weather === "Clear") {
+            this.weather = "wb_sunny";
+          } else if (weather === "Rain") {
+            this.weather = "wb_sunny";
+          }
+          console.log(temp, place, weather);
+        });
+    }
   }
 };
 </script>

@@ -139,14 +139,102 @@
 
 1. 사용할 것은 v1. 사용할 firebase 버전을 5.8로 올린다.
 
+   `index.html`
+   
    ```html
      <!-- Firebase -->
      <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
      <!-- VueFire -->
-     <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+     <!-- firebaseui-web -->
+       <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
+       <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.css" />
+       
+   ```
+   
+   `index.html`
+   
+   ```html
+       <script>
+         // Initialize Firebase
+         // TODO: Replace with your project's customized code snippet
+         const config = {
+           apiKey: "API_KEY",
+           authDomain: "webmobile-sub2-510fa.firebaseapp.com",
+           databaseURL: "https://webmobile-sub2.firebaseio.com",
+           projectId: "webmobile-sub2-510fa",
+         };
+         firebase.initializeApp(config);
+         const db = firebase.database()
+         const auth = firebase.auth()
+         const ui = new firebaseui.auth.AuthUI(auth)
+       </script>
+   ```
+   
+   위 두가지를 head 위에 넣는다.
+   
+   
+   
+   
+   
+2. 위에 들어갈 내용들은 firebase 프로젝트를 하나 만들고 필요한 부분을 넣어준다.
+
+   ![1562634414663](img/1562634414663.png)
+
+3. `SignIn.vue`
+
+   ```html
+   <template>
+     <div id="firebaseui-auth-container"></div>
+   </template>
+   ```
+
+   ```js
+   <script>
+   export default {
+     data() {
+       return {
+         currentUser: {
+           uid: "",
+           email: "",
+           username: ""
+         }
+       };
+     },
+     methods: {
+       initUI: function() {
+         ui.start("#firebaseui-auth-container", {
+           signInoptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
+           callbacks: {
+             signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+               this.currentUser.uid = authResult.user.uid;
+               this.currentUser.email = authResult.user.email;
+               this.currentUser.username = authResult.user.displayName;
+               return false;
+             }
+           }
+         });
+         
+       }
+       
+     },
+     mounted: function() {
+       auth.onAuthStateChanged((user) =>{
+           if (user) {
+               this.currentUser.uid = user.uid
+               this.currentUser.email = user.email
+               this.currentUser.username = user.displayName
+           }
+           this.initUI()
+       })
+     }
+   };
+   </script>
    ```
 
    
+
+
 
 
 
