@@ -1,45 +1,34 @@
 <template>
-  <div style="position: relative;">
-    <v-toolbar fixed dense>
-      <v-btn flat icon>
-        <v-icon>home</v-icon>
-      </v-btn>
-      <v-toolbar-title>TREVI</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
-        <v-btn flat @click.stop="dialog = true">LOGIN</v-btn>
-        <v-dialog v-model="dialog" max-width="290">
-          <v-card>
-            <v-card-title class="headline">Log in</v-card-title>
-
-            <v-card-text>
-              <!-- <SignIn></SignIn> -->
-              <!-- SignIn template -->
-            </v-card-text>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-
-              <v-btn color="green darken-1" flat="flat" @click="dialog = false">Disagree</v-btn>
-
-              <v-btn color="green darken-1" flat="flat" @click="dialog = false">Agree</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn v-on="on" flat>Writer</v-btn>
-          </template>
-          <v-list>
-            <v-list-tile v-for="(item, index) in items" :key="index" @click>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
-        <v-btn flat>Search</v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+    <img src="../assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    TREVI
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">fucking</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Navbar text with an inline element
+    </span>
   </div>
+</nav>
 </template>
 
 <script>

@@ -1,16 +1,25 @@
 <template>
   <v-app>
     <v-content>
+      <WMHeader></WMHeader>
       <router-view />
+      <back-to-top text="Back to top" visibleoffset="100"></back-to-top>
+      <WMFooter></WMFooter>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import store from "./store";
+import WMHeader from "./components/WMHeader";
+import WMFooter from "./components/WMFooter";
 
 export default {
   name: "App",
+  components:{
+    WMHeader,
+    WMFooter
+  },
   store,
   data() {
     return {
