@@ -2,14 +2,36 @@
 <template>
   <v-footer dark height="auto">
     <v-card class="flex" flat tile>
-      <v-card-title class="teal">
-        <v-icon>{{weather}}</v-icon>
-        <v-spacer></v-spacer>
-        <strong class="subheading">Get connected with us on social networks!</strong>
-
-        <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
+      <v-card-title class="grey darken-3 footer-info-container">
+        <div class="button">
+          <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
+            <!-- <v-icon size="24px">{{ icon }}</v-icon> -->
+            <a target="_blank" href="https://lab.ssafy.com/leeiopd/webmobile-sub2">
+              <i v-bind:class="icon "></i>
+            </a>
+          </v-btn>
+        </div>
+        <div class="weather-container">
+          <div class="weather-info">
+            <div class="place">{{place}}</div>
+            <div class="temp">{{temp}}°C</div>
+          </div>
+          <div class="weather-svg">
+            <template v-if="weather ==='Clear'">
+              <Clear></Clear>
+            </template>
+            <template v-if="weather ==='Clouds'">
+              <Cloudy></Cloudy>
+            </template>
+            <template v-if="weather ==='Fog'">
+              <Cloudy></Cloudy>
+            </template>
+            <template v-if="weather ==='Rain'">
+              <Rainy></Rainy>
+            </template>
+          </div>
+        </div>
+        <!-- <strong class="subheading">Get connected with us on social networks!</strong> -->
       </v-card-title>
 
       <v-card-actions class="grey darken-3 justify-center">
@@ -21,19 +43,23 @@
 </template>
 
 <script>
+import Clear from "./WeatherCondition/Clear";
+import Cloudy from "./WeatherCondition/Cloudy";
+import Rainy from "./WeatherCondition/Rainy";
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 export default {
   name: "WMFooter",
   data: () => ({
-    icons: [
-      "fab fa-facebook",
-      "fab fa-twitter",
-      "fab fa-google-plus",
-      "fab fa-linkedin",
-      "fab fa-instagram"
-    ],
-    weather: "wb_sunny"
+    icons: ["fab fa-github fa-2x"],
+    weather: "Clear",
+    place: "대전광역시",
+    temp: 0
   }),
+  components: {
+    Clear,
+    Cloudy,
+    Rainy
+  },
   mounted() {
     this.getPosition();
   },
@@ -52,19 +78,43 @@ export default {
       )
         .then(response => response.json())
         .then(json => {
-          const weather = json.weather[0].main;
-          const temp = Math.floor(json.main.temp - 273.15);
-          const place = json.name;
-          if (weather === "Clouds") {
-            this.weather = "wb_cloudys";
-          } else if (weather === "Clear") {
-            this.weather = "wb_sunny";
-          } else if (weather === "Rain") {
-            this.weather = "wb_sunny";
+          this.weather = json.weather[0].main;
+          this.temp = Math.floor(json.main.temp - 273.15);
+          if (json.name === "Taejŏn-gwangyŏksi") {
+            this.place = "대전광역시";
           }
-          console.log(temp, place, weather);
+          // console.log(this.weather);
+          // console.log(this.temp, this.place, this.weather);
         });
     }
   }
 };
 </script>
+
+
+<style scoped>
+.footer-info-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.weather-container {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 20px;
+}
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.fab {
+  width: 24px;
+  height: 24px;
+}
+a {
+  color: #fff;
+}
+</style>
