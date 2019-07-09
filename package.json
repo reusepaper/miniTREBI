@@ -20,6 +20,7 @@
 =======
 >>>>>>> 9a4a8370045e1b1b14beb290f22d2c9c6ba296a4
     "vue": "^2.6.10",
+    "vue-backtotop": "^1.6.1",
     "vue-browser-detect-plugin": "^0.1.2",
     "vue-router": "^3.0.3",
     "vue-simplemde": "^0.5.2",
