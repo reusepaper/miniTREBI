@@ -82,3 +82,60 @@
 * SideBar와 Main 화면과의 비율 - xs1:xs11
 * mini:true
   * 사이드바 토글 적용
+
+
+
+> ## Firebase Hosting
+
+1. Firebase Cli 설치
+
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. Firebase 로그인
+
+   ```bash
+   firebase login
+   ```
+
+3. Firebase 초기화
+
+   ```bash
+   firebase init
+   ```
+
+   1. ![firebase_init_1](./img/1562634414665.PNG)
+
+      * Y 로 Firebase init을 진행
+
+   2. ![firebase_init_2](./img/1562634414669.PNG)
+
+      * 사용할 서비스를 선택
+        * Firestore
+          * Firestore 관련 서비스를 사용하면서 선택하지 않을 시 firestore.rules 관련 오류 발생
+          * Firebase 에서도 Firestore를 시작 해 주어야 한다.
+        * Hosting
+        * Storage
+          * Storage를 사용하면서 선택을 하지 않을 시 storage.rules 관련 오류 발생
+          * Firebase 에서도 Storage 를 시작 해 주어야 한다.
+
+   3. ![firebase_init_2](./img/1562634414666.PNG)
+
+      ![firebase_init_2](./img/1562634414667.PNG)
+
+      ![firebase_init_2](./img/1562634414668.PNG)
+
+      * ### Hosting Setup의 `Public directory`에 주의 하자
+      
+        * build 된 app의 `index.html` 이 존재하는 `dist` 폴더로 지정한다.
+      
+   4. ![firebase_init_2](./img/1562634414670.PNG)
+   
+      * `npm run build` 
+        * build 명령어
+   
+   5. ![firebase_init_2](./img/1562634414671.PNG)
+   
+      * `firebase deploy`
+        * 배포 명령어
