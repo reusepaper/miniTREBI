@@ -2,7 +2,7 @@
   <v-layout column px-4>
     <v-flex
       v-for="i in repositories.length > limits ? limits : repositories.length"
-    >{{repositories[i-1]}}</v-flex>
+    >{{repositories[i-1].last_activity_at}}</v-flex>
   </v-layout>
 </template>
 
@@ -21,10 +21,11 @@ export default {
     };
   },
   mounted() {
-    this.getGitCommits("13akstjq");
+    // this.getGitCommits("13akstjq");
+    this.getGitRepos("13akstjq");
   },
   methods: {
-    async getGitCommits(userName) {
+    async getGitRepos(userName) {
       const response = await GitlabService.getRepos(userName);
       if (response.status !== 200) {
         return;
@@ -32,6 +33,18 @@ export default {
 
       this.repositories = response.data;
       console.log(this.repositories);
+      for (let i in this.repositories) {
+        this.getGitCommits(this.repositories[i]);
+      }
+    },
+    async getGitCommits(repo) {
+      console.log(repo.id);
+      const response = await GitlabService.getCommits(repo.id);
+      if (response.status !== 200) {
+        return;
+      } else {
+        console.log(response.data);
+      }
     }
   }
 };
