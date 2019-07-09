@@ -1,22 +1,17 @@
 <template>
   <div>
-    <WMHeader></WMHeader>
     <v-container mt-5>
-      <WMPost></WMPost>
+      <WMPostlist></WMPostlist>
     </v-container>
-    <WMFooter></WMFooter>
   </div>
 </template>
 
 <script>
-import WMHeader from "../components/WMHeader";
-import WMFooter from "../components/WMFooter";
-import WMPost from "../components/WMPost";
+import WMPostlist from "../components/WMPostlist";
 export default {
+  name: 'WMPostPage',
   components: {
-    WMHeader,
-    WMFooter,
-    WMPost
+    WMPostlist
   }
 };
 </script>
