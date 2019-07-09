@@ -17,6 +17,8 @@ export default {
     initUI: function() {
       ui.start("#firebaseui-auth-container", {
         signInoptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
+        // Required to enable one-tap sign-up credential helper.
+        credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => {
             this.currentUser.uid = authResult.user.uid;
@@ -26,8 +28,23 @@ export default {
           }
         }
       });
-
-      // this.$router.push('/');
+      
+    // this.$router.push('/');
+    },
+    redirect() {
+      const {search} = window.location
+      if (search==='') {
+      this.$router.push('/')
+      } else {
+      const tokens = search.replace(/^\?/, '').split('&')
+      // const {returnPath} = tokens.reduce((qs, tkn) => {
+      //   const pair = tkn.split('=')
+      //   qs[pair[0]] = decodeURIComponent(pair[1])
+      //   return qs
+      // }, {})
+      const {returnPath} = '/'
+      this.$router.push('/')
+      }
     }
   },
   mounted: function() {
