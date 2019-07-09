@@ -35,7 +35,8 @@
       </v-card-title>
 
       <v-card-actions class="grey darken-3 justify-center">
-        &copy;2019-07-08&nbsp;<br />
+        &copy;2019-07-08&nbsp;
+        <br />
         <strong>ssafy daejeon</strong>
       </v-card-actions>
     </v-card>
