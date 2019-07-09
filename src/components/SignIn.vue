@@ -26,10 +26,21 @@ export default {
           }
         }
       });
+      
+    // this.$router.push('/');
     }
+    
   },
   mounted: function() {
-    this.initUI();
+    auth.onAuthStateChanged((user) =>{
+        if (user) {
+            this.currentUser.uid = user.uid
+            this.currentUser.email = user.email
+            this.currentUser.username = user.displayName
+        }
+        this.initUI()
+    })
+    
   }
 };
 </script>
