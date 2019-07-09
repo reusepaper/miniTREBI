@@ -1,16 +1,17 @@
 <template>
   <div>
     <v-container mt-5>
-      <WMCreatePost></WMCreatePost>
+      <WMPostlist></WMPostlist>
     </v-container>
   </div>
 </template>
 
 <script>
-import WMCreatePost from "../components/WMCreatePost";
+import WMPostlist from "../components/WMPostlist";
 export default {
+  name: 'WMPostPage',
   components: {
-    WMCreatePost
+    WMPostlist
   }
 };
 </script>

@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import CreatePost from "./views/WMCreatePostPage.vue";
 import SignIn from "./views/SignIn.vue";
+import WMPostPage from "./views/WMPostPage.vue"
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
       path: "/signin",
       name: "signin",
       component: SignIn
+    },
+    {
+      path: "/postlist",
+      name: "postlist",
+      component: WMPostPage
     }
   ]
 });

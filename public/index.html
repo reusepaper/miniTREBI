@@ -12,7 +12,7 @@
 
     <!--fontawesome-->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-
+<!-- 
     <script>
       // Initialize Firebase
       // TODO: Replace with your project's customized code snippet
@@ -26,7 +26,7 @@
       const db = firebase.database();
       const auth = firebase.auth();
       const ui = new firebaseui.auth.AuthUI(auth);
-    </script>
+    </script> -->
 
     <!--Bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -50,7 +50,7 @@
         var bookmarkURL = window.location.href;
         var bookmarkTitle = document.title;
         var triggerDefault = false;
-        
+
         if (window.sidebar && window.sidebar.addPanel) {
             // Firefox version &lt; 23
             window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
@@ -69,7 +69,7 @@
             // WebKit - Safari/Chrome
             alert((navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D 를 이용해 이 페이지를 즐겨찾기에 추가할 수 있습니다.');
         }
-        
+
         return triggerDefault;
       });
       });
