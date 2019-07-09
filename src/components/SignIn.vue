@@ -28,6 +28,21 @@ export default {
       });
       
     // this.$router.push('/');
+    },
+    redirect() {
+      const {search} = window.location
+      if (search==='') {
+      this.$router.push('/')
+      } else {
+      const tokens = search.replace(/^\?/, '').split('&')
+      // const {returnPath} = tokens.reduce((qs, tkn) => {
+      //   const pair = tkn.split('=')
+      //   qs[pair[0]] = decodeURIComponent(pair[1])
+      //   return qs
+      // }, {})
+      const {returnPath} = '/'
+      this.$router.push('/')
+      }
     }
     
   },
