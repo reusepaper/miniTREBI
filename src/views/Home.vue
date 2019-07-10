@@ -26,7 +26,14 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
-          <GitlabGraph></GitlabGraph>
+
+          <v-layout>
+            <v-flex xs12>
+              <h2 class="headline my-5 text-xs-center">Contact Us</h2>
+              <ContactUs></ContactUs>
+            </v-flex>
+          </v-layout>
+
         </v-container>
       </div>
     </v-flex>
