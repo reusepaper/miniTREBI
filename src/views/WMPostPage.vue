@@ -13,7 +13,7 @@
 <script>
 import WMPostlist from "../components/WMPostlist";
 export default {
-  name: 'WMPostPage',
+  name: "WMPostPage",
   components: {
     WMPostlist
   }

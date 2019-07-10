@@ -12,16 +12,14 @@
 
 <script>
 export default {
-  name: 'WMPost',
+  name: "WMPost",
   props: {
-    title: {type: String},
-    content: {type: String},
-    image: {type: String}
+    title: { type: String },
+    content: { type: String },
+    image: { type: String }
   },
   data() {
-    return {
-
-    }
+    return {};
   }
-}
+};
 </script>
