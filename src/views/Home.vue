@@ -45,6 +45,9 @@ import HelloWorld from "../components/HelloWorld";
 import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
+
+
+
 import ContactUs from "../components/ContactUs";
 export default {
   components: {
@@ -53,6 +56,9 @@ export default {
     WMSidebar,
     HJ,
     PFShow,
+
+
+    
     ContactUs
   }
 };
