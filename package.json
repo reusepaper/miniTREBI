@@ -11,6 +11,7 @@
   },
   "main": "babel.config.js",
   "dependencies": {
+    "apexcharts": "^3.8.2",
     "axios": "^0.19.0",
     "circular-json": "^0.3.3",
     "core-js": "^2.6.5",
@@ -42,6 +43,7 @@
     "firebase": "^5.8.0",
 >>>>>>> f3eb9e580423def259ff9212622139f51cf475eb
     "vue": "^2.6.10",
+    "vue-apexcharts": "^1.4.0",
     "vue-backtotop": "^1.6.1",
     "vue-browser-detect-plugin": "^0.1.2",
     "vue-router": "^3.0.3",
