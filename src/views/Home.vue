@@ -25,14 +25,8 @@
               <h2 class="headline my-5 text-xs-center">Show Profile</h2>
               <PFShow></PFShow>
             </v-flex>
-          </v-layout><<<<<<< HEAD
-          =======
-          <v-layout>
-            <v-flex xs12>
-              <h2 class="headline my-5 text-xs-center">Contact Us</h2>
-              <ContactUs></ContactUs>
-            </v-flex>
-          </v-layout>>>>>>>> 28c8492b4b6c82c518584a326fe8238e553ac4ba
+          </v-layout>
+          <GitlabGraph></GitlabGraph>
         </v-container>
       </div>
     </v-flex>
@@ -44,7 +38,6 @@ import HelloWorld from "../components/HelloWorld";
 import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
-import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 export default {
   components: {
@@ -53,7 +46,6 @@ export default {
     WMSidebar,
     HJ,
     PFShow,
-    ContactUs,
     GitlabGraph
   }
 };
