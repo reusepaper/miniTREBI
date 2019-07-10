@@ -26,7 +26,6 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
-          <GitlabGraph></GitlabGraph>
         </v-container>
       </div>
     </v-flex>
@@ -38,6 +37,7 @@ import HelloWorld from "../components/HelloWorld";
 import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
+import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 export default {
   components: {
@@ -46,6 +46,7 @@ export default {
     WMSidebar,
     HJ,
     PFShow,
+    ContactUs,
     GitlabGraph
   }
 };

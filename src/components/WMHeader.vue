@@ -8,6 +8,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
+<<<<<<< HEAD
         <v-btn flat color="white" @click.stop="login_btn = true">Login</v-btn>
         <v-dialog v-model="login_btn" max-width="290">
           <v-card>
@@ -22,6 +23,24 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
+=======
+        <v-btn flat color="white" v-if="currentUser" @click="logout">Logout</v-btn>
+        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
+          <v-dialog v-model="login_btn" max-width="290">
+            <v-card>
+              <v-card-title class="headline">Log in</v-card-title>
+              <v-card-text>
+                <SignIn></SignIn>
+                SignIn template
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
+                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+>>>>>>> 61d50379ba1e74e24aa6b7f3e2f8a4a1cb3b93eb
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
         <v-menu open-on-hover offset-y>
@@ -96,14 +115,39 @@ export default {
       { title: "rain" }
     ],
     dialog: false,
-    login_btn: false
+    login_btn: false,
+    currentUser: false
   }),
+<<<<<<< HEAD
   methods: {
     showLoginDialog: function() {}
   },
   mounted: function() {
     console.log(sessionStorage["length"]);
     let isLogin = sessionStorage["length"];
+=======
+  methods:{
+    showLoginDialog:function(){
+
+    },
+    logout: function() {
+      this.currentUser = {
+          uid: '',
+          email: '',
+          displayName: ''
+      }
+      auth.signOut()
+    }
+  },
+  mounted: function(){
+    console.log(sessionStorage['length'])
+    let isLogin = sessionStorage['length']
+    auth.onAuthStateChanged(user => {
+      console.log(user)
+      if (user) this.currentUser=true;
+      else this.currentUser=false;
+    });
+>>>>>>> 61d50379ba1e74e24aa6b7f3e2f8a4a1cb3b93eb
   }
 };
 </script>
