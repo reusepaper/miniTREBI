@@ -1,32 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-  <title>webmobile-sub2</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" />
+    <!--fontawesome-->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-  <!--fontawesome-->
-  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-  <!--
-    <script>
-      // Initialize Firebase
-      // TODO: Replace with your project's customized code snippet
-      const config = {
-        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
-        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
-        databaseURL: "https://webmobile-sub2.firebaseio.com",
-        projectId: "webmobile-sub2-510fa"
-      };
-      firebase.initializeApp(config);
-      const db = firebase.database();
-      const auth = firebase.auth();
-      const ui = new firebaseui.auth.AuthUI(auth);
-    </script> -->
 
   <!--Bootstrap css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -44,10 +21,44 @@
     }
     gtag("js", new Date());
 
-    gtag("config", "UA-143603759-1");
-  </script>
-  
-</head>
+      gtag("config", "UA-143603759-1");
+    </script>
+
+    <!-- Firebase -->
+    <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <!-- VueFire -->
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+    <!-- firebaseui-web -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
+
+    <script>
+      // Initialize Firebase
+      // TODO: Replace with your project's customized code snippet
+      const config = {
+        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
+        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
+        databaseURL: "https://webmobile-sub2-510fa.firebaseio.com",
+        projectId: "webmobile-sub2-510fa",
+        storageBucket: "",
+        messagingSenderId: "69251272917",
+        appId: "1:69251272917:web:e3d748f5c506995f"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.database();
+      const auth = firebase.auth();
+      const ui = new firebaseui.auth.AuthUI(auth);
+      const firestore = firebase.firestore();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but webmobile-sub2 doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
 
 <body>
   <noscript>
