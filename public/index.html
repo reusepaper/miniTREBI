@@ -1,69 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!--fontawesome-->
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+<!--fontawesome-->
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <!--Bootstrap css-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!-- 즐겨찾기 추가 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- 즐겨찾기 추가 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143603759-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143603759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-      gtag("config", "UA-143603759-1");
-    </script>
+  gtag("config", "UA-143603759-1");
+</script>
 
-    <!-- Firebase -->
-    <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-    <!-- VueFire -->
-    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
-    <!-- firebaseui-web -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
+<!-- Firebase -->
+<script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<!-- VueFire -->
+<script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+<!-- firebaseui-web -->
+<script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
 
-    <!--Gitlab graph script-->
-    <script src="public/assets/webpack/network.bundle.js"></script>
-    <script src="custom.js"></script>
-    <!--Gitlab graph css-->
-    <link rel="stylesheet" href="custom.css" />
-    <script>
-      // Initialize Firebase
-      // TODO: Replace with your project's customized code snippet
-      const config = {
-        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
-        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
-        databaseURL: "https://webmobile-sub2-510fa.firebaseio.com",
-        projectId: "webmobile-sub2-510fa",
-        storageBucket: "",
-        messagingSenderId: "69251272917",
-        appId: "1:69251272917:web:e3d748f5c506995f"
-      };
-      firebase.initializeApp(config);
-      const db = firebase.database();
-      const auth = firebase.auth();
-      const ui = new firebaseui.auth.AuthUI(auth);
-      const firestore = firebase.firestore();
-    </script>
-  </head>
-  <body>
-    <noscript>
-      <strong
-        >We're sorry but webmobile-sub2 doesn't work properly without JavaScript
-        enabled. Please enable it to continue.</strong
-      >
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+<!--Gitlab graph script-->
+<script src="public/assets/webpack/network.bundle.js"></script>
+<script src="custom.js"></script>
+<!--Gitlab graph css-->
+<link rel="stylesheet" href="custom.css" />
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  const config = {
+    apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
+    authDomain: "webmobile-sub2-510fa.firebaseapp.com",
+    databaseURL: "https://webmobile-sub2-510fa.firebaseio.com",
+    projectId: "webmobile-sub2-510fa",
+    storageBucket: "",
+    messagingSenderId: "69251272917",
+    appId: "1:69251272917:web:e3d748f5c506995f"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.database();
+  const auth = firebase.auth();
+  const ui = new firebaseui.auth.AuthUI(auth);
+  const firestore = firebase.firestore();
+</script>
+</head>
 
 <body>
   <noscript>
@@ -110,17 +99,8 @@
 
         return triggerDefault;
       });
-<<<<<<< HEAD
     });
   </script>
-  <!--bootstrap js-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
-=======
-    </script>
-  </body>
->>>>>>> 41399de690b28cf5b3dfa66300cba224cf147649
 </html>
