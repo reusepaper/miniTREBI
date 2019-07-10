@@ -24,6 +24,7 @@ export default {
             this.currentUser.uid = authResult.user.uid;
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
+            window.location.assign('/');
             return false;
           }
         }
@@ -54,6 +55,7 @@ export default {
         this.currentUser.email = user.email;
         this.currentUser.username = user.displayName;
       }
+      // console.log(user)
       this.initUI();
     });
   }
