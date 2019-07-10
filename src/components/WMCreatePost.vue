@@ -17,9 +17,7 @@
 
 <script>
 import FirebaseService from "@/services/FirebaseService";
-import MarkdownText from './WMCreatePost'
-import MarkdownItVue from 'markdown-it-vue'
-import 'markdown-it-vue/dist/markdown-it-vue.css'
+import MarkdownItVue from '../../markdownsrc'
 
 export default {
   name: "WMCreatePost",
@@ -34,7 +32,7 @@ export default {
       configs: {
         spellChecker: false // disable spell check
       },
-      content: MarkdownText,
+      content: '',
       options: {
         markdownIt: {
           linkify: true
