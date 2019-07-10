@@ -1,43 +1,59 @@
 <template>
-<v-container>
-  <v-text-field v-model="title" label="제목"></v-text-field>
-  <div id="md-editor">
-    <markdown-editor v-model="content" ref="markdownEditor" label="내용"></markdown-editor>
+<!-- <v-container>
+  <v-text-field v-model="title" label="제목" outline></v-text-field> -->
+<div>
+  <p>
+    <label class="w3-text-blue"><b>TITLE</b></label>
+    <input class="w3-input w3-border" name="last" type="text" v-model="title">
+  </p>
+  <div class="container">
+    <textarea class="md-text" rows="10" v-model="content"></textarea>
+    <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
   </div>
-  <div v-if="!image">
-    <input type="file" @change="onFileChange" />
+  <div class="filebox" v-if="!image">
+    <label for="uploadFile">파일 선택</label>
+    <input type="file" @change="onFileChange" id="uploadFile"/>
   </div>
   <div v-else>
-    <img :src="image" /><br />
+    <img :src="image" />
   </div>
-  <v-btn @click="submit">등록</v-btn>
-</v-container>
+  <div>
+    <br/>
+    <button class="button buttonblue" v-on:click="submit()">등록</button>
+  </div>
+  <!-- <v-btn @click="submit">등록</v-btn> -->
+</div>
 </template>
 
 <script>
-import markdownEditor from 'vue-simplemde/src/markdown-editor'
 import FirebaseService from "@/services/FirebaseService";
+import MarkdownItVue from '../../markdownsrc/markdown-it-vue'
 
 export default {
   name: "WMCreatePost",
   components: {
-    markdownEditor
+    MarkdownItVue
   },
   data() {
     return {
       title: '',
-      content: '',
+      content: '# 이곳에 게시글을 작성해보세요! 8-)',
       image: '',
       configs: {
         spellChecker: false // disable spell check
+      },
+      options: {
+        markdownIt: {
+          linkify: true
+        },
+        linkAttributes: {
+          target: '_blank',
+          rel: 'noopener'
+        }
       }
     }
   },
   methods: {
-    goHome: function() {
-      alert('저장할게요!');
-      location.replace('/');
-    },
     submit() {
       if (this.title == "") {
         alert("제목을 입력하세요");
@@ -87,20 +103,86 @@ export default {
 }
 </script>
 
-<style>
-@import '~simplemde/dist/simplemde.min.css';
-
-#md-editor {
-  padding: 1rem;
+<style scoped>
+.container {
+  display: inline-flex;
+  width: 100%;
 }
 
-#createButton {
+.md-text {
+  width: 50%;
+  height: 500px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  resize: none;
+}
+
+.md-body {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.button {
+  background-color: #92C5FF;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonblue {
   background-color: white;
   color: black;
-  border: 1px solid pink;
-  border-radius: 15%;
-  padding: 0.7rem;
-  margin-left: 10px;
-  z-index: 99;
+  border: 2px solid #92C5FF;
+}
+
+.buttonblue:hover {
+  background-color: #92C5FF;
+  color: white;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid #92C5FF;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #92C5FF;
+  color: white;
+}
+
+.filebox label:active {
+  background-color: #92C5FF;
+  color: white;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 </style>
