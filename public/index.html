@@ -17,21 +17,6 @@
 
     <!--fontawesome-->
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <!-- 
-    <script>
-      // Initialize Firebase
-      // TODO: Replace with your project's customized code snippet
-      const config = {
-        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
-        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
-        databaseURL: "https://webmobile-sub2.firebaseio.com",
-        projectId: "webmobile-sub2-510fa"
-      };
-      firebase.initializeApp(config);
-      const db = firebase.database();
-      const auth = firebase.auth();
-      const ui = new firebaseui.auth.AuthUI(auth);
-    </script> -->
 
 
     <!-- 즐겨찾기 추가 -->
@@ -50,6 +35,37 @@
       gtag("js", new Date());
 
       gtag("config", "UA-143603759-1");
+    </script>
+
+    <!-- Firebase -->
+    <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <!-- VueFire -->
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+    <!-- firebaseui-web -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
+
+    <!--Gitlab graph script-->
+    <script src="public/assets/webpack/network.bundle.js"></script>
+    <script src="custom.js"></script>
+    <!--Gitlab graph css-->
+    <link rel="stylesheet" href="custom.css" />
+    <script>
+      // Initialize Firebase
+      // TODO: Replace with your project's customized code snippet
+      const config = {
+        apiKey: "AIzaSyCBToAXiNSn5EIUwm0AbYF3jtRJkzGQRs8",
+        authDomain: "webmobile-sub2-510fa.firebaseapp.com",
+        databaseURL: "https://webmobile-sub2-510fa.firebaseio.com",
+        projectId: "webmobile-sub2-510fa",
+        storageBucket: "",
+        messagingSenderId: "69251272917",
+        appId: "1:69251272917:web:e3d748f5c506995f"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.database();
+      const auth = firebase.auth();
+      const ui = new firebaseui.auth.AuthUI(auth);
+      const firestore = firebase.firestore();
     </script>
   </head>
   <body>
