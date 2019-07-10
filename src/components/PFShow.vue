@@ -1,76 +1,106 @@
 <template>
-<div class="card-deck">
-  <div class="card">
-    <div class="card-img-1">
-      <img class="card-img-top" src="../assets/goubook1.png" alt="Card image cap">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">유동관</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-img-2">
-      <img class="card-img-top" src="../assets/pikachu.jpg" alt="Card image cap">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">한단비</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-img-2">
-      <img class="card-img-top" src="../assets/hesee.jpg" alt="Card image cap">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">임연지</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-    <div class="card">
-    <div class="card-img-2">
-      <img class="card-img-top" src="../assets/togepi.jpg" alt="Card image cap">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">이주호</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-    <div class="card">
-    <div class="card-img-2">
-      <img class="card-img-top" src="../assets/jammanbo.jpg" alt="Card image cap">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">한만섭</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
-</template>
+  <v-layout>
+    <v-flex xs3 sm6 px-2>
+      <v-card class="card-img-1">
+        <v-img :src="require('../assets/goubook1.png')" aspect-ratio="1" position="center bottom"></v-img>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">유동관</h3>
+            <div>{{ card_text }}</div>
+          </div>
+        </v-card-title>
 
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+    <v-flex xs3 sm6 px-2>
+      <v-card class="card-img-1">
+        <v-img :src="require('../assets/pikachu.jpg')" aspect-ratio="1" position="center bottom"></v-img>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">한단비</h3>
+            <div>{{ card_text }}</div>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+    <v-flex xs3 sm6 px-2>
+      <v-card class="card-img-1">
+        <v-img :src="require('../assets/hesee.jpg')" aspect-ratio="1" position="center bottom"></v-img>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">임연지</h3>
+            <div>{{ card_text }}</div>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+    <v-flex xs3 sm6 px-2>
+      <v-card class="card-img-1">
+        <v-img :src="require('../assets/togepi.jpg')" aspect-ratio="1" position="center bottom"></v-img>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">이주호</h3>
+            <div>{{ card_text }}</div>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+    <v-flex xs3 sm6 px-2>
+      <v-card class="card-img-1">
+        <v-img :src="require('../assets/jammanbo.jpg')" aspect-ratio="1" position="center bottom"></v-img>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">한만섭</h3>
+            <div>{{ card_text }}</div>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      card_text:
+        "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat."
+    };
+  }
+};
+</script>
 <style>
-.card-img-1, .card-img-2{
+.card-img-1,
+.card-img-2 {
   overflow: hidden;
 }
-.card-img-1 img{
+.card-img-1 img {
   margin-top: -60%;
 }
-.card-img-2 img{
+.card-img-2 img {
   margin-top: -68%;
 }
 </style>
