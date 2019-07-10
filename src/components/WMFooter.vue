@@ -1,7 +1,8 @@
 
 <template>
   <v-footer dark height="auto">
-    <WMCommitGraph></WMCommitGraph>
+    <!-- <WMCommitGraph></WMCommitGraph> -->
+
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
         <div class="button">
@@ -36,6 +37,9 @@
             <template v-if="weather ==='Dust'">
               <Cloudy></Cloudy>
             </template>
+            <template v-if="weather ==='Haze'">
+              <Cloudy></Cloudy>
+            </template>
           </div>
         </div>
         <!-- <strong class="subheading">Get connected with us on social networks!</strong> -->
@@ -67,8 +71,8 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy,
-    WMCommitGraph
+    Rainy
+    // WMCommitGraph
   },
   mounted() {
     this.getPosition();

@@ -1,19 +1,19 @@
 <template>
   <v-layout>
     <v-flex>
-      <div>      
-        <v-container class='content-main'>
+      <div>
+        <v-container class="content-main">
           <v-layout>
             <v-flex xs12>
               <!--jumbotron page 호출! -->
               <HJ></HJ>
             </v-flex>
           </v-layout>
-          
+
           <v-layout>
             <!-- <v-flex xs1>
               <WMSidebar></WMSidebar>
-            </v-flex> -->
+            </v-flex>-->
             <v-flex xs12>
               <HelloWorld></HelloWorld>
             </v-flex>
@@ -45,10 +45,8 @@ import HelloWorld from "../components/HelloWorld";
 import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
-
-
-
 import ContactUs from "../components/ContactUs";
+import GitlabGraph from "../components/GitlabGraph";
 export default {
   components: {
     ImgBanner,
@@ -56,15 +54,13 @@ export default {
     WMSidebar,
     HJ,
     PFShow,
-
-
-    
-    ContactUs
+    ContactUs,
+    GitlabGraph
   }
 };
 </script>
 <style>
-.content-main{
-  margin-top:60px;
+.content-main {
+  margin-top: 60px;
 }
 </style>
