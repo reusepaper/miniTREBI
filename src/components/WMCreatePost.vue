@@ -94,13 +94,5 @@ export default {
   padding: 1rem;
 }
 
-#createButton {
-  background-color: white;
-  color: black;
-  border: 1px solid pink;
-  border-radius: 15%;
-  padding: 0.7rem;
-  margin-left: 10px;
-  z-index: 99;
-}
+</style>
 </style>
