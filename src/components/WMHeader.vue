@@ -8,7 +8,8 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
-        <v-btn flat color="white" @click.stop="login_btn = true">Login</v-btn>
+        <v-btn flat color="white" v-if="currentUser" @click="logout">Logout</v-btn>
+        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
           <v-dialog v-model="login_btn" max-width="290">
             <v-card>
               <v-card-title class="headline">Log in</v-card-title>
@@ -98,16 +99,30 @@ export default {
       { title: "rain" }
     ],
     dialog: false,
-    login_btn: false
+    login_btn: false,
+    currentUser: false
   }),
   methods:{
     showLoginDialog:function(){
 
+    },
+    logout: function() {
+      this.currentUser = {
+          uid: '',
+          email: '',
+          displayName: ''
+      }
+      auth.signOut()
     }
   },
   mounted: function(){
     console.log(sessionStorage['length'])
     let isLogin = sessionStorage['length']
+    auth.onAuthStateChanged(user => {
+      console.log(user)
+      if (user) this.currentUser=true;
+      else this.currentUser=false;
+    });
   }
 };
 </script>
