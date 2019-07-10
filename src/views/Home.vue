@@ -26,6 +26,7 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
+          <GitlabGraph></GitlabGraph>
         </v-container>
       </div>
     </v-flex>
