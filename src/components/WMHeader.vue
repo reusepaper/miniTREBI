@@ -1,7 +1,7 @@
 <template>
-<div class="hide-overflow" style="position: relative;">
+  <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white">
+      <v-btn flat icon to="/" color="white" v-on:click="functionHome">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
@@ -25,25 +25,25 @@
           </v-dialog>
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
-        <v-menu open-on-hover offset-y>
+        <!-- sdfsdfsdfsdfsd-->
+        <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
           <v-list>
-            <v-list-tile v-for="(item, index) in items" :key="index" @click="">
+            <v-list-tile v-for="(item, index) in items" :key="index" @click>
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
 
-
         <!-- <v-dialog v-model="dialog" width="500"> -->
-          <!-- <template v-slot:activator="{ on }">
+        <!-- <template v-slot:activator="{ on }">
             <v-btn class="white--text" flat v-on="on">
               <v-icon >star</v-icon>
             </v-btn>
-          </template> -->
-          <!-- <v-card>
+        </template>-->
+        <!-- <v-card>
             <v-card-title class="headline primary lighten-3 white--text">
               안내
             </v-card-title>
@@ -54,7 +54,7 @@
               <v-spacer></v-spacer>
               <v-btn color="primary lighten-3" class="white--text" @click="dialog = false">확인</v-btn>
             </v-card-actions>
-          </v-card> -->
+        </v-card>-->
         <!-- </v-dialog> -->
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
@@ -78,8 +78,8 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer> -->
-</div>
+    </v-navigation-drawer>-->
+  </div>
 </template>
 
 <script>
@@ -101,17 +101,17 @@ export default {
     login_btn: false,
     isLogin: false
   }),
-  methods:{
-    showLoginDialog:function(){
-
-    },
-    logout: function() {
-      this.currentUser = {
-          uid: '',
-          email: '',
-          displayName: ''
-      }
-      auth.signOut()
+  methods: {
+    showLoginDialog: function() {},
+    functionHome: function() {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users/")
+        .then(function(response) {
+          console.log("dfasdfsdfasdfsdfsafasdf");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     }
   },
   mounted: function(){
