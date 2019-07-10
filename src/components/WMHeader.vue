@@ -1,14 +1,13 @@
 <template>
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white">
+      <v-btn flat icon to="/" color="white" v-on:click="functionHome">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
-<<<<<<< HEAD
         <v-btn flat color="white" @click.stop="login_btn = true">Login</v-btn>
         <v-dialog v-model="login_btn" max-width="290">
           <v-card>
@@ -23,27 +22,10 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-=======
-        <v-btn flat color="white" v-if="currentUser" @click="logout">Logout</v-btn>
-        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-          <v-dialog v-model="login_btn" max-width="290">
-            <v-card>
-              <v-card-title class="headline">Log in</v-card-title>
-              <v-card-text>
-                <SignIn></SignIn>
-                SignIn template
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
->>>>>>> 61d50379ba1e74e24aa6b7f3e2f8a4a1cb3b93eb
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
-        <v-menu open-on-hover offset-y>
+        <!-- sdfsdfsdfsdfsd-->
+        <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
@@ -115,39 +97,24 @@ export default {
       { title: "rain" }
     ],
     dialog: false,
-    login_btn: false,
-    currentUser: false
+    login_btn: false
   }),
-<<<<<<< HEAD
   methods: {
-    showLoginDialog: function() {}
+    showLoginDialog: function() {},
+    functionHome: function() {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users/")
+        .then(function(response) {
+          console.log("dfasdfsdfasdfsdfsafasdf");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
   },
   mounted: function() {
     console.log(sessionStorage["length"]);
     let isLogin = sessionStorage["length"];
-=======
-  methods:{
-    showLoginDialog:function(){
-
-    },
-    logout: function() {
-      this.currentUser = {
-          uid: '',
-          email: '',
-          displayName: ''
-      }
-      auth.signOut()
-    }
-  },
-  mounted: function(){
-    console.log(sessionStorage['length'])
-    let isLogin = sessionStorage['length']
-    auth.onAuthStateChanged(user => {
-      console.log(user)
-      if (user) this.currentUser=true;
-      else this.currentUser=false;
-    });
->>>>>>> 61d50379ba1e74e24aa6b7f3e2f8a4a1cb3b93eb
   }
 };
 </script>
