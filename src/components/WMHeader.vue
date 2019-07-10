@@ -25,8 +25,7 @@
           </v-dialog>
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
-        <!-- sdfsdfsdfsdfsd-->
-        <v-menu offset-y>
+        <v-menu open-on-hover offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
