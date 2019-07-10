@@ -1,19 +1,19 @@
 <template>
   <v-layout>
     <v-flex>
-      <div>      
-        <v-container class='content-main'>
+      <div>
+        <v-container class="content-main">
           <v-layout>
             <v-flex xs12>
               <!--jumbotron page 호출! -->
               <HJ></HJ>
             </v-flex>
           </v-layout>
-          
+
           <v-layout>
             <!-- <v-flex xs1>
               <WMSidebar></WMSidebar>
-            </v-flex> -->
+            </v-flex>-->
             <v-flex xs12>
               <HelloWorld></HelloWorld>
             </v-flex>
@@ -26,7 +26,6 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
-
         </v-container>
       </div>
     </v-flex>
@@ -49,7 +48,7 @@ export default {
 };
 </script>
 <style>
-.content-main{
-  margin-top:60px;
+.content-main {
+  margin-top: 60px;
 }
 </style>
