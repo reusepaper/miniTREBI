@@ -144,17 +144,20 @@
    ```html
      <!-- Firebase -->
      <script src="https://gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-     <!-- VueFire -->
-  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+   ```
+   ```html
+   <!-- VueFire -->
+   <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+   ```
+   ```html
      <!-- firebaseui-web -->
        <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.css" />
-       
    ```
    
    `index.html`
    
-   ```html
+```html
        <script>
          // Initialize Firebase
          // TODO: Replace with your project's customized code snippet
@@ -169,14 +172,14 @@
          const auth = firebase.auth()
          const ui = new firebaseui.auth.AuthUI(auth)
        </script>
-   ```
-   
-   위 두가지를 head 위에 넣는다.
-   
-   
-   
-   
-   
+```
+
+위 두가지를 head 위에 넣는다.
+
+
+
+
+
 2. 위에 들어갈 내용들은 firebase 프로젝트를 하나 만들고 필요한 부분을 넣어준다.
 
    ![1562634414663](img/1562634414663.png)
@@ -232,7 +235,77 @@
    </script>
    ```
 
-   
+
+
+
+
+
+
+
+### nav bar에 로그인/로그아웃 버튼 만들기
+
+`WMHeader.vue`
+
+```html
+<template>
+<div class="hide-overflow" style="position: relative;">
+    ...
+        <!-- 로그인 다이얼로그 활성화 -->
+        <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
+        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
+          <v-dialog v-model="login_btn" max-width="290">
+            <v-card>
+              ...
+
+```
+
+`isLogin`변수를 사용하여 true일때에는 logout버튼을, 반대의 경우에는 login 버튼을 나타나게 한다.
+
+```js
+<script>
+import SignIn from "./SignIn";
+export default {
+  components: {
+    SignIn
+  },
+  name: "WMHeader",
+  data: () => ({
+    ...
+    isLogin: false
+  }),
+  methods:{
+    showLoginDialog:function(){
+
+    },
+    logout: function() {
+      this.currentUser = {
+          uid: '',
+          email: '',
+          displayName: ''
+      }
+      auth.signOut()
+    }
+  },
+  mounted: function(){
+    auth.onAuthStateChanged(user => {
+      if (user) this.isLogin=true;
+      else this.isLogin=false;
+    });
+  }
+};
+</script>
+
+```
+
+`isLogin` 변수를 기본 false로 둔 후, mounted에서 현재 로그인 유저의 정보가 존재할 경우 true로, 아닐 경우 false로 수정한다.
+
+
+
+
+
+![1562748176924](img/1562748176924.png)
+
+![1562748229409](img/1562748229409.png)
 
 
 
