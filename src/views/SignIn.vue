@@ -1,6 +1,8 @@
 <template>
   <div>
+    <v-container mt-5>
     <SignIn></SignIn>
+    </v-container>
   </div>
 </template>
 
