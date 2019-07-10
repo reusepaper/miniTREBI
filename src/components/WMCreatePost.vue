@@ -1,8 +1,9 @@
 <template>
 <v-container>
-  <v-text-field v-model="title" label="제목"></v-text-field>
-  <div id="md-editor">
-    <markdown-editor v-model="content" ref="markdownEditor" label="내용"></markdown-editor>
+  <v-text-field v-model="title" label="제목" outline></v-text-field>
+  <div class="container">
+    <textarea class="md-text" rows="10" v-model="content"></textarea>
+    <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
   </div>
   <div v-if="!image">
     <input type="file" @change="onFileChange" />
@@ -15,13 +16,14 @@
 </template>
 
 <script>
-import markdownEditor from 'vue-simplemde/src/markdown-editor'
 import FirebaseService from "@/services/FirebaseService";
+import MarkdownText from '../src'
+import MarkdownItVue from '../markdown'
 
 export default {
   name: "WMCreatePost",
   components: {
-    markdownEditor
+    MarkdownItVue
   },
   data() {
     return {
@@ -30,14 +32,20 @@ export default {
       image: '',
       configs: {
         spellChecker: false // disable spell check
+      },
+      content: MarkdownText,
+      options: {
+        markdownIt: {
+          linkify: true
+        },
+        linkAttributes: {
+          target: '_blank',
+          rel: 'noopener'
+        }
       }
     }
   },
   methods: {
-    goHome: function() {
-      alert('저장할게요!');
-      location.replace('/');
-    },
     submit() {
       if (this.title == "") {
         alert("제목을 입력하세요");
@@ -82,17 +90,24 @@ export default {
           this.image = success.data.link;
         })
         .catch();
-    }
+    },
+    update: _.debounce(function(e) {
+      this.input = e.target.value;
+    }, 300)
   }
 }
 </script>
 
-<style>
-@import '~simplemde/dist/simplemde.min.css';
-
-#md-editor {
-  padding: 1rem;
+<style scoped>
+.container {
+  display: inline-flex;
+  width: 100%;
 }
-
-</style>
+.md-text {
+ width: 47%;
+}
+.md-body {
+  width: 50%;
+  margin-left: 20px;
+}
 </style>
