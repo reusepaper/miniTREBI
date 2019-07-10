@@ -44,6 +44,17 @@ export default {
     WMSidebar,
     HJ,
     PFShow
+  },
+  methods: {
+    firebaseFunction: function() {
+      axios({
+        method: "GET",
+        url: "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
+      }).then(response => {
+        console.log(response);
+        console.log("hihi");
+      });
+    }
   }
 };
 </script>

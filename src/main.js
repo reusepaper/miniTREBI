@@ -8,8 +8,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import browserDetect from "vue-browser-detect-plugin";
-import BackToTop from 'vue-backtotop';
- 
+import BackToTop from "vue-backtotop";
+import axios from "axios";
+import VueAxios from "vue-axios";
+
+Vue.use(VueAxios, axios);
 Vue.use(BackToTop);
 Vue.use(browserDetect);
 Vue.config.productionTip = false;
