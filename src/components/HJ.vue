@@ -53,7 +53,7 @@
       </v-card>
     </v-menu>
           <v-divider class="my-3"></v-divider>
-          <div class="title mb-3">반갑습니다</div>
+          <div class="title mb-3">{{content_msg}}</div>
           <v-btn large color="primary" class="mx-0">See more</v-btn>
         </v-flex>
       </v-layout>
@@ -68,7 +68,8 @@
       fav: true,
       menu: false,
       message: false,
-      hints: true
+      hints: true,
+      content_msg: 'orem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
     })
   }
 </script>

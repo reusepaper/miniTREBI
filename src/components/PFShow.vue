@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex xs3 sm6 px-2>
       <v-card class='card-img-1'>
-        <v-img
+        <v-img class='hi'
         :src="require('../assets/goubook1.png')" aspect-ratio="1"></v-img>
         <v-card-title primary-title>
           <div>
@@ -101,9 +101,8 @@
 .card-img-1, .card-img-2{
   overflow: hidden;
 }
-.card-img-1 img{
-  margin-top: -60%;
-}
+
+
 .card-img-2 img{
   margin-top: -68%;
 }
