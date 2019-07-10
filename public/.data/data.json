@@ -1,0 +1,3630 @@
+{
+  "commits": [
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-10T15:52:24.000+09:00",
+      "id": "54d06cd64f1d87bf0ac6ecabd9ed701858677a4c",
+      "message": "mansub | before add graph\n",
+      "refs": "mansub",
+      "space": 1,
+      "time": 0,
+      "parents": [
+        [
+          "f3eb9e580423def259ff9212622139f51cf475eb",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-10T06:20:25.000+00:00",
+      "id": "f3eb9e580423def259ff9212622139f51cf475eb",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "master",
+      "space": 1,
+      "time": 1,
+      "parents": [
+        [
+          "7df472fafa78485efb404905318a097d9a532021",
+          1
+        ],
+        [
+          "48b1003daf4986cdce466ca0acbc0d81cac3c841",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-10T15:19:42.000+09:00",
+      "id": "48b1003daf4986cdce466ca0acbc0d81cac3c841",
+      "message": "rain|merge firebase\n",
+      "refs": "",
+      "space": 3,
+      "time": 2,
+      "parents": [
+        [
+          "7df472fafa78485efb404905318a097d9a532021",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-10T05:49:46.000+00:00",
+      "id": "7df472fafa78485efb404905318a097d9a532021",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 3,
+      "parents": [
+        [
+          "ee32f8f2df2338802697b7aa5cea774cab7295d4",
+          1
+        ],
+        [
+          "956f0fb40a5c1bebf4400b56b67f52516e7418c6",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-10T14:48:44.000+09:00",
+      "id": "956f0fb40a5c1bebf4400b56b67f52516e7418c6",
+      "message": "YDK | profile update\n",
+      "refs": "",
+      "space": 3,
+      "time": 4,
+      "parents": [
+        [
+          "4174fec0aa1b83b4b956751fc3755e5145f3b2db",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-10T11:17:25.000+09:00",
+      "id": "4174fec0aa1b83b4b956751fc3755e5145f3b2db",
+      "message": "YDK | jumbotron bootstrap to vuetify\n",
+      "refs": "",
+      "space": 3,
+      "time": 5,
+      "parents": [
+        [
+          "ee32f8f2df2338802697b7aa5cea774cab7295d4",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-10T01:45:32.000+00:00",
+      "id": "ee32f8f2df2338802697b7aa5cea774cab7295d4",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 6,
+      "parents": [
+        [
+          "a64404ab7ec828ece31fc24be9cd3be2e61a6225",
+          1
+        ],
+        [
+          "d9bf1ef3d38b45be38e7577947eeafb5cde4305d",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-10T01:45:23.000+00:00",
+      "id": "d9bf1ef3d38b45be38e7577947eeafb5cde4305d",
+      "message": "Merge branch 'master' into 'ydk'\n",
+      "refs": "",
+      "space": 3,
+      "time": 7,
+      "parents": [
+        [
+          "052748408c29a24f298d0ce46ff56c7472f1411f",
+          3
+        ],
+        [
+          "a64404ab7ec828ece31fc24be9cd3be2e61a6225",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-10T10:44:17.000+09:00",
+      "id": "052748408c29a24f298d0ce46ff56c7472f1411f",
+      "message": "YDK | navbar complete\n",
+      "refs": "",
+      "space": 3,
+      "time": 8,
+      "parents": [
+        [
+          "0a918de79d7c4a83a345936e047d7d7ca125657c",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-10T10:32:34.000+09:00",
+      "id": "0a918de79d7c4a83a345936e047d7d7ca125657c",
+      "message": "YDK | navbar update\n",
+      "refs": "",
+      "space": 3,
+      "time": 9,
+      "parents": [
+        [
+          "dee030e3bc6c19d7d6a9f2d51edaf0d3705bf980",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-10T01:31:32.000+00:00",
+      "id": "a64404ab7ec828ece31fc24be9cd3be2e61a6225",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 10,
+      "parents": [
+        [
+          "287204280774ae17f2ac4c570a6c106edd2a68e3",
+          3
+        ],
+        [
+          "c3bd5bd32a58158c760f5525142fbeaae82571b7",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-10T10:29:53.000+09:00",
+      "id": "c3bd5bd32a58158c760f5525142fbeaae82571b7",
+      "message": "ho|Google Analaytics 연결\n",
+      "refs": "",
+      "space": 5,
+      "time": 11,
+      "parents": [
+        [
+          "287204280774ae17f2ac4c570a6c106edd2a68e3",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T09:00:54.000+00:00",
+      "id": "287204280774ae17f2ac4c570a6c106edd2a68e3",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 12,
+      "parents": [
+        [
+          "a769e66ae3413489a8f1dfad0702051c8b91b691",
+          1
+        ],
+        [
+          "1de126f6223e9240cf12c45138659b747281cff0",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:59:55.000+09:00",
+      "id": "1de126f6223e9240cf12c45138659b747281cff0",
+      "message": "ho|header\n",
+      "refs": "",
+      "space": 3,
+      "time": 13,
+      "parents": [
+        [
+          "de0939b63a4c1f969bc8d1d6546259cb95b284cd",
+          3
+        ],
+        [
+          "a769e66ae3413489a8f1dfad0702051c8b91b691",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:58:48.000+00:00",
+      "id": "a769e66ae3413489a8f1dfad0702051c8b91b691",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 14,
+      "parents": [
+        [
+          "dee030e3bc6c19d7d6a9f2d51edaf0d3705bf980",
+          3
+        ],
+        [
+          "21ac0d908943e9cb1bae216f5b7fb7812c6ccf98",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:58:23.000+09:00",
+      "id": "de0939b63a4c1f969bc8d1d6546259cb95b284cd",
+      "message": "ho|header\n",
+      "refs": "",
+      "space": 3,
+      "time": 15,
+      "parents": [
+        [
+          "dee030e3bc6c19d7d6a9f2d51edaf0d3705bf980",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:58:11.000+09:00",
+      "id": "21ac0d908943e9cb1bae216f5b7fb7812c6ccf98",
+      "message": "mansub | gitlab commits\n",
+      "refs": "",
+      "space": 5,
+      "time": 16,
+      "parents": [
+        [
+          "d4e070d803d5afe80b2899d3e6cc1540f64495d0",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:55:28.000+09:00",
+      "id": "d4e070d803d5afe80b2899d3e6cc1540f64495d0",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 17,
+      "parents": [
+        [
+          "b6cf4193d565077876ffc7bc9cdb55d6657e889e",
+          5
+        ],
+        [
+          "dee030e3bc6c19d7d6a9f2d51edaf0d3705bf980",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:55:12.000+00:00",
+      "id": "dee030e3bc6c19d7d6a9f2d51edaf0d3705bf980",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 18,
+      "parents": [
+        [
+          "d618d41405c4d458e19b4d92a5ec56e9f0db583b",
+          3
+        ],
+        [
+          "b4f870cc939806e3fc254be4ec4bb85545cde9fe",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:54:08.000+09:00",
+      "id": "b4f870cc939806e3fc254be4ec4bb85545cde9fe",
+      "message": "ho|merge\n",
+      "refs": "",
+      "space": 5,
+      "time": 19,
+      "parents": [
+        [
+          "4ddf020d0ab62ee011a7d395dc0272022999b76a",
+          5
+        ],
+        [
+          "d618d41405c4d458e19b4d92a5ec56e9f0db583b",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:53:46.000+09:00",
+      "id": "4ddf020d0ab62ee011a7d395dc0272022999b76a",
+      "message": "ho|merge\n",
+      "refs": "",
+      "space": 5,
+      "time": 20,
+      "parents": [
+        [
+          "267679cec4d645c4fadc4f66d0c4262f46114cd9",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:49:27.000+09:00",
+      "id": "b6cf4193d565077876ffc7bc9cdb55d6657e889e",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 21,
+      "parents": [
+        [
+          "f4202e036dcae5c2ab33f3ff97bb80019f295db9",
+          5
+        ],
+        [
+          "d618d41405c4d458e19b4d92a5ec56e9f0db583b",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:49:23.000+09:00",
+      "id": "f4202e036dcae5c2ab33f3ff97bb80019f295db9",
+      "message": "mansub | temp commit\n",
+      "refs": "",
+      "space": 5,
+      "time": 22,
+      "parents": [
+        [
+          "95d116389ca1ccc9a83425a3c2abc7f170f02470",
+          5
+        ],
+        [
+          "a16ef47b270b1c665b67a5d45ac13e88a9249d99",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:48:43.000+00:00",
+      "id": "d618d41405c4d458e19b4d92a5ec56e9f0db583b",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 23,
+      "parents": [
+        [
+          "a16ef47b270b1c665b67a5d45ac13e88a9249d99",
+          3
+        ],
+        [
+          "c56eb62e7a62eca0c09d70b8728e578809e81a7f",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T17:47:48.000+09:00",
+      "id": "c56eb62e7a62eca0c09d70b8728e578809e81a7f",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into rain\n",
+      "refs": "",
+      "space": 5,
+      "time": 24,
+      "parents": [
+        [
+          "305e22f3f4442d59677e102eccf4626104048bcb",
+          5
+        ],
+        [
+          "a16ef47b270b1c665b67a5d45ac13e88a9249d99",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:45:30.000+09:00",
+      "id": "95d116389ca1ccc9a83425a3c2abc7f170f02470",
+      "message": "mansub | before pull\n",
+      "refs": "",
+      "space": 5,
+      "time": 25,
+      "parents": [
+        [
+          "4a2a3ae9948786f6f8ba904d5a7592f2b34c0288",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T17:45:09.000+09:00",
+      "id": "305e22f3f4442d59677e102eccf4626104048bcb",
+      "message": "rain|signin|signout\"\n",
+      "refs": "",
+      "space": 5,
+      "time": 26,
+      "parents": [
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:44:28.000+00:00",
+      "id": "a16ef47b270b1c665b67a5d45ac13e88a9249d99",
+      "message": "Merge branch 'yeon' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 27,
+      "parents": [
+        [
+          "259754eec6a7df3e2e978720f63b8e15aa5c153a",
+          3
+        ],
+        [
+          "1f37e6dedacdbf2f2afd0e1d11148e5853fc9a7d",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:42:35.000+09:00",
+      "id": "4a2a3ae9948786f6f8ba904d5a7592f2b34c0288",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 28,
+      "parents": [
+        [
+          "979d0a425d109eee57e2f723f648fe12cafb5da2",
+          5
+        ],
+        [
+          "259754eec6a7df3e2e978720f63b8e15aa5c153a",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:42:29.000+09:00",
+      "id": "1f37e6dedacdbf2f2afd0e1d11148e5853fc9a7d",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into yeon\n",
+      "refs": "",
+      "space": 5,
+      "time": 29,
+      "parents": [
+        [
+          "8ebb012c33b3ee0dff6d5021f71fa528cff466ba",
+          5
+        ],
+        [
+          "259754eec6a7df3e2e978720f63b8e15aa5c153a",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:42:12.000+00:00",
+      "id": "259754eec6a7df3e2e978720f63b8e15aa5c153a",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 30,
+      "parents": [
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          3
+        ],
+        [
+          "e52298d26944d6bcecc9fea3274d817016a744a2",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T17:41:41.000+09:00",
+      "id": "e52298d26944d6bcecc9fea3274d817016a744a2",
+      "message": "YDK|div end file add\n",
+      "refs": "",
+      "space": 5,
+      "time": 31,
+      "parents": [
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:40:14.000+09:00",
+      "id": "8ebb012c33b3ee0dff6d5021f71fa528cff466ba",
+      "message": "Edit header bug\n",
+      "refs": "",
+      "space": 5,
+      "time": 32,
+      "parents": [
+        [
+          "6d196a2be08f050eedd17415c1087bf169acecb7",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:39:50.000+09:00",
+      "id": "6d196a2be08f050eedd17415c1087bf169acecb7",
+      "message": "Show Postlist\n",
+      "refs": "",
+      "space": 5,
+      "time": 33,
+      "parents": [
+        [
+          "300df9b3821f98d7f91ed3d729f3f0d44eef8ba7",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:28:26.000+09:00",
+      "id": "979d0a425d109eee57e2f723f648fe12cafb5da2",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 34,
+      "parents": [
+        [
+          "64d9007c0bb2290ccb3bdcb0b4b3e43bf463c7af",
+          5
+        ],
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:28:21.000+09:00",
+      "id": "64d9007c0bb2290ccb3bdcb0b4b3e43bf463c7af",
+      "message": "mansub | pakage.json change\n",
+      "refs": "",
+      "space": 5,
+      "time": 35,
+      "parents": [
+        [
+          "f668f84dfc8b16fa31a3d6abb3b02c440d82914f",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:26:12.000+09:00",
+      "id": "300df9b3821f98d7f91ed3d729f3f0d44eef8ba7",
+      "message": "merge\n",
+      "refs": "",
+      "space": 5,
+      "time": 36,
+      "parents": [
+        [
+          "ea04b70716a0092f34619758e7b139aceb35d31c",
+          5
+        ],
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:23:32.000+09:00",
+      "id": "267679cec4d645c4fadc4f66d0c4262f46114cd9",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into ho\n",
+      "refs": "",
+      "space": 5,
+      "time": 37,
+      "parents": [
+        [
+          "4226bf9f7a52653ac5ef1f8fbdc7aaa82f6eb10c",
+          5
+        ],
+        [
+          "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:23:23.000+00:00",
+      "id": "10d198a076ebceb945603ebd2345f4a5a8f8e549",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 38,
+      "parents": [
+        [
+          "7b31fc9194b789d698c5698db4930aa590d3e464",
+          3
+        ],
+        [
+          "c75c2cbcbe98feb50953c67be97ca4c84bbc50b1",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:22:57.000+09:00",
+      "id": "ea04b70716a0092f34619758e7b139aceb35d31c",
+      "message": "delete package\n",
+      "refs": "",
+      "space": 5,
+      "time": 39,
+      "parents": [
+        [
+          "4a838ea55d54afc43a90c21976d6ca31ac4654b7",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T17:22:35.000+09:00",
+      "id": "c75c2cbcbe98feb50953c67be97ca4c84bbc50b1",
+      "message": "YDK|merging\n",
+      "refs": "",
+      "space": 5,
+      "time": 40,
+      "parents": [
+        [
+          "cd0400d0925ffef63244ae606cc280b9c75d1a03",
+          5
+        ],
+        [
+          "7b31fc9194b789d698c5698db4930aa590d3e464",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T17:18:59.000+09:00",
+      "id": "cd0400d0925ffef63244ae606cc280b9c75d1a03",
+      "message": "YDK|merging\n",
+      "refs": "",
+      "space": 5,
+      "time": 41,
+      "parents": [
+        [
+          "040bd856e04bfaa807862ebd2b8e288e627a9cd8",
+          5
+        ],
+        [
+          "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:18:40.000+09:00",
+      "id": "f668f84dfc8b16fa31a3d6abb3b02c440d82914f",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 42,
+      "parents": [
+        [
+          "d95f352768a485d61a0558399e5ae1bab5ac838d",
+          5
+        ],
+        [
+          "7b31fc9194b789d698c5698db4930aa590d3e464",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:18:36.000+09:00",
+      "id": "4226bf9f7a52653ac5ef1f8fbdc7aaa82f6eb10c",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into ho\n",
+      "refs": "",
+      "space": 5,
+      "time": 43,
+      "parents": [
+        [
+          "2dee56e622ddbf1f1e2a441d353c74e01fb0864c",
+          5
+        ],
+        [
+          "7b31fc9194b789d698c5698db4930aa590d3e464",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T17:18:28.000+09:00",
+      "id": "2dee56e622ddbf1f1e2a441d353c74e01fb0864c",
+      "message": "ho|pakage.json\n",
+      "refs": "",
+      "space": 5,
+      "time": 44,
+      "parents": [
+        [
+          "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:18:23.000+09:00",
+      "id": "4a838ea55d54afc43a90c21976d6ca31ac4654b7",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into yeon\n",
+      "refs": "",
+      "space": 5,
+      "time": 45,
+      "parents": [
+        [
+          "1af8c0046bb5027577d37648a26e0b555b2e9deb",
+          5
+        ],
+        [
+          "7b31fc9194b789d698c5698db4930aa590d3e464",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T17:17:41.000+09:00",
+      "id": "1af8c0046bb5027577d37648a26e0b555b2e9deb",
+      "message": "Create Postlistpage\n",
+      "refs": "",
+      "space": 5,
+      "time": 46,
+      "parents": [
+        [
+          "ac79b94febacc8ba7db72e0169c5cbbdcbe7096a",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:17:14.000+00:00",
+      "id": "7b31fc9194b789d698c5698db4930aa590d3e464",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 47,
+      "parents": [
+        [
+          "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+          3
+        ],
+        [
+          "f54a677e39dec4bb266b5a846598bb9a10392fa2",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T08:17:03.000+00:00",
+      "id": "f54a677e39dec4bb266b5a846598bb9a10392fa2",
+      "message": "Merge branch 'master' into 'ydk'\n",
+      "refs": "",
+      "space": 5,
+      "time": 48,
+      "parents": [
+        [
+          "040bd856e04bfaa807862ebd2b8e288e627a9cd8",
+          5
+        ],
+        [
+          "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T17:16:22.000+09:00",
+      "id": "d95f352768a485d61a0558399e5ae1bab5ac838d",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 49,
+      "parents": [
+        [
+          "dae640402cc48f00dccf9a06fd2d7a6b652d04e7",
+          5
+        ],
+        [
+          "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T17:06:42.000+09:00",
+      "id": "040bd856e04bfaa807862ebd2b8e288e627a9cd8",
+      "message": "YDK|UI update\n",
+      "refs": "",
+      "space": 1,
+      "time": 50,
+      "parents": [
+        [
+          "e6232a6b959b0e759abb8eed189837c7c73490cb",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T07:47:04.000+00:00",
+      "id": "28b873cfeb93aeb40ca41398ceb57d16fdb9f2fc",
+      "message": "Merge branch 'yeon' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 51,
+      "parents": [
+        [
+          "9a4a8370045e1b1b14beb290f22d2c9c6ba296a4",
+          3
+        ],
+        [
+          "ac79b94febacc8ba7db72e0169c5cbbdcbe7096a",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T16:45:15.000+09:00",
+      "id": "ac79b94febacc8ba7db72e0169c5cbbdcbe7096a",
+      "message": "merge\n",
+      "refs": "",
+      "space": 3,
+      "time": 52,
+      "parents": [
+        [
+          "264acaf79815ee07e550e2f3796a7fbb0547ae46",
+          3
+        ],
+        [
+          "9a4a8370045e1b1b14beb290f22d2c9c6ba296a4",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-09T16:41:12.000+09:00",
+      "id": "264acaf79815ee07e550e2f3796a7fbb0547ae46",
+      "message": "Add Image\n",
+      "refs": "",
+      "space": 3,
+      "time": 53,
+      "parents": [
+        [
+          "500660c572040e8cfe8b464646783d2285b1a868",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T16:40:20.000+09:00",
+      "id": "dae640402cc48f00dccf9a06fd2d7a6b652d04e7",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 5,
+      "time": 54,
+      "parents": [
+        [
+          "c2a2cbaf97049e1dfdc57eef2d5339e3b1c31f3f",
+          5
+        ],
+        [
+          "9a4a8370045e1b1b14beb290f22d2c9c6ba296a4",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T16:40:14.000+09:00",
+      "id": "c2a2cbaf97049e1dfdc57eef2d5339e3b1c31f3f",
+      "message": "mansub | get Commit\n",
+      "refs": "",
+      "space": 5,
+      "time": 55,
+      "parents": [
+        [
+          "4aa6d4dba18f61c9c04b8c5eb85b8ccfa665efe8",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T07:39:37.000+00:00",
+      "id": "9a4a8370045e1b1b14beb290f22d2c9c6ba296a4",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 56,
+      "parents": [
+        [
+          "500660c572040e8cfe8b464646783d2285b1a868",
+          3
+        ],
+        [
+          "ff574cf56b2f3b9c18c711b981e7776e3efe3a0c",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T16:39:12.000+09:00",
+      "id": "ff574cf56b2f3b9c18c711b981e7776e3efe3a0c",
+      "message": "ho|Firebase deploy\n",
+      "refs": "",
+      "space": 5,
+      "time": 57,
+      "parents": [
+        [
+          "bf46cb52529d7a83c3f24dbf550c98ed2d5d5c64",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T15:22:32.000+09:00",
+      "id": "e6232a6b959b0e759abb8eed189837c7c73490cb",
+      "message": "YDK | 즐겨찾기 버튼 추가\n",
+      "refs": "",
+      "space": 1,
+      "time": 58,
+      "parents": [
+        [
+          "4dbedcabb41bd00f8511a43a9db519d013b6b20e",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T15:00:24.000+09:00",
+      "id": "4dbedcabb41bd00f8511a43a9db519d013b6b20e",
+      "message": "YDK|header,footer level up\n",
+      "refs": "",
+      "space": 1,
+      "time": 59,
+      "parents": [
+        [
+          "2a09d2f2668d7eba3e7460fef3a34e20fa16c7e6",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T05:07:42.000+00:00",
+      "id": "500660c572040e8cfe8b464646783d2285b1a868",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 60,
+      "parents": [
+        [
+          "bf46cb52529d7a83c3f24dbf550c98ed2d5d5c64",
+          1
+        ],
+        [
+          "4aa6d4dba18f61c9c04b8c5eb85b8ccfa665efe8",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T14:07:03.000+09:00",
+      "id": "4aa6d4dba18f61c9c04b8c5eb85b8ccfa665efe8",
+      "message": "mansub | modify dropdown\n",
+      "refs": "",
+      "space": 3,
+      "time": 61,
+      "parents": [
+        [
+          "7cb877ed03ac0053bb5f32c52831059d7825df4d",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T13:54:58.000+09:00",
+      "id": "7cb877ed03ac0053bb5f32c52831059d7825df4d",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 3,
+      "time": 62,
+      "parents": [
+        [
+          "be0d88b5091e0f8968a2bccd6bc32a54be472131",
+          3
+        ],
+        [
+          "bf46cb52529d7a83c3f24dbf550c98ed2d5d5c64",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T13:54:51.000+09:00",
+      "id": "be0d88b5091e0f8968a2bccd6bc32a54be472131",
+      "message": "mansub | gitCommit.vue create\n",
+      "refs": "",
+      "space": 3,
+      "time": 63,
+      "parents": [
+        [
+          "9e6da26563530dce8381dfe91909150b54166b02",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T04:53:55.000+00:00",
+      "id": "bf46cb52529d7a83c3f24dbf550c98ed2d5d5c64",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 64,
+      "parents": [
+        [
+          "9e6da26563530dce8381dfe91909150b54166b02",
+          3
+        ],
+        [
+          "a10de2f8d0891881070643f76cfba68d20d37969",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T13:53:44.000+09:00",
+      "id": "a10de2f8d0891881070643f76cfba68d20d37969",
+      "message": "ho|login modal\n",
+      "refs": "",
+      "space": 5,
+      "time": 65,
+      "parents": [
+        [
+          "9e6da26563530dce8381dfe91909150b54166b02",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T04:51:20.000+00:00",
+      "id": "9e6da26563530dce8381dfe91909150b54166b02",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 66,
+      "parents": [
+        [
+          "7701f65934c768708a010b88c047589bdc896a17",
+          1
+        ],
+        [
+          "055d629c82f962ed959d43bbbe4bb3913c39fabb",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T13:50:21.000+09:00",
+      "id": "055d629c82f962ed959d43bbbe4bb3913c39fabb",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into rain\n",
+      "refs": "",
+      "space": 3,
+      "time": 67,
+      "parents": [
+        [
+          "39b11a621cbf7556939ed20d37388b38fe5e269d",
+          3
+        ],
+        [
+          "7701f65934c768708a010b88c047589bdc896a17",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T13:49:59.000+09:00",
+      "id": "39b11a621cbf7556939ed20d37388b38fe5e269d",
+      "message": "rain|signin choose page 삭제\n",
+      "refs": "",
+      "space": 3,
+      "time": 68,
+      "parents": [
+        [
+          "28ec32ecd72fae237614b0ce109b1bd441dbfdda",
+          3
+        ],
+        [
+          "2a09d2f2668d7eba3e7460fef3a34e20fa16c7e6",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T04:35:20.000+00:00",
+      "id": "7701f65934c768708a010b88c047589bdc896a17",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 69,
+      "parents": [
+        [
+          "29ef0779858d28051df5107025c013b7c9954efd",
+          3
+        ],
+        [
+          "e7f122fc2af1fc0151057c01432e709886cfca8f",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T13:35:01.000+09:00",
+      "id": "e7f122fc2af1fc0151057c01432e709886cfca8f",
+      "message": "master|경로 재설정\n",
+      "refs": "",
+      "space": 5,
+      "time": 70,
+      "parents": [
+        [
+          "29ef0779858d28051df5107025c013b7c9954efd",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T04:31:31.000+00:00",
+      "id": "29ef0779858d28051df5107025c013b7c9954efd",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 71,
+      "parents": [
+        [
+          "2a09d2f2668d7eba3e7460fef3a34e20fa16c7e6",
+          1
+        ],
+        [
+          "cf080dccecb94961acebd4153a010bc0f995f9f7",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T13:31:18.000+09:00",
+      "id": "cf080dccecb94961acebd4153a010bc0f995f9f7",
+      "message": "master|파일명 정정\n",
+      "refs": "",
+      "space": 3,
+      "time": 72,
+      "parents": [
+        [
+          "2a09d2f2668d7eba3e7460fef3a34e20fa16c7e6",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T13:19:57.000+09:00",
+      "id": "28ec32ecd72fae237614b0ce109b1bd441dbfdda",
+      "message": "rain|modify signin\n",
+      "refs": "",
+      "space": 3,
+      "time": 73,
+      "parents": [
+        [
+          "1ffefa9bb981689bd7000dd360e90e68970d10d1",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T04:19:54.000+00:00",
+      "id": "2a09d2f2668d7eba3e7460fef3a34e20fa16c7e6",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 74,
+      "parents": [
+        [
+          "1ffefa9bb981689bd7000dd360e90e68970d10d1",
+          1
+        ],
+        [
+          "18ce11d2129b1d975de65b557a4e6fa9b55569f7",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T13:19:38.000+09:00",
+      "id": "18ce11d2129b1d975de65b557a4e6fa9b55569f7",
+      "message": "ho|SignIn modal\n",
+      "refs": "",
+      "space": 3,
+      "time": 75,
+      "parents": [
+        [
+          "1ffefa9bb981689bd7000dd360e90e68970d10d1",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T03:05:58.000+00:00",
+      "id": "1ffefa9bb981689bd7000dd360e90e68970d10d1",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 76,
+      "parents": [
+        [
+          "06964491140ef2fb4ff0a30440df7d8586565f8c",
+          1
+        ],
+        [
+          "03ef03c9da3a862645621fab3e3f715a6fc5c6ab",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T12:04:39.000+09:00",
+      "id": "03ef03c9da3a862645621fab3e3f715a6fc5c6ab",
+      "message": "YDK | chrome detector update\n",
+      "refs": "",
+      "space": 3,
+      "time": 77,
+      "parents": [
+        [
+          "5e371de82a4c5d4dea90f4550afb981c3099c58e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T02:49:17.000+00:00",
+      "id": "06964491140ef2fb4ff0a30440df7d8586565f8c",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 78,
+      "parents": [
+        [
+          "bfbaa29f1eb4b489d3087158dae88e4c9a76a1e8",
+          1
+        ],
+        [
+          "5e371de82a4c5d4dea90f4550afb981c3099c58e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T11:47:11.000+09:00",
+      "id": "5e371de82a4c5d4dea90f4550afb981c3099c58e",
+      "message": "npm install vue-browser-detect-plugin\n",
+      "refs": "",
+      "space": 3,
+      "time": 79,
+      "parents": [
+        [
+          "bfbaa29f1eb4b489d3087158dae88e4c9a76a1e8",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T02:36:01.000+00:00",
+      "id": "bfbaa29f1eb4b489d3087158dae88e4c9a76a1e8",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 80,
+      "parents": [
+        [
+          "25e59d2892d38d4f13589b4ceb6fe7c056ba7bcf",
+          1
+        ],
+        [
+          "5af526a5c10202f7abc1fdf91794984dc109cab1",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T11:35:36.000+09:00",
+      "id": "5af526a5c10202f7abc1fdf91794984dc109cab1",
+      "message": "mansub | commit\n",
+      "refs": "",
+      "space": 3,
+      "time": 81,
+      "parents": [
+        [
+          "688ea6ded6223a36112bb9f9b93622fd650c27d2",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T11:20:11.000+09:00",
+      "id": "688ea6ded6223a36112bb9f9b93622fd650c27d2",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into mansub\n",
+      "refs": "",
+      "space": 3,
+      "time": 82,
+      "parents": [
+        [
+          "92814694934db72c15b0d372cb093525c88d2611",
+          3
+        ],
+        [
+          "25e59d2892d38d4f13589b4ceb6fe7c056ba7bcf",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T11:20:02.000+09:00",
+      "id": "92814694934db72c15b0d372cb093525c88d2611",
+      "message": "mansub | commit before pull\n",
+      "refs": "",
+      "space": 3,
+      "time": 83,
+      "parents": [
+        [
+          "4970a62b5930e130f36a1d534a20f6f21ede63d0",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T02:08:01.000+00:00",
+      "id": "25e59d2892d38d4f13589b4ceb6fe7c056ba7bcf",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 84,
+      "parents": [
+        [
+          "d09a8ef2f55f81cd115a95b07f1280e456f32d44",
+          3
+        ],
+        [
+          "9fdc92751ccdde1faa1f517a291cce60210fbac2",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T10:47:32.000+09:00",
+      "id": "9fdc92751ccdde1faa1f517a291cce60210fbac2",
+      "message": "ho|error\n",
+      "refs": "",
+      "space": 5,
+      "time": 85,
+      "parents": [
+        [
+          "d09a8ef2f55f81cd115a95b07f1280e456f32d44",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T01:39:39.000+00:00",
+      "id": "d09a8ef2f55f81cd115a95b07f1280e456f32d44",
+      "message": "Merge branch 'ydk' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 86,
+      "parents": [
+        [
+          "4970a62b5930e130f36a1d534a20f6f21ede63d0",
+          1
+        ],
+        [
+          "3b8d6e17fa6edd04c7d06fce307947bc4049f631",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T01:24:25.000+00:00",
+      "id": "3b8d6e17fa6edd04c7d06fce307947bc4049f631",
+      "message": "Merge branch 'master' into 'ydk'\n",
+      "refs": "",
+      "space": 3,
+      "time": 87,
+      "parents": [
+        [
+          "2780559f1cfb335585e3f55370c87e570b6321a5",
+          3
+        ],
+        [
+          "4970a62b5930e130f36a1d534a20f6f21ede63d0",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "dkyou7@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/b0b62f2faf3e5f0c978bf2488277b77d?s=40&d=wavatar",
+        "name": "youdongkwan"
+      },
+      "date": "2019-07-09T10:23:41.000+09:00",
+      "id": "2780559f1cfb335585e3f55370c87e570b6321a5",
+      "message": "ydk|merge\n",
+      "refs": "",
+      "space": 3,
+      "time": 88,
+      "parents": [
+        [
+          "c0b44579cfe7a44fd0cebe6d47f2e270c9b1f113",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T01:21:15.000+00:00",
+      "id": "4970a62b5930e130f36a1d534a20f6f21ede63d0",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 89,
+      "parents": [
+        [
+          "c46ba6190cad0ef5e534a1bda0735795b8675ecf",
+          3
+        ],
+        [
+          "79b95dfc2f693f713e3076daf66a0f37d3f3aec2",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-09T10:20:49.000+09:00",
+      "id": "79b95dfc2f693f713e3076daf66a0f37d3f3aec2",
+      "message": "ho|Sidebar\n",
+      "refs": "",
+      "space": 5,
+      "time": 90,
+      "parents": [
+        [
+          "c46ba6190cad0ef5e534a1bda0735795b8675ecf",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T01:16:03.000+00:00",
+      "id": "c46ba6190cad0ef5e534a1bda0735795b8675ecf",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 91,
+      "parents": [
+        [
+          "3f6809017f22dc6a39b09f9a232b9032df672e69",
+          1
+        ],
+        [
+          "103578de0f067547528d73e603de53beae81a13d",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-09T10:14:22.000+09:00",
+      "id": "103578de0f067547528d73e603de53beae81a13d",
+      "message": "rain|modify signin_up page\n",
+      "refs": "",
+      "space": 3,
+      "time": 92,
+      "parents": [
+        [
+          "3f6809017f22dc6a39b09f9a232b9032df672e69",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-09T00:41:22.000+00:00",
+      "id": "3f6809017f22dc6a39b09f9a232b9032df672e69",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 93,
+      "parents": [
+        [
+          "c0b44579cfe7a44fd0cebe6d47f2e270c9b1f113",
+          1
+        ],
+        [
+          "ec6a90a15b55646a9bafb0b13c78d76d77ec98f7",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-09T09:40:37.000+09:00",
+      "id": "ec6a90a15b55646a9bafb0b13c78d76d77ec98f7",
+      "message": "mansub | add geolocation\n",
+      "refs": "",
+      "space": 3,
+      "time": 94,
+      "parents": [
+        [
+          "c0b44579cfe7a44fd0cebe6d47f2e270c9b1f113",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T09:01:37.000+00:00",
+      "id": "c0b44579cfe7a44fd0cebe6d47f2e270c9b1f113",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 95,
+      "parents": [
+        [
+          "01aea199de7197f00812ac8e03f539182349d6ce",
+          1
+        ],
+        [
+          "e67b3eea57727fd287473fdd7e508db47fca2c03",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T18:01:06.000+09:00",
+      "id": "e67b3eea57727fd287473fdd7e508db47fca2c03",
+      "message": "modified Footer\n",
+      "refs": "",
+      "space": 3,
+      "time": 96,
+      "parents": [
+        [
+          "1daf099189a65376f24b77f8b7f4b12d9f2c75b9",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T09:00:06.000+00:00",
+      "id": "01aea199de7197f00812ac8e03f539182349d6ce",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 97,
+      "parents": [
+        [
+          "2d9c02e7c0d6d0b98b7b47823a22e7e85e6c5c81",
+          1
+        ],
+        [
+          "956f158a8baa8786718018e2fbc8f1ce1aee1190",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T17:59:22.000+09:00",
+      "id": "956f158a8baa8786718018e2fbc8f1ce1aee1190",
+      "message": "ho|pakage-lock\n",
+      "refs": "",
+      "space": 3,
+      "time": 98,
+      "parents": [
+        [
+          "2d9c02e7c0d6d0b98b7b47823a22e7e85e6c5c81",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:25:38.000+00:00",
+      "id": "2d9c02e7c0d6d0b98b7b47823a22e7e85e6c5c81",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 99,
+      "parents": [
+        [
+          "8fb5c2988aa32e0bf5546806637ab1f68c77536f",
+          1
+        ],
+        [
+          "1daf099189a65376f24b77f8b7f4b12d9f2c75b9",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T17:24:10.000+09:00",
+      "id": "1daf099189a65376f24b77f8b7f4b12d9f2c75b9",
+      "message": "mansub | data change function\n",
+      "refs": "",
+      "space": 3,
+      "time": 100,
+      "parents": [
+        [
+          "8fb5c2988aa32e0bf5546806637ab1f68c77536f",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:21:58.000+00:00",
+      "id": "8fb5c2988aa32e0bf5546806637ab1f68c77536f",
+      "message": "Merge branch 'yeon' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 101,
+      "parents": [
+        [
+          "942683708c2670b55061af9c8bbce06bef230d9a",
+          1
+        ],
+        [
+          "4ab1c5fe53661954b1599d5fda897fbd38d55aa7",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T17:20:09.000+09:00",
+      "id": "4ab1c5fe53661954b1599d5fda897fbd38d55aa7",
+      "message": "Merge branch 'master' of https://lab.ssafy.com/leeiopd/webmobile-sub2 into yeon\n",
+      "refs": "",
+      "space": 3,
+      "time": 102,
+      "parents": [
+        [
+          "6843bec0d141e407f355db49e283b70253f40eba",
+          3
+        ],
+        [
+          "942683708c2670b55061af9c8bbce06bef230d9a",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T17:17:54.000+09:00",
+      "id": "6843bec0d141e407f355db49e283b70253f40eba",
+      "message": "Edit files\n",
+      "refs": "",
+      "space": 3,
+      "time": 103,
+      "parents": [
+        [
+          "dea2acbd90bf95bd7e00fcf9219896ccc6db5e7e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:13:55.000+00:00",
+      "id": "942683708c2670b55061af9c8bbce06bef230d9a",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 104,
+      "parents": [
+        [
+          "d9a1fc37618f8e2ff94890d95888a34a48a72b74",
+          3
+        ],
+        [
+          "0044c6065e20e1c2d28d78301dfacfab2b060f0a",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:13:48.000+00:00",
+      "id": "0044c6065e20e1c2d28d78301dfacfab2b060f0a",
+      "message": "Merge branch 'master' into 'ho'\n",
+      "refs": "",
+      "space": 5,
+      "time": 105,
+      "parents": [
+        [
+          "72eacd9950cbff76aeb5ce9ef6c3d8b0538089ee",
+          5
+        ],
+        [
+          "d9a1fc37618f8e2ff94890d95888a34a48a72b74",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:12:34.000+00:00",
+      "id": "d9a1fc37618f8e2ff94890d95888a34a48a72b74",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 106,
+      "parents": [
+        [
+          "826c2b72260805b368f973d77502c222b33c1b30",
+          3
+        ],
+        [
+          "b2868604ed0095d2ef71446a67c5589966b764c4",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T17:12:04.000+09:00",
+      "id": "b2868604ed0095d2ef71446a67c5589966b764c4",
+      "message": "mansub | remove main.js geolocation\n",
+      "refs": "",
+      "space": 5,
+      "time": 107,
+      "parents": [
+        [
+          "51cda5d5d16c71546a2121a0f8122a4572ec6814",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T17:11:49.000+09:00",
+      "id": "72eacd9950cbff76aeb5ce9ef6c3d8b0538089ee",
+      "message": "juho|Sidebar\n",
+      "refs": "",
+      "space": 5,
+      "time": 108,
+      "parents": [
+        [
+          "312d32a3e26a135cbb07eba9485393715ad35421",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:11:05.000+00:00",
+      "id": "826c2b72260805b368f973d77502c222b33c1b30",
+      "message": "Merge branch 'yeon' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 109,
+      "parents": [
+        [
+          "30af9b5b806c218928f19d6ce61bb5e64f656a85",
+          3
+        ],
+        [
+          "20ea24f2457b731ca5d50bc858494455a434579a",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:10:55.000+00:00",
+      "id": "20ea24f2457b731ca5d50bc858494455a434579a",
+      "message": "Merge branch 'master' into 'yeon'\n",
+      "refs": "",
+      "space": 5,
+      "time": 110,
+      "parents": [
+        [
+          "dea2acbd90bf95bd7e00fcf9219896ccc6db5e7e",
+          5
+        ],
+        [
+          "30af9b5b806c218928f19d6ce61bb5e64f656a85",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:09:58.000+00:00",
+      "id": "30af9b5b806c218928f19d6ce61bb5e64f656a85",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 111,
+      "parents": [
+        [
+          "24dae3c5c218dfbd4c2a4be21ba9ccf6b699d897",
+          3
+        ],
+        [
+          "2536cba259dba9e64de8be1c4117d6f95eef3e4b",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:09:45.000+00:00",
+      "id": "2536cba259dba9e64de8be1c4117d6f95eef3e4b",
+      "message": "Merge branch 'master' into 'rain'\n",
+      "refs": "",
+      "space": 5,
+      "time": 112,
+      "parents": [
+        [
+          "3107ff76e80f60120a8f8ee7aecb5d2844239961",
+          5
+        ],
+        [
+          "24dae3c5c218dfbd4c2a4be21ba9ccf6b699d897",
+          7
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T17:07:53.000+09:00",
+      "id": "3107ff76e80f60120a8f8ee7aecb5d2844239961",
+      "message": "rain|add login page\n",
+      "refs": "",
+      "space": 5,
+      "time": 113,
+      "parents": [
+        [
+          "6083dd3dab05c8f6a8b1b6d98620b2afcc6d6ebd",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T17:07:13.000+09:00",
+      "id": "6083dd3dab05c8f6a8b1b6d98620b2afcc6d6ebd",
+      "message": "rain|create post 위치 조절\n",
+      "refs": "",
+      "space": 5,
+      "time": 114,
+      "parents": [
+        [
+          "312d32a3e26a135cbb07eba9485393715ad35421",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T17:06:18.000+09:00",
+      "id": "dea2acbd90bf95bd7e00fcf9219896ccc6db5e7e",
+      "message": "yeon|Change WMHeader UI\n",
+      "refs": "",
+      "space": 1,
+      "time": 115,
+      "parents": [
+        [
+          "219ab2fa44882c197fc6c079742f606f35a162da",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T08:05:46.000+00:00",
+      "id": "24dae3c5c218dfbd4c2a4be21ba9ccf6b699d897",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 116,
+      "parents": [
+        [
+          "312d32a3e26a135cbb07eba9485393715ad35421",
+          3
+        ],
+        [
+          "51cda5d5d16c71546a2121a0f8122a4572ec6814",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T17:05:05.000+09:00",
+      "id": "51cda5d5d16c71546a2121a0f8122a4572ec6814",
+      "message": "mansub | add openweatherapp\n",
+      "refs": "",
+      "space": 3,
+      "time": 117,
+      "parents": [
+        [
+          "312d32a3e26a135cbb07eba9485393715ad35421",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T16:08:54.000+09:00",
+      "id": "219ab2fa44882c197fc6c079742f606f35a162da",
+      "message": "Edit WMHeader\n",
+      "refs": "",
+      "space": 1,
+      "time": 118,
+      "parents": [
+        [
+          "c0bfffe29bbf30e8795fe3a8fe5530cc74decf34",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T06:43:32.000+00:00",
+      "id": "312d32a3e26a135cbb07eba9485393715ad35421",
+      "message": "Merge branch 'yeon' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 119,
+      "parents": [
+        [
+          "276685c1186ba99022086737996974ab3b630813",
+          1
+        ],
+        [
+          "c0bfffe29bbf30e8795fe3a8fe5530cc74decf34",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T15:40:50.000+09:00",
+      "id": "c0bfffe29bbf30e8795fe3a8fe5530cc74decf34",
+      "message": "Make first WMHeader\n",
+      "refs": "",
+      "space": 3,
+      "time": 120,
+      "parents": [
+        [
+          "276685c1186ba99022086737996974ab3b630813",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T06:26:41.000+00:00",
+      "id": "276685c1186ba99022086737996974ab3b630813",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 121,
+      "parents": [
+        [
+          "4ed43545b90a7fc469c06444c5c5088f84f5f120",
+          1
+        ],
+        [
+          "2e371d366584447a37a916ba7556081941a70b7a",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T15:25:42.000+09:00",
+      "id": "2e371d366584447a37a916ba7556081941a70b7a",
+      "message": "rain|add createpage and markdown editor\n",
+      "refs": "",
+      "space": 3,
+      "time": 122,
+      "parents": [
+        [
+          "4ed43545b90a7fc469c06444c5c5088f84f5f120",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T05:34:42.000+00:00",
+      "id": "4ed43545b90a7fc469c06444c5c5088f84f5f120",
+      "message": "Merge branch 'mansub' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 123,
+      "parents": [
+        [
+          "a35aea9d81d99196b9d6279501601696753ece4d",
+          1
+        ],
+        [
+          "ddb7041874b401a27c5deea4be0b8d429848f35d",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T14:33:42.000+09:00",
+      "id": "ddb7041874b401a27c5deea4be0b8d429848f35d",
+      "message": "mansub | modify App.vue\n",
+      "refs": "",
+      "space": 3,
+      "time": 124,
+      "parents": [
+        [
+          "0e2d8fe7de9e02fe384a6251951907e7f9f422ea",
+          3
+        ],
+        [
+          "a35aea9d81d99196b9d6279501601696753ece4d",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T04:50:45.000+00:00",
+      "id": "a35aea9d81d99196b9d6279501601696753ece4d",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "github/master master",
+      "space": 3,
+      "time": 125,
+      "parents": [
+        [
+          "37728581a71665e08d016646abc9f5d187b2ff8e",
+          3
+        ],
+        [
+          "b6c9b60e4c175fef1b65a639c8e8d325b49a6344",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T13:49:54.000+09:00",
+      "id": "b6c9b60e4c175fef1b65a639c8e8d325b49a6344",
+      "message": "rain|home.vue\n",
+      "refs": "rain",
+      "space": 5,
+      "time": 126,
+      "parents": [
+        [
+          "7d73267b8df5e5bcbc49a4ba618c1f08b6e58462",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T04:41:11.000+00:00",
+      "id": "37728581a71665e08d016646abc9f5d187b2ff8e",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 127,
+      "parents": [
+        [
+          "2ea2cac94892a5467b38128e13af23358c2e675b",
+          3
+        ],
+        [
+          "7d73267b8df5e5bcbc49a4ba618c1f08b6e58462",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T13:40:09.000+09:00",
+      "id": "7d73267b8df5e5bcbc49a4ba618c1f08b6e58462",
+      "message": "rain|test\n",
+      "refs": "",
+      "space": 3,
+      "time": 128,
+      "parents": [
+        [
+          "93de60005bfb1fb290e7ecbdf977b7e224d6bc7a",
+          3
+        ],
+        [
+          "2ea2cac94892a5467b38128e13af23358c2e675b",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T04:33:58.000+00:00",
+      "id": "2ea2cac94892a5467b38128e13af23358c2e675b",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 3,
+      "time": 129,
+      "parents": [
+        [
+          "abf1cb412695a6c5c4572539702694b1051dba55",
+          3
+        ],
+        [
+          "ad26a8ec351b87c3381b5c4910f128c90941c1b6",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T13:33:56.000+09:00",
+      "id": "0e2d8fe7de9e02fe384a6251951907e7f9f422ea",
+      "message": "mansub | test.txt\n",
+      "refs": "",
+      "space": 3,
+      "time": 130,
+      "parents": [
+        [
+          "763a369f548c84c9923408420b834c6b773001b8",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T13:33:19.000+09:00",
+      "id": "ad26a8ec351b87c3381b5c4910f128c90941c1b6",
+      "message": "ho|test\n",
+      "refs": "ho",
+      "space": 5,
+      "time": 131,
+      "parents": [
+        [
+          "abf1cb412695a6c5c4572539702694b1051dba55",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "reusepaper210@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/818ac116df5d5a61ffd68de5c4ff0bcc?s=40&d=wavatar",
+        "name": "YeonjiLim"
+      },
+      "date": "2019-07-08T13:31:31.000+09:00",
+      "id": "da053c129591fe949bca5b1a713be5a7bb7c09a3",
+      "message": "push test\n",
+      "refs": "yeon",
+      "space": 1,
+      "time": 132,
+      "parents": [
+        [
+          "abf1cb412695a6c5c4572539702694b1051dba55",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T13:31:22.000+09:00",
+      "id": "93de60005bfb1fb290e7ecbdf977b7e224d6bc7a",
+      "message": "rain|test.txt\n",
+      "refs": "",
+      "space": 3,
+      "time": 133,
+      "parents": [
+        [
+          "abf1cb412695a6c5c4572539702694b1051dba55",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "13akstjq@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/872ef1e2438a7b93f8fd943bee9f3ad6?s=40&d=wavatar",
+        "name": "한만섭"
+      },
+      "date": "2019-07-08T13:31:22.000+09:00",
+      "id": "763a369f548c84c9923408420b834c6b773001b8",
+      "message": "mansub | test commit\n",
+      "refs": "",
+      "space": 3,
+      "time": 134,
+      "parents": [
+        [
+          "abf1cb412695a6c5c4572539702694b1051dba55",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T13:30:00.000+09:00",
+      "id": "abf1cb412695a6c5c4572539702694b1051dba55",
+      "message": "master|test\n",
+      "refs": "",
+      "space": 1,
+      "time": 135,
+      "parents": [
+        [
+          "36b8e13dea3889d0facdbe941fb79cd40e7fd8f6",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T01:37:09.000+00:00",
+      "id": "36b8e13dea3889d0facdbe941fb79cd40e7fd8f6",
+      "message": "Merge branch 'ho' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 136,
+      "parents": [
+        [
+          "191dd8c559135a77780db82a5376696b7bc4232c",
+          1
+        ],
+        [
+          "d67619e0ed8130bda96bb7228202dbe1c8226b1b",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T10:36:20.000+09:00",
+      "id": "d67619e0ed8130bda96bb7228202dbe1c8226b1b",
+      "message": "ho|add-gitignore\n",
+      "refs": "",
+      "space": 3,
+      "time": 137,
+      "parents": [
+        [
+          "191dd8c559135a77780db82a5376696b7bc4232c",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T01:33:04.000+00:00",
+      "id": "191dd8c559135a77780db82a5376696b7bc4232c",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 138,
+      "parents": [
+        [
+          "1a24e74b98aa36b36d956ffc67f5e093daf1f712",
+          1
+        ],
+        [
+          "d4339f3433e885cbfdf949e1bcd4375384d00714",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T10:32:27.000+09:00",
+      "id": "d4339f3433e885cbfdf949e1bcd4375384d00714",
+      "message": "rain|edit main.js\n",
+      "refs": "",
+      "space": 3,
+      "time": 139,
+      "parents": [
+        [
+          "1a24e74b98aa36b36d956ffc67f5e093daf1f712",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "이주호"
+      },
+      "date": "2019-07-08T01:22:45.000+00:00",
+      "id": "1a24e74b98aa36b36d956ffc67f5e093daf1f712",
+      "message": "Merge branch 'rain' into 'master'\n",
+      "refs": "",
+      "space": 1,
+      "time": 140,
+      "parents": [
+        [
+          "1935eb089efa39c778b985f9832013655ef3f6b2",
+          1
+        ],
+        [
+          "0bae7cfb1fcd19237b3e7397e8654f41d69132c2",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gpfhddl09@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/ca0edbd4500a8efb88e88a7f8d1bc2e5?s=40&d=wavatar",
+        "name": "sweetrain096"
+      },
+      "date": "2019-07-08T10:19:28.000+09:00",
+      "id": "0bae7cfb1fcd19237b3e7397e8654f41d69132c2",
+      "message": "rain|add vuetify\n",
+      "refs": "",
+      "space": 3,
+      "time": 141,
+      "parents": [
+        [
+          "1935eb089efa39c778b985f9832013655ef3f6b2",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T09:50:08.000+09:00",
+      "id": "1935eb089efa39c778b985f9832013655ef3f6b2",
+      "message": "master|init\n",
+      "refs": "",
+      "space": 1,
+      "time": 142,
+      "parents": [
+        [
+          "4ee8e6d99c90d4113ba8e32d19ea1aced2a75fe6",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "leeiopd@hanmail.net",
+        "icon": "https://secure.gravatar.com/avatar/6311a2315b181e653bf70403fd1f68b9?s=40&d=wavatar",
+        "name": "leeiopd"
+      },
+      "date": "2019-07-08T09:41:37.000+09:00",
+      "id": "4ee8e6d99c90d4113ba8e32d19ea1aced2a75fe6",
+      "message": "init\n",
+      "refs": "",
+      "space": 1,
+      "time": 143,
+      "parents": [
+        [
+          "",
+          1
+        ]
+      ]
+    }
+  ],
+  "days": [
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ]
+  ]
+}

@@ -2,6 +2,7 @@
 <template>
   <v-footer dark height="auto">
     <!-- <WMCommitGraph></WMCommitGraph> -->
+
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
         <div class="button">
@@ -70,8 +71,8 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy,
-    WMCommitGraph
+    Rainy
+    // WMCommitGraph
   },
   mounted() {
     this.getPosition();
