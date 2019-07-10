@@ -2,7 +2,7 @@
 <template>
   <v-footer dark height="auto">
     <!-- <WMCommitGraph></WMCommitGraph> -->
-
+    <Gitlab></Gitlab>
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
         <div class="button">
@@ -59,6 +59,7 @@ import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
 import WMCommitGraph from "./WMCommitGraph";
+import GitlabGraph from "../components/GitlabGraph";
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 export default {
   name: "WMFooter",
@@ -71,7 +72,8 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy
+    Rainy,
+    GitlabGraph
     // WMCommitGraph
   },
   mounted() {
