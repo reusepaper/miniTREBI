@@ -27,6 +27,13 @@
             </v-flex>
           </v-layout>
 
+          <v-layout>
+            <v-flex xs12>
+              <h2 class="headline my-5 text-xs-center">Contact Us</h2>
+              <ContactUs></ContactUs>
+            </v-flex>
+          </v-layout>
+
         </v-container>
       </div>
     </v-flex>
@@ -38,13 +45,15 @@ import HelloWorld from "../components/HelloWorld";
 import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
+import ContactUs from "../components/ContactUs";
 export default {
   components: {
     ImgBanner,
     HelloWorld,
     WMSidebar,
     HJ,
-    PFShow
+    PFShow,
+    ContactUs
   }
 };
 </script>
