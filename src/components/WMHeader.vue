@@ -26,29 +26,16 @@
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
-<template>
-  <v-card color="grey lighten-4" flat height="200px">
-    <v-toolbar color="grey darken-1" dark>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-
-      <v-menu :nudge-width="100">
-        <template v-slot:activator="{ on }">
-          <v-toolbar-title v-on="on">
-            <span>All</span>
-            <v-icon dark>arrow_drop_down</v-icon>
-          </v-toolbar-title>
-        </template>
-
-        <v-list>
-          <v-list-tile
-            v-for="item in items"
-            :key="item"
-            @click=""
-          >
-            <v-list-tile-title v-text="item"></v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on" flat color="white">Writer</v-btn>
+          </template>
+          <v-list>
+            <v-list-tile v-for="(item, index) in items" :key="index" @click="">
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
 
 
         <!-- <v-dialog v-model="dialog" width="500"> -->
