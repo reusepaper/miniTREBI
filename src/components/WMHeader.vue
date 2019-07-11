@@ -7,6 +7,10 @@
       <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
       <v-spacer></v-spacer>
 
+      <v-toolbar-items>
+        <div id="google_translate_element"></div>
+      </v-toolbar-items>
+
       <!-- sdfsdfsdfsdfsd-->
       <v-menu offset-y>
         <template v-slot:activator="{ on }">
@@ -24,9 +28,6 @@
         </v-list>
       </v-menu>
 
-      <v-toolbar-items>
-        <div id="google_translate_element"></div>
-      </v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
