@@ -35,13 +35,10 @@ export default {
           },
           {
             provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-            scopes: [
-              'public_profile',
-              'email',
-            ],
+            scopes: ["public_profile", "email"],
             customParameters: {
               // Forces password re-entry.
-              auth_type: 'reauthenticate'
+              auth_type: "reauthenticate"
             }
           }
         ],
@@ -52,27 +49,27 @@ export default {
             this.currentUser.uid = authResult.user.uid;
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
-            window.location.assign('/');
+            window.location.assign("/");
             return false;
           }
         }
       });
-      
-    // this.$router.push('/');
+
+      // this.$router.push('/');
     },
     redirect() {
-      const {search} = window.location
-      if (search==='') {
-      this.$router.push('/')
+      const { search } = window.location;
+      if (search === "") {
+        this.$router.push("/");
       } else {
-      const tokens = search.replace(/^\?/, '').split('&')
-      // const {returnPath} = tokens.reduce((qs, tkn) => {
-      //   const pair = tkn.split('=')
-      //   qs[pair[0]] = decodeURIComponent(pair[1])
-      //   return qs
-      // }, {})
-      const {returnPath} = '/'
-      this.$router.push('/')
+        const tokens = search.replace(/^\?/, "").split("&");
+        // const {returnPath} = tokens.reduce((qs, tkn) => {
+        //   const pair = tkn.split('=')
+        //   qs[pair[0]] = decodeURIComponent(pair[1])
+        //   return qs
+        // }, {})
+        const { returnPath } = "/";
+        this.$router.push("/");
       }
     }
   },
@@ -85,6 +82,10 @@ export default {
       }
       // console.log(user)
       this.initUI();
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
+      );
     });
   }
 };
