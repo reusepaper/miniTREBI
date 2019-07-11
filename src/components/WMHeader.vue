@@ -34,7 +34,7 @@
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
           <v-list>
-            <v-list-tile v-for="(item, index) in items" :key="index" @click>
+            <v-list-tile v-for="(item, index) in items" :key="index" @click="selectWriter(item.title)" to="/postlist">
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
@@ -113,6 +113,9 @@ export default {
         displayName: ""
       };
       auth.signOut();
+    },
+    selectWriter: function(s_writer){
+      this.$store.state.writer = s_writer;
     }
   },
   mounted: function() {
