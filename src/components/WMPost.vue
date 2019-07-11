@@ -4,7 +4,6 @@
     <v-card-title primary-title>
       <div>
         <div>{{ title }}</div>
-        <span>{{ content }}</span>
       </div>
     </v-card-title>
   </v-card>
