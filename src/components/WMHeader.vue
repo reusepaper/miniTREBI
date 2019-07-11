@@ -6,24 +6,26 @@
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items><div id="google_translate_element"></div></v-toolbar-items>
+      <v-toolbar-items>
+        <div id="google_translate_element"></div>
+      </v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
         <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-          <v-dialog v-model="login_btn" max-width="290">
-            <v-card>
-              <v-card-title class="headline">Log in</v-card-title>
-              <v-card-text>
-                <SignIn></SignIn>
-              </v-card-text>
-              <!-- <v-card-actions>
+        <v-dialog v-model="login_btn" max-width="290">
+          <v-card>
+            <v-card-title class="headline">Log in</v-card-title>
+            <v-card-text>
+              <SignIn></SignIn>
+            </v-card-text>
+            <!-- <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-              </v-card-actions> -->
-            </v-card>
-          </v-dialog>
+            </v-card-actions>-->
+          </v-card>
+        </v-dialog>
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
@@ -115,10 +117,17 @@ export default {
   },
   mounted: function() {
     auth.onAuthStateChanged(user => {
-      console.log(user)
+      console.log(user);
       if (user) this.isLogin = true;
       else this.isLogin = false;
     });
   }
 };
 </script>
+
+<style>
+#google_translate_element {
+  display: flex;
+  align-items: center;
+}
+</style>
