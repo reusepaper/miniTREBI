@@ -30,7 +30,7 @@ export default {
             clientId:
               "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com"
           },
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
             provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
             scopes: ["public_profile", "email"],
@@ -55,6 +55,7 @@ export default {
             return false;
           }
         }
+        // signInSuccessUrl: '/'
       });
 
       // this.$router.push('/');
@@ -81,6 +82,9 @@ export default {
         this.currentUser.uid = user.uid;
         this.currentUser.email = user.email;
         this.currentUser.username = user.displayName;
+      } else {
+        // console.log(user)
+        this.initUI();
       }
       // console.log(user)
       this.initUI();
