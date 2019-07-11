@@ -38,7 +38,6 @@
   </v-layout>
 </template>
 <script>
-import HelloWorld from "../components/HelloWorld";
 // import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
@@ -46,7 +45,6 @@ import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 export default {
   components: {
-    HelloWorld,
     // WMSidebar,
     HJ,
     PFShow,
