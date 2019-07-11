@@ -33,8 +33,7 @@
               <GitlabGraph></GitlabGraph>
             </v-flex>
           </v-layout>
-          
-          
+
           <v-layout>
             <v-flex xs12>
               <!-- 우리에게 연락하고 싶다면 -->
@@ -42,7 +41,6 @@
               <ContactUs></ContactUs>
             </v-flex>
           </v-layout>
-          
         </v-container>
       </div>
     </v-flex>
