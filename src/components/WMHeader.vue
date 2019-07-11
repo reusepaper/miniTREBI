@@ -1,38 +1,45 @@
 <template>
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white" @click="functionHome">
+      <v-btn flat icon to="/" color="white" @click="homelog">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items><div id="google_translate_element"></div></v-toolbar-items>
+      <v-toolbar-items>
+        <div id="google_translate_element"></div>
+      </v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
         <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-          <v-dialog v-model="login_btn" max-width="290">
-            <v-card>
-              <v-card-title class="headline">Log in</v-card-title>
-              <v-card-text>
-                <SignIn></SignIn>
-              </v-card-text>
-              <!-- <v-card-actions>
+        <v-dialog v-model="login_btn" max-width="290">
+          <v-card>
+            <v-card-title class="headline">Log in</v-card-title>
+            <v-card-text>
+              <SignIn></SignIn>
+            </v-card-text>
+            <!-- <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-              </v-card-actions> -->
-            </v-card>
-          </v-dialog>
-        <v-btn to="/post" class="white--text" flat>Post</v-btn>
-        <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
+            </v-card-actions>-->
+          </v-card>
+        </v-dialog>
+        <v-btn to="/post" class="white--text" flat @click="postlog">Post</v-btn>
+        <v-btn to="/portfolio" class="white--text" flat @click>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
           <v-list>
-            <v-list-tile v-for="(item, index) in items" :key="index" @click>
+            <v-list-tile
+              v-for="(item, index) in items"
+              :key="index"
+              @click="selectWriter(item.title)"
+              to="/postlist"
+            >
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
@@ -111,14 +118,41 @@ export default {
         displayName: ""
       };
       auth.signOut();
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/logout"
+      );
+    },
+    selectWriter: function(s_writer) {
+      this.$store.state.writer = s_writer;
+    },
+
+    homelog: function() {
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
+      );
+    },
+    postlog: function() {
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/post"
+      );
     }
   },
   mounted: function() {
     auth.onAuthStateChanged(user => {
-      console.log(user)
+      console.log(user);
       if (user) this.isLogin = true;
       else this.isLogin = false;
     });
   }
 };
 </script>
+
+<style>
+#google_translate_element {
+  display: flex;
+  align-items: center;
+}
+</style>
