@@ -3,7 +3,7 @@
     <v-container fill-height>
       <v-layout align-center>
         <v-flex>
-          <h3 class="display-3">Team TRABI</h3>
+          <h3 class="display-3">Team TREBI</h3>
           <span class="subheading">2반 연지 주호 단비 만섭</span>
           <v-menu :close-on-content-click="false" :nudge-width="200" v-model="menu" offset-x>
             <span slot="activator" class="subheading">동관</span>
