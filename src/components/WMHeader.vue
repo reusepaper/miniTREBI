@@ -4,7 +4,7 @@
       <v-btn flat icon to="/" color="white" @click="homelog">
         <v-icon>home</v-icon>
       </v-btn>
-      <v-toolbar-title class="white--text">TRABI</v-toolbar-title>
+      <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <div id="google_translate_element"></div>
