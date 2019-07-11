@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card hover to="/postview">
     <v-img :src="image" height="200px"></v-img>
     <v-card-title primary-title>
       <div>
