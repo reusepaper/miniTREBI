@@ -63,10 +63,11 @@
       email: '',
       select: null,
       items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4'
+        '유동관',
+        '임연지',
+        '이주호',
+        '한단비',
+        '한만섭'
       ],
       checkbox: false
     }),
