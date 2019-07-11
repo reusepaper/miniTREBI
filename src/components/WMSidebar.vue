@@ -1,10 +1,11 @@
 <template>
   <v-navigation-drawer
+    id="wm_sidebar"
     v-model="drawer"
     :mini-variant.sync="mini"
     stateless
     fixed
-    style="margin-top: 0px;"
+    
   >
     <v-toolbar flat class="transparent">
       <v-list class="pa-0">
@@ -57,3 +58,18 @@ export default {
   }
 };
 </script>
+<style>
+#wm_sidebar{
+  top:64px;
+}
+@media screen and (max-width: 959px) {
+  #wm_sidebar{
+    top:48px;
+  }
+}
+@media screen and (max-width: 715px) {
+  #wm_sidebar{
+    top:56px;
+  }
+}
+</style>
