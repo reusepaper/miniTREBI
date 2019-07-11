@@ -6,9 +6,28 @@
       </v-btn>
       <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
       <v-spacer></v-spacer>
+
       <v-toolbar-items>
         <div id="google_translate_element"></div>
       </v-toolbar-items>
+
+      <!-- sdfsdfsdfsdfsd-->
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" flat color="white">Writer</v-btn>
+        </template>
+        <v-list>
+          <v-list-tile
+            v-for="(item, index) in items"
+            :key="index"
+            @click="selectWriter(item.title)"
+            to="/postlist"
+          >
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
@@ -26,24 +45,6 @@
             </v-card-actions>-->
           </v-card>
         </v-dialog>
-        <v-btn to="/post" class="white--text" flat @click="postlog">Post</v-btn>
-        <v-btn to="/portfolio" class="white--text" flat @click>Portfolio</v-btn>
-        <!-- sdfsdfsdfsdfsd-->
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn v-on="on" flat color="white">Writer</v-btn>
-          </template>
-          <v-list>
-            <v-list-tile
-              v-for="(item, index) in items"
-              :key="index"
-              @click="selectWriter(item.title)"
-              to="/postlist"
-            >
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
 
         <!-- <v-dialog v-model="dialog" width="500"> -->
         <!-- <template v-slot:activator="{ on }">
