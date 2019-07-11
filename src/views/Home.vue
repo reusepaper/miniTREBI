@@ -50,6 +50,12 @@ export default {
     PFShow,
     ContactUs,
     GitlabGraph
+  },
+  mounted: function() {
+    const axios = require("axios");
+    axios.get(
+      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
+    );
   }
 };
 </script>
