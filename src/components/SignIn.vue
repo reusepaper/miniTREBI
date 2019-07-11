@@ -29,6 +29,7 @@ export default {
             // console.
             clientId: '69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com'
           },
+          firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
             provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
             scopes: ["public_profile", "email"],
