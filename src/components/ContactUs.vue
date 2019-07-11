@@ -21,11 +21,27 @@
       v-model="select"
       :items="items"
       :error-messages="selectErrors"
-      label="Item"
+      label="Who?"
       required
       @change="$v.select.$touch()"
       @blur="$v.select.$touch()"
     ></v-select>
+    <v-text-field
+      v-model="email"
+      :error-messages="titleErrors"
+      label="title"
+      required
+      @input="$v.title.$touch()"
+      @blur="$v.title.$touch()"
+    ></v-text-field>
+    <v-text-field
+      v-model="email"
+      :error-messages="emailErrors"
+      label="content"
+      required
+      @input="$v.content.$touch()"
+      @blur="$v.content.$touch()"
+    ></v-text-field>
     <v-checkbox
       v-model="checkbox"
       :error-messages="checkboxErrors"
@@ -62,6 +78,8 @@
       name: '',
       email: '',
       select: null,
+      title:'',
+      content:'',
       items: [
         '유동관',
         '임연지',
@@ -93,6 +111,13 @@
         return errors
       },
       emailErrors () {
+        const errors = []
+        if (!this.$v.email.$dirty) return errors
+        !this.$v.email.email && errors.push('Must be valid e-mail')
+        !this.$v.email.required && errors.push('E-mail is required')
+        return errors
+      },
+      titleErrors () {
         const errors = []
         if (!this.$v.email.$dirty) return errors
         !this.$v.email.email && errors.push('Must be valid e-mail')
