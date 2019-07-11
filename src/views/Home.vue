@@ -61,7 +61,7 @@ export default {
     // WMSidebar,
     HJ,
     PFShow,
-    // ContactUs,
+    ContactUs,
     GitlabGraph
   }
 };
