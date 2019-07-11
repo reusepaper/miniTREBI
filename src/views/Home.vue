@@ -43,13 +43,15 @@ import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
 import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
+import WMGitlabRepo from "../components/WMGitlabRepo";
 export default {
   components: {
     // WMSidebar,
     HJ,
     PFShow,
     ContactUs,
-    GitlabGraph
+    GitlabGraph,
+    WMGitlabRepo
   },
   mounted() {
     const axios = require("axios");

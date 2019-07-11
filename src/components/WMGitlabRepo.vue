@@ -11,7 +11,7 @@
 import GitlabService from "../services/GitlabService";
 import ApexChart from "./ApexChart";
 export default {
-  name: "RepositoryList",
+  name: "WMGitlabRepo",
   props: {
     limits: { type: Number, default: 5 },
     loadMore: { type: Boolean, default: false }
@@ -26,8 +26,8 @@ export default {
     };
   },
   mounted() {
-    this.getGitCommits("6073");
-    // this.getGitRepos("13akstjq");
+    // this.getGitCommits("6073");
+    this.getGitRepos("leeiopd");
   },
   methods: {
     async getGitRepos(userName) {
