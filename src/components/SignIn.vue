@@ -29,7 +29,7 @@ export default {
             // console.
             clientId: '69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com'
           },
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
             provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
             scopes: ["public_profile", "email"],
@@ -49,7 +49,8 @@ export default {
             window.location.assign("/");
             return false;
           }
-        }
+        },
+        // signInSuccessUrl: '/'
       });
 
       // this.$router.push('/');
@@ -76,9 +77,11 @@ export default {
         this.currentUser.uid = user.uid;
         this.currentUser.email = user.email;
         this.currentUser.username = user.displayName;
+      }else{
+        // console.log(user)
+        this.initUI();
       }
-      // console.log(user)
-      this.initUI();
+
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
