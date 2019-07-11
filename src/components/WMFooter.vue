@@ -56,8 +56,6 @@
 import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
-import WMCommitGraph from "./WMCommitGraph";
-import GitlabGraph from "../components/GitlabGraph";
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 export default {
   name: "WMFooter",
@@ -70,8 +68,7 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy,
-    GitlabGraph
+    Rainy
   },
   mounted() {
     this.getPosition();
