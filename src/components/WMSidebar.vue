@@ -4,7 +4,7 @@
     :mini-variant.sync="mini"
     stateless
     fixed
-    style="margin-top: 50px;"
+    style="margin-top: 0px;"
   >
     <v-toolbar flat class="transparent">
       <v-list class="pa-0">
