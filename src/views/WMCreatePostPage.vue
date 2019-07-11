@@ -15,7 +15,7 @@ export default {
   mounted() {
     const axios = require("axios");
     axios.get(
-      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/creatpost"
+      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/creatPost"
     );
   }
 };
