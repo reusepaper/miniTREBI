@@ -311,6 +311,83 @@ export default {
 
 
 
+### facebook login
+
+1. [facebook for developers](<https://developers.facebook.com/>) 페이지에서 새로운 어플리케이션을 만들고 facebook 로그인 설정을 맞춰준다.
+
+   ![1562811473395](img/1562811473395.png)
+
+2. firebase authentication의 로그인 방법에서 facebook을 열고 1번의 설정에서 확인할 수 있는 앱 ID와 비밀번호를 등록한다.
+
+   ![1562811617070](img/1562811617070.png)
+
+   아래에 있는 OAuth 리디렉션 주소를 1번의 유효한 OAuth 리디렉션 URI로 등록해준다.
+
+3. `SignIn.vue`
+
+   ```js
+     methods: {
+       initUI: function() {
+         ui.start("#firebaseui-auth-container", {
+           signInoptions: [
+             firebase.auth.EmailAuthProvider.PROVIDER_ID,
+             {
+               provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+               scopes: [
+                 'public_profile',
+                 'email',
+               ],
+               customParameters: {
+                 // Forces password re-entry.
+                 auth_type: 'reauthenticate'
+               }
+             },
+           ],
+   ```
+
+   firebase 로그인 `signInoptions`에 제공하는 provider를 facebook으로 추가하고, 받아올 scopes로 email과 프로필을 가져온다.
+
+   ![1562811827288](img/1562811827288.png)
+
+   ![1562811934013](img/1562811934013.png)
+
+   다음과 같이 로그인을 할 수 있다.
+
+
+
+
+
+
+
+### google 로그인
+
+1. `SignIn.vue`
+
+   ```js
+     methods: {
+       initUI: function() {
+         ui.start("#firebaseui-auth-container", {
+           signInoptions: [
+             firebase.auth.EmailAuthProvider.PROVIDER_ID,
+             {
+               provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+               authMethod: 'https://accounts.google.com',
+               clientId: 'xxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
+             },
+   ```
+
+2. firebase authentication에서 로그인 방법에 google로그인 열기
+
+   ![1562813075283](img/1562813075283.png)
+
+   여기에서 나온 웹 클라이언트 ID를 1번의 clientId에 넣기
+
+
+
+
+
+
+
 
 
 

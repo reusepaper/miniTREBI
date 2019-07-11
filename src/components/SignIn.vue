@@ -19,6 +19,17 @@ export default {
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
+            // Google provider must be enabled in Firebase Console to support one-tap
+            // sign-up.
+            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            // Required to enable this provider in one-tap sign-up.
+            authMethod: 'https://accounts.google.com',
+            // Required to enable ID token credentials for this provider.
+            // This can be obtained from the Credentials page of the Google APIs
+            // console.
+            clientId: '69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com'
+          },
+          {
             provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
             scopes: [
               'public_profile',
@@ -28,7 +39,7 @@ export default {
               // Forces password re-entry.
               auth_type: 'reauthenticate'
             }
-          },
+          }
         ],
         // Required to enable one-tap sign-up credential helper.
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
