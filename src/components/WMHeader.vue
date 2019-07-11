@@ -6,11 +6,11 @@
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items><div id="google_translate_element"></div></v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
         <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-<<<<<<< HEAD
           <v-dialog v-model="login_btn" max-width="290">
             <v-card>
               <v-card-title class="headline">Log in</v-card-title>
@@ -23,22 +23,7 @@
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
               </v-card-actions> -->
             </v-card>
-          </v-dialog>
-=======
-        <v-dialog v-model="login_btn" max-width="290">
-          <v-card>
-            <v-card-title class="headline">Log in</v-card-title>
-            <v-card-text>
-              <SignIn></SignIn>
-            </v-card-text>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
-              <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
->>>>>>> 6870d54d18591ae70e285cdaa1c87a818c5b9f75
+          </v-dialog>   
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
