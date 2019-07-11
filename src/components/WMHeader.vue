@@ -1,7 +1,7 @@
 <template>
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white">
+      <v-btn flat icon to="/" color="white" @click="functionHome">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
@@ -10,35 +10,19 @@
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
         <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-<<<<<<< HEAD
-          <v-dialog v-model="login_btn" max-width="290">
-            <v-card>
-              <v-card-title class="headline">Log in</v-card-title>
-              <v-card-text>
-                <SignIn></SignIn>
-              </v-card-text>
-              <!-- <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-              </v-card-actions> -->
-            </v-card>
-          </v-dialog>
-=======
         <v-dialog v-model="login_btn" max-width="290">
           <v-card>
             <v-card-title class="headline">Log in</v-card-title>
             <v-card-text>
               <SignIn></SignIn>
             </v-card-text>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
-              <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-            </v-card-actions>
+            <!-- <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
+                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
+            </v-card-actions>-->
           </v-card>
         </v-dialog>
->>>>>>> 6870d54d18591ae70e285cdaa1c87a818c5b9f75
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
@@ -119,23 +103,13 @@ export default {
   }),
   methods: {
     showLoginDialog: function() {},
-    functionHome: function() {
-      axios
-        .get("https://jsonplaceholder.typicode.com/users/")
-        .then(function(response) {
-          console.log("dfasdfsdfasdfsdfsafasdf");
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    },
     logout: function() {
       this.currentUser = {
-          uid: '',
-          email: '',
-          displayName: ''
-      }
-      auth.signOut()
+        uid: "",
+        email: "",
+        displayName: ""
+      };
+      auth.signOut();
     }
   },
   mounted: function() {
