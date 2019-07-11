@@ -8,35 +8,53 @@ admin.initializeApp(functions.config().firebase);
 
 exports.home = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("home");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("home");
   });
 });
 
 exports.post = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("post");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("post");
   });
 });
 
 exports.portfolio = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("portfolio");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("portfolio");
   });
 });
 
 exports.creatpost = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("creatpost");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("creatpost");
   });
 });
 
 exports.login = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("login");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("login");
   });
 });
 exports.logout = functions.https.onRequest((req, res) => {
   cors(request, response, () => {
-    res.status(200).send("logout");
+    res
+      .set({ "Access-Control-Allow-Origin": "*" })
+      .status(200)
+      .send("logout");
   });
 });
