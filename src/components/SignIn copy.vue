@@ -16,10 +16,7 @@ export default {
   methods: {
     initUI: function() {
       ui.start("#firebaseui-auth-container", {
-        signInoptions: [
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        ],
+        signInoptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
         // Required to enable one-tap sign-up credential helper.
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
         callbacks: {

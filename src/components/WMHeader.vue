@@ -16,11 +16,11 @@
               <v-card-text>
                 <SignIn></SignIn>
               </v-card-text>
-              <v-card-actions>
+              <!-- <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
                 <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-              </v-card-actions>
+              </v-card-actions> -->
             </v-card>
           </v-dialog>
         <v-btn to="/post" class="white--text" flat>Post</v-btn>
@@ -112,6 +112,14 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
+    },
+    logout: function() {
+      this.currentUser = {
+          uid: '',
+          email: '',
+          displayName: ''
+      }
+      auth.signOut()
     }
   },
   mounted: function(){
