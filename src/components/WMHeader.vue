@@ -113,16 +113,16 @@ export default {
   methods: {
     showLoginDialog: function() {},
     logout: function() {
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/logout"
+      );
       this.currentUser = {
         uid: "",
         email: "",
         displayName: ""
       };
       auth.signOut();
-      const axios = require("axios");
-      axios.get(
-        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/logout"
-      );
     },
     selectWriter: function(s_writer) {
       this.$store.state.writer = s_writer;
