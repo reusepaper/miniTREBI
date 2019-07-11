@@ -27,6 +27,14 @@
 
           <v-layout>
             <v-flex xs12>
+              <!-- Gitlab Repo 컴포넌트 호출  -->
+              <h2 class="headline my-5 text-xs-center">Gitlab Repo</h2>
+              <WMRepoList></WMRepoList>
+            </v-flex>
+          </v-layout>
+
+          <v-layout>
+            <v-flex xs12>
               <!-- 우리에게 연락하고 싶다면 -->
               <h2 class="headline my-5 text-xs-center">Contact Us</h2>
               <ContactUs></ContactUs>
@@ -43,12 +51,14 @@ import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
 import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
+import WMRepoList from "../components/WMRepoList";
 export default {
   components: {
     // WMSidebar,
     HJ,
     PFShow,
     ContactUs,
+<<<<<<< HEAD
     GitlabGraph
   },
   mounted: function() {
@@ -56,6 +66,10 @@ export default {
     axios.get(
       "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
     );
+=======
+    GitlabGraph,
+    WMRepoList
+>>>>>>> 718c9914d6c2b16e165aa8e8ca74dffbf67e11ba
   }
 };
 </script>
