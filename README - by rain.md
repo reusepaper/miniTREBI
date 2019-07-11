@@ -359,6 +359,33 @@ export default {
 
 
 
+### google 로그인
+
+1. `SignIn.vue`
+
+   ```js
+     methods: {
+       initUI: function() {
+         ui.start("#firebaseui-auth-container", {
+           signInoptions: [
+             firebase.auth.EmailAuthProvider.PROVIDER_ID,
+             {
+               provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+               authMethod: 'https://accounts.google.com',
+               clientId: 'xxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
+             },
+   ```
+
+2. firebase authentication에서 로그인 방법에 google로그인 열기
+
+   ![1562813075283](img/1562813075283.png)
+
+   여기에서 나온 웹 클라이언트 ID를 1번의 clientId에 넣기
+
+
+
+
+
 
 
 
