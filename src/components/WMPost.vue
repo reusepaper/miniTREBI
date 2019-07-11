@@ -16,7 +16,8 @@ export default {
   props: {
     title: { type: String },
     content: { type: String },
-    image: { type: String }
+    image: { type: String },
+    writer: { type: String }
   },
   data() {
     return {};

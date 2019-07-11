@@ -21,14 +21,9 @@
             </v-card-text>
           </v-card>
         </v-dialog>
-<<<<<<< HEAD
-        <v-btn to="/post" class="white--text" flat>Post</v-btn>
-        <v-btn to="/portfolio" class="white--text" flat>Portfolio</v-btn>
-=======
         <v-btn to="/post" class="white--text" flat @click="postlog">Post</v-btn>
         <v-btn to="/portfolio" class="white--text" flat @click>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
->>>>>>> 791bc510f1e4b962da6fdeb6a42aca70e9a01b96
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
@@ -84,7 +79,7 @@ export default {
       );
     },
     selectWriter: function(s_writer) {
-      this.$store.state.writer = s_writer;
+      this.$store.state.writer = s_writer
     },
 
     homelog: function() {
