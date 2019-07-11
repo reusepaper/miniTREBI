@@ -21,6 +21,10 @@ exports.creatPost = functions.https.onRequest((req, res) => {
   res.status(200).send("creatpost");
 });
 
-exports.signin = functions.https.onRequest((req, res) => {
-  res.status(200).send("signin");
+exports.login = functions.https.onRequest((req, res) => {
+  res.status(200).send("login");
+});
+
+exports.logout = functions.https.onRequest((req, res) => {
+  res.status(200).send("logout");
 });
