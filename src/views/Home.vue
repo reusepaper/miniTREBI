@@ -26,7 +26,14 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
-          <GitlabGraph></GitlabGraph>
+          <v-layout>
+            <v-flex xs12>
+              <!-- 프로필 띄워주는 컴포넌트 호출 -->
+              <h2 class="headline my-5 text-xs-center">Gitlab Graph</h2>
+              <GitlabGraph></GitlabGraph>
+            </v-flex>
+          </v-layout>
+          
         </v-container>
       </div>
     </v-flex>
