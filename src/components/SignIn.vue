@@ -47,16 +47,17 @@ export default {
             this.currentUser.uid = authResult.user.uid;
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
-            const axios = require("axios");
-            axios.get(
-              "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
-            );
-            window.location.assign("/");
+            // window.location.assign("/");
             return false;
           }
         }
         // signInSuccessUrl: '/'
       });
+
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
+      );
 
       // this.$router.push('/');
     },
@@ -86,8 +87,11 @@ export default {
         // console.log(user)
         this.initUI();
       }
-      // console.log(user)
-      this.initUI();
+
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
+      );
     });
   }
 };
