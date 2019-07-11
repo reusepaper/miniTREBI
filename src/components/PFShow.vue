@@ -1,6 +1,6 @@
 <template>
-  <v-layout>
-    <v-flex xs3 sm6 px-2>
+  <v-layout row wrap>
+    <v-flex px-2 py-2 xs12 sm6 md3>
       <v-card class="card-img-1">
         <v-img :src="require('../assets/goubook1.png')" aspect-ratio="1" position="center bottom"></v-img>
         <v-card-title primary-title>
@@ -16,7 +16,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs3 sm6 px-2>
+    <v-flex xs12 sm6 px-2 py-2 md3>
       <v-card class="card-img-1">
         <v-img :src="require('../assets/pikachu.jpg')" aspect-ratio="1" position="center bottom"></v-img>
         <v-card-title primary-title>
@@ -32,7 +32,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs3 sm6 px-2>
+    <v-flex xs12 sm6 px-2 py-2 md3>
       <v-card class="card-img-1">
         <v-img :src="require('../assets/hesee.jpg')" aspect-ratio="1" position="center bottom"></v-img>
         <v-card-title primary-title>
@@ -48,7 +48,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs3 sm6 px-2>
+    <v-flex xs12 sm6 md3 py-2 px-2>
       <v-card class="card-img-1">
         <v-img :src="require('../assets/togepi.jpg')" aspect-ratio="1" position="center bottom"></v-img>
         <v-card-title primary-title>
@@ -64,7 +64,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs3 sm6 px-2>
+    <v-flex xs12 sm6 md3 py-2 px-2>
       <v-card class="card-img-1">
         <v-img :src="require('../assets/jammanbo.jpg')" aspect-ratio="1" position="center bottom"></v-img>
         <v-card-title primary-title>
@@ -93,14 +93,4 @@ export default {
 };
 </script>
 <style>
-.card-img-1,
-.card-img-2 {
-  overflow: hidden;
-}
-.card-img-1 img {
-  margin-top: -60%;
-}
-.card-img-2 img {
-  margin-top: -68%;
-}
 </style>
