@@ -1,7 +1,7 @@
 <template>
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white" @click="functionHome">
+      <v-btn flat icon to="/" color="white" @click="homelog">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
@@ -34,7 +34,12 @@
             <v-btn v-on="on" flat color="white">Writer</v-btn>
           </template>
           <v-list>
-            <v-list-tile v-for="(item, index) in items" :key="index" @click>
+            <v-list-tile
+              v-for="(item, index) in items"
+              :key="index"
+              @click="selectWriter(item.title)"
+              to="/postlist"
+            >
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
@@ -113,6 +118,20 @@ export default {
         displayName: ""
       };
       auth.signOut();
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/logout"
+      );
+    },
+    selectWriter: function(s_writer) {
+      this.$store.state.writer = s_writer;
+    },
+
+    homelog: function() {
+      const axios = require("axios");
+      axios.get(
+        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
+      );
     },
     postlog: function() {
       const axios = require("axios");
