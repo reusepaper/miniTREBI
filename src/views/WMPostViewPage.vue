@@ -1,5 +1,9 @@
 <template>
-
+  <v-container mt-5>
+    <v-layout>
+      <WMPostView></WMPostView>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

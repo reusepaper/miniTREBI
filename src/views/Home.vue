@@ -17,7 +17,7 @@
               <PFShow></PFShow>
             </v-flex>
           </v-layout>
-          <v-layout>
+          <v-layout class="mobile-hidden">
             <v-flex xs12>
               <!-- Gitlab Graph 컴포넌트 호출  -->
               <h2 class="headline my-5 text-xs-center">Gitlab Graph</h2>
@@ -60,11 +60,25 @@ export default {
     ContactUs,
     GitlabGraph,
     WMRepoList
+  },
+  mounted: function() {
+    const axios = require("axios");
+    axios.get(
+      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
+    );
   }
 };
 </script>
 <style>
 .content-main {
   margin-top: 60px;
+}
+.mobile-hidden {
+  display: block;
+}
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
 }
 </style>
