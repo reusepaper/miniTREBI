@@ -1,11 +1,12 @@
 <template>
   <div class="hide-overflow" style="position: relative;">
     <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white">
+      <v-btn flat icon to="/" color="white" @click="functionHome">
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TRAVI</v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items><div id="google_translate_element"></div></v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <!-- 로그인 다이얼로그 활성화 -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
@@ -103,16 +104,6 @@ export default {
   }),
   methods: {
     showLoginDialog: function() {},
-    functionHome: function() {
-      axios
-        .get("https://jsonplaceholder.typicode.com/users/")
-        .then(function(response) {
-          console.log("dfasdfsdfasdfsdfsafasdf");
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    },
     logout: function() {
       this.currentUser = {
         uid: "",

@@ -6,17 +6,21 @@ const admin = require("firebase-admin");
 admin.initializeApp(functions.config().firebase);
 
 exports.home = functions.https.onRequest((req, res) => {
-  res.status(200).send("log home");
+  res.status(200).send("home");
 });
 
 exports.post = functions.https.onRequest((req, res) => {
-  res.status(200).send("log post");
+  res.status(200).send("post");
 });
 
 exports.portfolio = functions.https.onRequest((req, res) => {
-  res.status(200).send("log portfolio");
+  res.status(200).send("portfolio");
 });
 
-exports.writer = functions.https.onRequest((req, res) => {
-  res.status(200).send("log writer");
+exports.creatPost = functions.https.onRequest((req, res) => {
+  res.status(200).send("creatpost");
+});
+
+exports.signin = functions.https.onRequest((req, res) => {
+  res.status(200).send("signin");
 });

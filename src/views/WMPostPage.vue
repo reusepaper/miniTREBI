@@ -16,6 +16,12 @@ export default {
   name: "WMPostPage",
   components: {
     WMPostlist
+  },
+  mounted() {
+    const axios = require("axios");
+    axios.get(
+      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/post"
+    );
   }
 };
 </script>
