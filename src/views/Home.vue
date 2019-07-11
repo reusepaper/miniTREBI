@@ -33,7 +33,6 @@
               <GitlabGraph></GitlabGraph>
             </v-flex>
           </v-layout>
-          
         </v-container>
       </div>
     </v-flex>
