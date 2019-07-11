@@ -58,18 +58,14 @@ export default {
     HJ,
     PFShow,
     ContactUs,
-<<<<<<< HEAD
-    GitlabGraph
+    GitlabGraph,
+    WMRepoList
   },
   mounted: function() {
     const axios = require("axios");
     axios.get(
       "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
     );
-=======
-    GitlabGraph,
-    WMRepoList
->>>>>>> 718c9914d6c2b16e165aa8e8ca74dffbf67e11ba
   }
 };
 </script>
