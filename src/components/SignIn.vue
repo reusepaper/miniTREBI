@@ -18,7 +18,17 @@ export default {
       ui.start("#firebaseui-auth-container", {
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          {
+            provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            scopes: [
+              'public_profile',
+              'email',
+            ],
+            customParameters: {
+              // Forces password re-entry.
+              auth_type: 'reauthenticate'
+            }
+          },
         ],
         // Required to enable one-tap sign-up credential helper.
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
