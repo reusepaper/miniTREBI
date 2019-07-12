@@ -1,5 +1,5 @@
 <template>
-  <div class="hide-overflow" style="position: relative;">
+  <v-container>
     <v-toolbar fixed color="primary lighten-3">
       <v-btn flat icon to="/" color="white" @click="homelog">
         <v-icon>home</v-icon>
@@ -38,57 +38,28 @@
             <v-card-text>
               <SignIn></SignIn>
             </v-card-text>
-            <!-- <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Disagree</v-btn>
-                <v-btn color="primary darken-1" flat="flat" @click="login_btn = false">Agree</v-btn>
-            </v-card-actions>-->
           </v-card>
         </v-dialog>
-
-        <!-- <v-dialog v-model="dialog" width="500"> -->
-        <!-- <template v-slot:activator="{ on }">
-            <v-btn class="white--text" flat v-on="on">
-              <v-icon >star</v-icon>
-            </v-btn>
-        </template>-->
-        <!-- <v-card>
-            <v-card-title class="headline primary lighten-3 white--text">
-              안내
-            </v-card-title>
-            <v-card-text>
-              즐겨찾기에 추가하려면 Ctrl+D를 누르세요
-            </v-card-text>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn color="primary lighten-3" class="white--text" @click="dialog = false">확인</v-btn>
-            </v-card-actions>
-        </v-card>-->
-        <!-- </v-dialog> -->
+        <!-- sdfsdfsdfsdfsd-->
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on" flat color="white">Writer</v-btn>
+          </template>
+          <v-list>
+            <v-list-tile
+              v-for="(item, index) in items"
+              :key="index"
+              @click="selectWriter(item.title)"
+              to="/postlist"
+            >
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
-
-    <!-- <v-navigation-drawer app right disable-resize-watcher v-model="drawer" class="primary lighten-3">
-      <v-list>
-        <v-list-tile @click="$router.push('/post')">
-          <v-list-tile-content>
-            <v-list-tile-title class="white--text title">Post</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile @click="$router.push('/portfolio')">
-          <v-list-tile-content>
-            <v-list-tile-title class="white--text title">Portfolio</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile @click="$router.push('/login')">
-          <v-list-tile-content>
-            <v-list-tile-title class="white--text title">Login</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>-->
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -125,7 +96,7 @@ export default {
       auth.signOut();
     },
     selectWriter: function(s_writer) {
-      this.$store.state.writer = s_writer;
+      this.$store.state.writer = s_writer
     },
 
     homelog: function() {

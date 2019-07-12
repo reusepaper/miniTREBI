@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import CreatePost from "./views/WMCreatePostPage.vue";
 import Test from "./views/Test.vue";
 import WMPostPage from "./views/WMPostPage.vue"
+import WMPostViewPage from "./views/WMPostViewPage.vue"
 
 Vue.use(Router);
 
@@ -39,6 +40,11 @@ export default new Router({
       path: "/postlist",
       name: "postlist",
       component: WMPostPage
+    },
+    {
+      path: "/postview",
+      name: "postview",
+      component: WMPostViewPage
     }
   ]
 });
