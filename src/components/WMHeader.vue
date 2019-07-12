@@ -40,22 +40,6 @@
             </v-card-text>
           </v-card>
         </v-dialog>
-        <!-- sdfsdfsdfsdfsd-->
-        <v-menu offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn v-on="on" flat color="white">Writer</v-btn>
-          </template>
-          <v-list>
-            <v-list-tile
-              v-for="(item, index) in items"
-              :key="index"
-              @click="selectWriter(item.title)"
-              to="/postlist"
-            >
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
       </v-toolbar-items>
       <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
@@ -96,7 +80,7 @@ export default {
       auth.signOut();
     },
     selectWriter: function(s_writer) {
-      this.$store.state.writer = s_writer
+      this.$store.state.writer = s_writer;
     },
 
     homelog: function() {
