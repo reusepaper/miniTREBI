@@ -1,45 +1,49 @@
 <template>
-<!-- <v-container>
-  <v-text-field v-model="title" label="제목" outline></v-text-field> -->
-<div>
-  <p>
-    <label class="w3-text-blue"><b>TITLE</b></label>
-    <input class="w3-input w3-border" name="last" type="text" v-model="title">
-  </p>
-  <div class="container">
-    <textarea class="md-text" rows="10" v-model="content"></textarea>
-    <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
-  </div>
-  <div class="filebox" v-if="!image">
-    <label for="uploadFile">파일 선택</label>
-    <input type="file" @change="onFileChange" id="uploadFile"/>
-  </div>
-  <div v-else>
-    <img :src="image" />
-  </div>
+  <!-- <v-container>
+  <v-text-field v-model="title" label="제목" outline></v-text-field>-->
   <div>
-    <br/>
-    <button class="button buttonblue" v-on:click="submit()">등록</button>
+    <p>
+      <label class="w3-text-blue">
+        <b>TITLE</b>
+      </label>
+      <input class="w3-input w3-border" name="last" type="text" v-model="title" />
+    </p>
+    <div class="container">
+      <textarea class="md-text" rows="10" v-model="content"></textarea>
+      <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
+    </div>
+    <!-- <div class="filebox" v-if="!image">
+      <label for="uploadFile">파일 선택</label>
+      <input type="file" @change="onFileChange" id="uploadFile" />
+    </div>
+    <div v-else>
+      <img :src="image" />
+    </div>-->
+    <ImgUpLoad v-on:upLoadImg="upLoadImg"></ImgUpLoad>
+    <div>
+      <br />
+      <button class="button buttonblue" v-on:click="submit()">등록</button>
+    </div>
+    <!-- <v-btn @click="submit">등록</v-btn> -->
   </div>
-  <!-- <v-btn @click="submit">등록</v-btn> -->
-</div>
 </template>
 
 <script>
 import FirebaseService from "@/services/FirebaseService";
-import MarkdownItVue from '../../markdownsrc/markdown-it-vue'
-
+import MarkdownItVue from "../../markdownsrc/markdown-it-vue";
+import ImgUpLoad from "./ImgUpLoad";
 export default {
   name: "WMCreatePost",
   components: {
-    MarkdownItVue
+    MarkdownItVue,
+    ImgUpLoad
   },
   data() {
     return {
-      title: '',
-      postWriter: '',
-      content: '# 이곳에 게시글을 작성해보세요! 8-)',
-      image: '',
+      title: "",
+      postWriter: "",
+      content: "# 이곳에 게시글을 작성해보세요! 8-)",
+      image: "",
       configs: {
         spellChecker: false // disable spell check
       },
@@ -48,17 +52,19 @@ export default {
           linkify: true
         },
         linkAttributes: {
-          target: '_blank',
-          rel: 'noopener'
+          target: "_blank",
+          rel: "noopener"
         }
       }
-    }
+    };
   },
-  mounted:function() {
+  mounted: function() {
     auth.onAuthStateChanged(user => {
       if (user == null) {
         alert("로그인이 필요합니다.");
-        window.location.assign('/');
+        window.location.assign("/");
+      } else {
+        this.postWriter = user.displayName;
       }
     });
   },
@@ -69,7 +75,12 @@ export default {
       } else if (this.content == "") {
         alert("내용을 입력하세요");
       } else {
-        FirebaseService.postPost(this.title, this.postWriter, this.content, this.image);
+        FirebaseService.postPost(
+          this.title,
+          this.postWriter,
+          this.content,
+          this.image
+        );
         alert("업로드 되었습니다");
         this.title = "";
         this.postWriter = "";
@@ -80,43 +91,41 @@ export default {
     removeImage() {
       this.image = "";
     },
-    onFileChange(e) {
-      // file 세팅
-      let files = e.target.files || e.dataTransfer.files;
-      if (!files.length) {
-        return;
-      }
-      const apiUrl = "https://api.imgur.com/3/image";
-      const apiKey = "5139c8830e24c39";
-
-      let data = new FormData();
-      let content = {
-        method: "POST",
-        headers: {
-          Authorization: "Client-ID " + apiKey,
-          Accept: "application/json"
-        },
-        body: data,
-        mimeType: "multipart/form-data"
-      };
-
-      this.postWriter = auth.onAuthStateChanged(user =>{
-          this.postWriter = user.displayName;   
-      })
-
-
-        
-      data.append("image", files[0]);
-
-      fetch(apiUrl, content)
-        .then(response => response.json())
-        .then(success => {
-          this.image = success.data.link;
-        })
-        .catch();
+    upLoadImg(image) {
+      console.log("업로드 : ", image);
+      this.image = image;
     }
+    // onFileChange(e) {
+    //   // file 세팅
+    //   let files = e.target.files || e.dataTransfer.files;
+    //   if (!files.length) {
+    //     return;
+    //   }
+    //   const apiUrl = "https://api.imgur.com/3/image";
+    //   const apiKey = "5139c8830e24c39";
+
+    //   let data = new FormData();
+    //   let content = {
+    //     method: "POST",
+    //     headers: {
+    //       Authorization: "Client-ID " + apiKey,
+    //       Accept: "application/json"
+    //     },
+    //     body: data,
+    //     mimeType: "multipart/form-data"
+    //   };
+
+    //   data.append("image", files[0]);
+
+    //   fetch(apiUrl, content)
+    //     .then(response => response.json())
+    //     .then(success => {
+    //       this.image = success.data.link;
+    //     })
+    //     .catch();
+    // }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -140,7 +149,7 @@ export default {
 }
 
 .button {
-  background-color: #92C5FF;
+  background-color: #92c5ff;
   border: none;
   border-radius: 2px;
   color: white;
@@ -158,36 +167,36 @@ export default {
 .buttonblue {
   background-color: white;
   color: black;
-  border: 2px solid #92C5FF;
+  border: 2px solid #92c5ff;
 }
 
 .buttonblue:hover {
-  background-color: #92C5FF;
+  background-color: #92c5ff;
   color: white;
 }
 
 .filebox label {
   display: inline-block;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   font-size: inherit;
   line-height: normal;
   vertical-align: middle;
   background-color: white;
   color: black;
   cursor: pointer;
-  border: 2px solid #92C5FF;
-  border-radius: .25em;
+  border: 2px solid #92c5ff;
+  border-radius: 0.25em;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 
 .filebox label:hover {
-  background-color: #92C5FF;
+  background-color: #92c5ff;
   color: white;
 }
 
 .filebox label:active {
-  background-color: #92C5FF;
+  background-color: #92c5ff;
   color: white;
 }
 

@@ -54,15 +54,15 @@ export default {
     };
   },
   mounted: function() {
-    const userName = document.querySelector('#user_name')
-    const createPost = document.querySelector('#create_post')
+    const userName = document.querySelector("#user_name");
+    const createPost = document.querySelector("#create_post");
     auth.onAuthStateChanged(user => {
       if (user) {
         userName.innerText = user.displayName;
         this.isLogin = true;
-      } else{
-        userName.innerText = 'guest'
-        this.isLogin = false
+      } else {
+        userName.innerText = "guest";
+        this.isLogin = false;
       }
     });
   }
