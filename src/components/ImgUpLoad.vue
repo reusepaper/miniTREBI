@@ -59,4 +59,39 @@ export default {
 </script>
 
 <style>
+.filebox label {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid #92c5ff;
+  border-radius: 0.25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #92c5ff;
+  color: white;
+}
+
+.filebox label:active {
+  background-color: #92c5ff;
+  color: white;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 </style>

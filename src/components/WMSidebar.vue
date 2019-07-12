@@ -11,7 +11,10 @@
             <v-list-tile-title>
               <span id="user_name"></span>님 환영합니다!
             </v-list-tile-title>
-            <button id="createButton" v-if="isLogin" @click="$router.push('create')">글쓰기!</button>
+            <v-list-tile-sub-title>
+              <button id="editProfileBtn" v-if="isLogin" @click="$router.push('create')">프로필 수정</button>
+              <button id="createButton" v-if="isLogin" @click="$router.push('create')">글쓰기!</button>
+            </v-list-tile-sub-title>
           </v-list-tile-content>
 
           <v-list-tile-action>
@@ -82,24 +85,28 @@ export default {
     top: 56px;
   }
 }
-#createButton {
+#createButton,
+#editProfileBtn {
   float: right;
   padding: 3px 5px;
   border: 1px solid pink;
   border-radius: 16px;
   /* padding: 3px; */
 }
-#createButton:hover {
+#createButton:hover,
+#editProfileBtn:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#createButton:focus {
+#createButton:focus,
+#editProfileBtn:focus {
   outline: none;
 }
 
 .sidebar-title {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
 }
 </style>
