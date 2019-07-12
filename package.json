@@ -49,6 +49,8 @@
     "vue-browser-detect-plugin": "^0.1.2",
     "vue-router": "^3.0.3",
     "vue-simplemde": "^0.5.2",
+    "vue-weather-widget": "^2.1.7",
+    "vue2-google-maps": "^0.10.7",
     "vuelidate": "^0.7.4",
     "vuetify": "^1.5.16",
     "vuex": "^3.0.1"
