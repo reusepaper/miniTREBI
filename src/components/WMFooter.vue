@@ -57,11 +57,12 @@ import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
+
 export default {
   name: "WMFooter",
   data: () => ({
     icons: ["fab fa-github fa-2x"],
-    weather: "Clear",
+    weather: "",
     place: "",
     temp: 0
   }),
