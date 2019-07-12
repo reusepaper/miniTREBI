@@ -1,8 +1,9 @@
 <template>
   <div>
     <v-container mt-5>
+      <EditProfileModal v-if="showModal" @close="showModal = false" />
       <v-layout>
-        <WMSidebar></WMSidebar>
+        <WMSidebar v-on:editProfile="editProfile"></WMSidebar>
         <v-flex xs12>
           <WMPostlist :limits="4" :load-more="true"></WMPostlist>
         </v-flex>
@@ -13,12 +14,24 @@
 
 <script>
 import WMPostlist from "../components/WMPostlist";
-import WMSidebar from "../components/WMSidebar"
+import WMSidebar from "../components/WMSidebar";
+import EditProfileModal from "../components/EditProfileModal";
 export default {
   name: "WMPostPage",
   components: {
     WMPostlist,
-    WMSidebar
+    WMSidebar,
+    EditProfileModal
+  },
+  data() {
+    return {
+      showModal: false
+    };
+  },
+  methods: {
+    editProfile() {
+      this.showModal = true;
+    }
   }
 };
 </script>
