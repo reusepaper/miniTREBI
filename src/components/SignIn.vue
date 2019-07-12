@@ -53,7 +53,7 @@ export default {
             console.log(authResult.user.uid);
             console.log(this.users[0]);
             console.log(this.users);
-            alert("ok")
+            alert("ok");
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
             window.location.reload();
