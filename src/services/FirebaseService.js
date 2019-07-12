@@ -20,7 +20,8 @@ export default {
     return firestore.collection(POSTS).add({
       title,
       content,
-      image
+      image,
+      writer
     })
   },
 }
