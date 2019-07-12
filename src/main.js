@@ -18,6 +18,7 @@ import browserDetect from "vue-browser-detect-plugin";
 import BackToTop from "vue-backtotop";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.use(VueAxios, axios);
 Vue.use(BackToTop);
@@ -28,6 +29,13 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 
 Vue.use(VueSimplemde);
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "REPLACE-THIS-WITH-YOUR-KEY-FROM-ABOVE",
+    libraries: "places" // necessary for places input
+  }
+});
 
 new Vue({
   router,
