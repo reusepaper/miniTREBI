@@ -440,7 +440,89 @@ mounted: function() {
 
 
 
+## firebase post에 writerPost 추가
 
+1. `FirebaseService.js`
+
+   ```js
+     postPost(title, postWriter, content, image) {
+       return firestore.collection(POSTS).add({
+         title,
+         postWriter,
+         content,
+         image,
+       })
+     },
+   ```
+
+   postWriter 추가
+
+2. `store.js`
+
+   ```js
+   export default new Vuex.Store({
+     state: {
+       title: '',
+       postWriter: '',
+       content: '',
+       image: ''
+     },
+   ```
+
+   postWriter 추가
+
+3. `components/WMPostlist.vue`
+
+   ```html
+   <v-layout mt-5 wrap>
+     <v-flex v-for="i in posts.length > limits ? limits : posts.length" xs12 sm6 md3>
+       <WMPost class="ma-3" :title="posts[i-1].title" :postWriter="posts[i-1].postWriter" :content="posts[i-1].content" :image="posts[i-1].image">
+       </WMPost>
+   ```
+
+   postWirter 바인딩 추가
+
+4. `componets/WMPost.vue`
+
+   ```js
+     props: {
+       title: {
+         type: String
+       },
+       postWriter: {
+         type: String
+       },
+           ...
+           
+     methods: {
+       viewPage() {
+         this.$store.state.title = this.title,
+         this.$store.state.postWriter = this.postWriter,
+         this.$store.state.content = this.content,
+         this.$store.state.image = this.image
+         this.$router.push("/postview")
+   ```
+
+   props에 postWirter 추가
+
+   methods에 postWirter 부분 추가.
+
+5. `components/WMView.vue`
+
+   ```html
+       <p>
+         <input class="w3-input w3-border" name="last" type="text" :value="this.$store.state.title" readonly/>
+       </p>
+       <p>
+         작성자 : <input class="w3-input w3-border" style="display:inline; width:90%;" name="last" type="text" :value="this.$store.state.postWriter" readonly/>
+       </p>
+   ```
+
+   작성자 부분 추가.
+
+
+
+![1562909954477](img/1562909954477.png)
 
 
 
