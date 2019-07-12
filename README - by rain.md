@@ -528,3 +528,24 @@ mounted: function() {
 
 
 
+## 미로그인 사용자 글 작성 금지
+
+`components/WMCreatePost.vue`
+
+```js
+  mounted:function() {
+    auth.onAuthStateChanged(user => {
+      if (user == null) {
+        alert("로그인이 필요합니다.");
+        window.location.assign('/');
+      }
+    });
+  },
+```
+
+페이지가 로딩될 때 현재 유저가 존재하는지 확인. 아닐경우 알람창 다음에 루트페이지로 이동.
+
+![1562910309091](img/1562910309091.png)
+
+
+
