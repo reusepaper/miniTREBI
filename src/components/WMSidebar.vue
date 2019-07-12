@@ -12,7 +12,7 @@
               <span id="user_name"></span>님 환영합니다!
             </v-list-tile-title>
             <v-list-tile-sub-title>
-              <button id="editProfileBtn" v-if="isLogin" @click="$router.push('create')">프로필 수정</button>
+              <button id="editProfileBtn" v-if="isLogin" @click="editProfile">프로필 수정</button>
               <button id="createButton" v-if="isLogin" @click="$router.push('create')">글쓰기!</button>
             </v-list-tile-sub-title>
           </v-list-tile-content>
@@ -68,6 +68,11 @@ export default {
         this.isLogin = false;
       }
     });
+  },
+  methods: {
+    editProfile() {
+      this.$emit("editProfile");
+    }
   }
 };
 </script>
@@ -103,7 +108,9 @@ export default {
 #editProfileBtn:focus {
   outline: none;
 }
-
+#editProfileBtn {
+  margin-right: 10px;
+}
 .sidebar-title {
   display: flex;
   align-items: flex-end;
