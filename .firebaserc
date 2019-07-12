@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "webmobile-sub2-510fa"
+    "default": "webmobile-sub2-510fa",
+    "yes": "webmobile-sub2-510fa"
   }
 }

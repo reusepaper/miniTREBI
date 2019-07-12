@@ -62,8 +62,8 @@ export default {
   data: () => ({
     icons: ["fab fa-github fa-2x"],
     weather: "Clear",
-    place: "대전광역시",
-    temp: 28
+    place: "",
+    temp: 0
   }),
   components: {
     Clear,
