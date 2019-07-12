@@ -1,22 +1,27 @@
 <template>
-  <v-card hover to="/postview">
-    <v-img :src="image" height="200px"></v-img>
-    <v-card-title primary-title>
-      <div>
-        <div>{{ title }}</div>
-      </div>
-    </v-card-title>
-  </v-card>
+<v-card hover @click="viewPage()">
+  <v-img :src="image" height="200px"></v-img>
+  <v-card-title primary-title>
+    <div>
+      <div>{{ title }}</div>
+    </div>
+  </v-card-title>
+</v-card>
 </template>
 
 <script>
 export default {
   name: "WMPost",
   props: {
-    title: { type: String },
-    content: { type: String },
-    image: { type: String },
-    writer: { type: String }
+    title: {
+      type: String
+    },
+    content: {
+      type: String
+    },
+    image: {
+      type: String
+    }
   },
   mounted: function() {
     const axios = require("axios");
@@ -26,6 +31,14 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    viewPage() {
+      this.$store.state.title = this.title,
+      this.$store.state.content = this.content,
+      this.$store.state.image = this.image
+      this.$router.push("/postview")
+    }
   }
 };
 </script>

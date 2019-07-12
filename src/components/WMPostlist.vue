@@ -1,7 +1,7 @@
 <template>
 <v-layout mt-5 wrap>
   <v-flex v-for="i in posts.length > limits ? limits : posts.length" xs12 sm6 md3>
-    <WMPost class="ma-3" :title="posts[i-1].title" :image="posts[i-1].image" @click="viewPage(posts[i-1])">
+    <WMPost class="ma-3" :title="posts[i-1].title" :content="posts[i-1].content" :image="posts[i-1].image">
     </WMPost>
   </v-flex>
   <v-flex xs12 text-xs-center round my-5 v-if="loadMore">
@@ -36,11 +36,6 @@ export default {
     },
     loadMorePosts() {
       this.limits += 4;
-    },
-    viewPage(post) {
-      this.$store.state.title = post.title,
-      this.$store.state.content = post.content,
-      this.$store.state.image = post.image
     }
   }
 }

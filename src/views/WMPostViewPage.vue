@@ -1,7 +1,9 @@
 <template>
   <v-container mt-5>
     <v-layout>
-      <WMPostView></WMPostView>
+      <v-flex xs12>
+        <WMPostView></WMPostView>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -10,9 +12,9 @@
 import WMPostView from "../components/WMPostView";
 
 export default {
-  name: "WMPostView",
+  name: "WMPostViewPage",
   components: {
     WMPostView
   }
-}
+};
 </script>

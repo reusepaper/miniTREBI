@@ -40,8 +40,6 @@
             </v-card-text>
           </v-card>
         </v-dialog>
-        <v-btn to="/post" class="white--text" flat @click="postlog">Post</v-btn>
-        <v-btn to="/portfolio" class="white--text" flat @click>Portfolio</v-btn>
         <!-- sdfsdfsdfsdfsd-->
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
