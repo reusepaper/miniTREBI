@@ -3,14 +3,17 @@
 </template>
 
 <script>
+import FirebaseService from "@/services/FirebaseService";
+
 export default {
   data() {
     return {
+      users: [],
       currentUser: {
         uid: "",
         email: "",
         username: ""
-      }
+      },
     };
   },
   methods: {
@@ -45,6 +48,12 @@ export default {
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => {
             this.currentUser.uid = authResult.user.uid;
+            this.getUsers();
+            console.log("ok");
+            console.log(authResult.user.uid);
+            console.log(this.users[0]);
+            console.log(this.users);
+            alert("ok")
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
             window.location.reload();
@@ -60,6 +69,7 @@ export default {
       );
 
       // this.$router.push('/');
+      
     },
     redirect() {
       const { search } = window.location;
@@ -75,7 +85,10 @@ export default {
         const { returnPath } = "/";
         this.$router.push("/");
       }
-    }
+    },
+    async getUsers() {
+      this.users = await FirebaseService.getUsers();
+    },
   },
   mounted: function() {
     auth.onAuthStateChanged(user => {
