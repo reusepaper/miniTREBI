@@ -388,11 +388,164 @@ export default {
 
 
 
+## sidebar
+
+### check isLogin 
+
+`WMsidebar.vue`
+
+```html
+          <v-list-tile-content>
+            <v-list-tile-title><span id="user_name"></span>님 환영합니다!</v-list-tile-title>
+            <v-list-tile-title v-if="isLogin" @click="$router.push('create')" id="create_post_button"><button id="createButton">글쓰기!</button></v-list-tile-title>
+          </v-list-tile-content>
+
+```
+
+```js
+mounted: function() {
+    const userName = document.querySelector('#user_name')
+    const createPost = document.querySelector('#create_post')
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        userName.innerText = user.displayName
+        this.isLogin = true;
+
+      } else{
+        userName.innerText = 'guest'
+        this.isLogin = false
+      }
+    });
+  }
+```
+
+```css
+#createButton{
+  border: 1px solid pink;
+  padding: 3px;
+}
+```
+
++ 현재 사용자의 이름을 보여주기 위해 id 태그로 span 태그를 선택. querySelector로 잡아서 innerText로 수정할 수 있게 만들었다.
++ 현재 로그인 된 사용자이면 글쓰기 버튼을 보여주고(v-if) 아닌경우에는 랜더링 되지 못하게 만들었다.
++ 버튼 클릭시 이동이 잘 구현되지 않아, `v-list-tile-title` 자체에 구현했다.
+
+왼쪽 : 로그인 된 상태. 오른쪽 로그인 안된 상태
+
+![1562909131605](img/1562909131605.png)![1562909164095](img/1562909164095.png)
 
 
 
 
 
+
+
+## firebase post에 writerPost 추가
+
+1. `FirebaseService.js`
+
+   ```js
+     postPost(title, postWriter, content, image) {
+       return firestore.collection(POSTS).add({
+         title,
+         postWriter,
+         content,
+         image,
+       })
+     },
+   ```
+
+   postWriter 추가
+
+2. `store.js`
+
+   ```js
+   export default new Vuex.Store({
+     state: {
+       title: '',
+       postWriter: '',
+       content: '',
+       image: ''
+     },
+   ```
+
+   postWriter 추가
+
+3. `components/WMPostlist.vue`
+
+   ```html
+   <v-layout mt-5 wrap>
+     <v-flex v-for="i in posts.length > limits ? limits : posts.length" xs12 sm6 md3>
+       <WMPost class="ma-3" :title="posts[i-1].title" :postWriter="posts[i-1].postWriter" :content="posts[i-1].content" :image="posts[i-1].image">
+       </WMPost>
+   ```
+
+   postWirter 바인딩 추가
+
+4. `componets/WMPost.vue`
+
+   ```js
+     props: {
+       title: {
+         type: String
+       },
+       postWriter: {
+         type: String
+       },
+           ...
+           
+     methods: {
+       viewPage() {
+         this.$store.state.title = this.title,
+         this.$store.state.postWriter = this.postWriter,
+         this.$store.state.content = this.content,
+         this.$store.state.image = this.image
+         this.$router.push("/postview")
+   ```
+
+   props에 postWirter 추가
+
+   methods에 postWirter 부분 추가.
+
+5. `components/WMView.vue`
+
+   ```html
+       <p>
+         <input class="w3-input w3-border" name="last" type="text" :value="this.$store.state.title" readonly/>
+       </p>
+       <p>
+         작성자 : <input class="w3-input w3-border" style="display:inline; width:90%;" name="last" type="text" :value="this.$store.state.postWriter" readonly/>
+       </p>
+   ```
+
+   작성자 부분 추가.
+
+
+
+![1562909954477](img/1562909954477.png)
+
+
+
+
+
+## 미로그인 사용자 글 작성 금지
+
+`components/WMCreatePost.vue`
+
+```js
+  mounted:function() {
+    auth.onAuthStateChanged(user => {
+      if (user == null) {
+        alert("로그인이 필요합니다.");
+        window.location.assign('/');
+      }
+    });
+  },
+```
+
+페이지가 로딩될 때 현재 유저가 존재하는지 확인. 아닐경우 알람창 다음에 루트페이지로 이동.
+
+![1562910309091](img/1562910309091.png)
 
 
 
