@@ -4,11 +4,11 @@
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-            <slot name="header">default header</slot>
+            <slot name="header">프로필 수정</slot>
           </div>
 
           <div class="modal-body">
-            <slot name="body">default body</slot>
+            <slot name="body">이미지 및 이름</slot>
           </div>
 
           <div class="modal-footer">
