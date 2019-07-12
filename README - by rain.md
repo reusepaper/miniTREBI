@@ -388,6 +388,56 @@ export default {
 
 
 
+## sidebar
+
+### check isLogin 
+
+`WMsidebar.vue`
+
+```html
+          <v-list-tile-content>
+            <v-list-tile-title><span id="user_name"></span>님 환영합니다!</v-list-tile-title>
+            <v-list-tile-title v-if="isLogin" @click="$router.push('create')" id="create_post_button"><button id="createButton">글쓰기!</button></v-list-tile-title>
+          </v-list-tile-content>
+
+```
+
+```js
+mounted: function() {
+    const userName = document.querySelector('#user_name')
+    const createPost = document.querySelector('#create_post')
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        userName.innerText = user.displayName
+        this.isLogin = true;
+
+      } else{
+        userName.innerText = 'guest'
+        this.isLogin = false
+      }
+    });
+  }
+```
+
+```css
+#createButton{
+  border: 1px solid pink;
+  padding: 3px;
+}
+```
+
++ 현재 사용자의 이름을 보여주기 위해 id 태그로 span 태그를 선택. querySelector로 잡아서 innerText로 수정할 수 있게 만들었다.
++ 현재 로그인 된 사용자이면 글쓰기 버튼을 보여주고(v-if) 아닌경우에는 랜더링 되지 못하게 만들었다.
++ 버튼 클릭시 이동이 잘 구현되지 않아, `v-list-tile-title` 자체에 구현했다.
+
+왼쪽 : 로그인 된 상태. 오른쪽 로그인 안된 상태
+
+![1562909131605](img/1562909131605.png)![1562909164095](img/1562909164095.png)
+
+
+
+
+
 
 
 
