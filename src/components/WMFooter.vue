@@ -84,7 +84,7 @@ export default {
     getWeather: function(lat, log) {
       // open weather map
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&APPID=${APPKEY}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&APPID=${APPKEY}`
       )
         .then(response => response.json())
         .then(json => {
