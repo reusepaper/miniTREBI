@@ -37,6 +37,7 @@ export default {
   data() {
     return {
       title: '',
+      postWriter: '',
       content: '# 이곳에 게시글을 작성해보세요! 8-)',
       image: '',
       configs: {
@@ -53,6 +54,14 @@ export default {
       }
     }
   },
+  mounted:function() {
+    auth.onAuthStateChanged(user => {
+      if (user == null) {
+        alert("로그인이 필요합니다.");
+        window.location.assign('/');
+      }
+    });
+  },
   methods: {
     submit() {
       if (this.title == "") {
@@ -60,9 +69,10 @@ export default {
       } else if (this.content == "") {
         alert("내용을 입력하세요");
       } else {
-        FirebaseService.postPost(this.title, this.content, this.image);
+        FirebaseService.postPost(this.title, this.postWriter, this.content, this.image);
         alert("업로드 되었습니다");
         this.title = "";
+        this.postWriter = "";
         this.image = "";
         this.content = "";
       }
@@ -90,6 +100,12 @@ export default {
         mimeType: "multipart/form-data"
       };
 
+      this.postWriter = auth.onAuthStateChanged(user =>{
+          this.postWriter = user.displayName;   
+      })
+
+
+        
       data.append("image", files[0]);
 
       fetch(apiUrl, content)
