@@ -16,7 +16,7 @@
 
           <v-list-tile-content>
             <v-list-tile-title><span id="user_name"></span>님 환영합니다!</v-list-tile-title>
-            <v-list-tile-title v-if="isLogin" @click="$router.push('create')" id="create_post_button"><button id="createButton">글쓰기!</button></v-list-tile-title>
+            <v-list-tile-title v-if="isLogin" @click="$router.push('create')"><button id="createButton">글쓰기!</button></v-list-tile-title>
           </v-list-tile-content>
 
 
@@ -62,13 +62,10 @@ export default {
   mounted: function() {
     const userName = document.querySelector('#user_name')
     const createPost = document.querySelector('#create_post')
-    const create_post_button = document.querySelector('#create_post_button')
     auth.onAuthStateChanged(user => {
       if (user) {
         userName.innerText = user.displayName
         this.isLogin = true;
-        console.log(user.displayName)
-
       } else{
         userName.innerText = 'guest'
         this.isLogin = false
