@@ -7,6 +7,7 @@
         </a>
         <p
           class="repository--name subheading mb-1 grey--text text--darken-1 font-weight-light"
+          style="white-space: nowrap; overflow:hidden; text-overflow:ellipsis;"
         >{{repos.namespace.name}}</p>
       </v-flex>
     </v-layout>
