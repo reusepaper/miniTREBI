@@ -94,12 +94,14 @@ export default {
 }
 #createButton,
 #editProfileBtn {
+  font-size: 12px;
   float: right;
   padding: 3px 5px;
   border: 1px solid pink;
   border-radius: 16px;
   /* padding: 3px; */
 }
+
 #createButton:hover,
 #editProfileBtn:hover {
   background-color: rgba(0, 0, 0, 0.1);

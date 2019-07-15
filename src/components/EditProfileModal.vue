@@ -16,10 +16,8 @@
           </div>
 
           <div class="modal-footer">
-            <slot name="footer">
-              default footer
-              <button class="modal-default-button" @click="$emit('close')">OK</button>
-            </slot>
+            <button class="saveBtn" @click="saveData">저장</button>
+            <button class="cancelBtn modal-default-button" @click="$emit('close')">취소</button>
           </div>
         </div>
       </div>
@@ -29,6 +27,7 @@
 
 <script>
 import ImgUpLoad from "../components/ImgUpLoad";
+import FirebaseService from "@/services/FirebaseService";
 
 export default {
   components: {
@@ -50,7 +49,9 @@ export default {
   methods: {
     upLoadImg(image) {
       this.image = image;
-      this.$store.state.profileImage = this.image;
+    },
+    async saveData() {
+      this.$emit("close");
     }
   }
 };
@@ -128,6 +129,16 @@ export default {
 .name-text {
   margin-right: 10px;
 }
+
+.saveBtn {
+  margin-right: 30px;
+}
+.saveBtn,
+.cancelBtn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 .name-input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   padding: 10px 5px;
@@ -148,5 +159,9 @@ export default {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.modal-footer {
+  align-self: flex-end;
 }
 </style>
