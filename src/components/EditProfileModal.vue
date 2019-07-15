@@ -36,13 +36,16 @@ export default {
   data() {
     return {
       writer: "",
-      image: this.$store.state.profileImage
+      image: this.$store.state.profileImage,
+      currentUser: ''
     };
   },
   mounted() {
     auth.onAuthStateChanged(user => {
       if (user) {
         this.writer = user.displayName;
+        this.currentUser = user;
+        this.image = user.photoURL;
       }
     });
   },
@@ -50,7 +53,10 @@ export default {
     upLoadImg(image) {
       this.image = image;
     },
-    async saveData() {
+    saveData() {
+      this.currentUser.updateProfile({
+        photoURL: this.image
+      })
       this.$emit("close");
     }
   }
