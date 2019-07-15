@@ -8,7 +8,8 @@ import FirebaseService from "@/services/FirebaseService";
 export default {
   data() {
     return {
-      users: [],
+      allUsers: [],
+      isSignedup: false,
       currentUser: {
         uid: "",
         email: "",
@@ -48,14 +49,17 @@ export default {
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => {
             this.currentUser.uid = authResult.user.uid;
-            this.getUsers();
-            console.log("ok");
-            console.log(authResult.user.uid);
-            console.log(this.users[0]);
-            console.log(this.users);
-            alert("ok");
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
+            console.log(authResult.user.uid);
+            this.getUsers();
+            if(this.isSignedup == false){
+              FirebaseService.postPost(
+                authResult.user.uid,
+                authResult.user.displayName,
+                '',
+              );
+            }
             window.location.reload();
             return false;
           }
@@ -87,10 +91,15 @@ export default {
       }
     },
     async getUsers() {
-      this.users = await FirebaseService.getUsers();
+      this.allUsers = await FirebaseService.getUsers();
+      await console.log("ok");
+      await console.log(this.allUsers);
+      await console.log(this.allUsers[0].uid);
+      if(this.currentUser.uid == this.allUsers[0].uid) this.isSignedup = true;
     },
   },
   mounted: function() {
+
     auth.onAuthStateChanged(user => {
       if (user) {
         this.currentUser.uid = user.uid;
