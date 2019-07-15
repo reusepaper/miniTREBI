@@ -84,13 +84,8 @@ export default {
   },
   methods: {
     random: function(){
-      const axios = require("axios");
-      axios.get('https://api.unsplash.com/random/1000x400/?client_id=ab9087a453d0e9f5b36080f167582d7eab8417474bea4294796c448881c145de')
-        .then(response => {
-            this.image = response.data;
-        })
-        .catch((error) => console.log(error));
-      // this.image = "https://source.unsplash.com/random/1000x400";
+      let random_id = Math.floor(Math.random() * 1000) + 1;
+      this.image = `https://picsum.photos/id/${random_id}/1000/400`;
       console.log(this.image)
     },
     userphoto: function(){
