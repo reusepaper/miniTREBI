@@ -45,27 +45,28 @@ navigator.geolocation.getCurrentPosition(position => {
 
   fetch를 사용해서 데이터를 요청했으며 **then**을 사용해서 데이터를 처리함.
 
-  온도는 절대온도이기 때문에 -273.15 해야함.
-
-
-    ```
-    getWeather: function(lat, log) {
-          // open weather map
-          fetch(
-            `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&APPID=${APPKEY}`
-          )
-            .then(response => response.json())
-            .then(json => {
-              this.weather = json.weather[0].main;
-              this.temp = Math.floor(json.main.temp - 273.15);
-              if (json.name === "Taejŏn-gwangyŏksi") {
-                this.place = "대전광역시";
-              }
-              /*eslint-disable*/
-              console.log(this.weather);
-              // console.log(this.temp, this.place, this.weather);
-            });
-    ```
+  온도는 절대온도이기 때문에 -273.15 해야함.  
+  
+  ```js
+  getWeather: function(lat, log) {
+        // open weather map
+        fetch(
+          `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&APPID=${APPKEY}`
+        )
+          .then(response => response.json())
+          .then(json => {
+            this.weather = json.weather[0].main;
+            this.temp = Math.floor(json.main.temp - 273.15);
+            if (json.name === "Taejŏn-gwangyŏksi") {
+              this.place = "대전광역시";
+            }
+            /*eslint-disable*/
+            console.log(this.weather);
+            // console.log(this.temp, this.place, this.weather);
+          });
+  ```
+  
+  
 
 - animation svg icon
 
@@ -80,6 +81,16 @@ navigator.geolocation.getCurrentPosition(position => {
 [github](https://github.com/chromatixau/gitlab-network-graph)을 참고해서 따라했음.
 
 위 github 프로젝트를 실행해서 만든 index.html 을 프로젝트에 직접 넣어서 사용했는데, 동기화를 해주는 것이 아니라 한번 생성한 그래프를 넣어주는 방식으로 사용했음.
+
+bash에서 아래 명령어 작성 
+
+```bash
+../gitlab-network-graph/scripts/network.sh
+```
+
+
+
+
 
 - git clone을 하고나서 생기는 프로젝트에서 아래의 파일을 webmobile-sub2프로젝트에 넣어줌.
 
@@ -108,7 +119,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
   **\${userName}** 에 **gitlab id** 를 입력하면 됨.
 
-  ```
+  ```js
   https://lab.ssafy.com/api/v4/users/${userName}/projects?private_token=프라이빗토큰
   ```
 
@@ -118,7 +129,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
   **Master Branch**이외에는 커밋이 한개만 불러지는 이슈가 있음.
 
-  ```
+  ```js
   https://lab.ssafy.com/api/v4/projects/${fullName}/repository/commits?private_token=프라이빗토큰
   ```
 
