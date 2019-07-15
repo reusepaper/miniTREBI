@@ -105,7 +105,7 @@
    firebase init
    ```
 
-   1. ![firebase_hsosting1](img/1562634414665.PNG)
+   1. ![firebase_hsosting1](img/firebase_hsosting1.PNG)
 
       - Y 로 Firebase init을 진행
 
