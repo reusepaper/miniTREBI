@@ -105,11 +105,11 @@
    firebase init
    ```
 
-   1. ![firebase_init_1](C:/Users/multicampus/Desktop/img/1562634414665.PNG)
+   1. ![firebase_init_1](img/1562634414665.PNG)
 
       - Y 로 Firebase init을 진행
 
-   2. ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414669.PNG)
+   2. ![firebase_init_2](img/1562634414669.PNG)
 
       - 사용할 서비스를 선택
         - Firestore
@@ -120,22 +120,22 @@
           - Storage를 사용하면서 선택을 하지 않을 시 storage.rules 관련 오류 발생
           - Firebase 에서도 Storage 를 시작 해 주어야 한다.
 
-   3. ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414666.PNG)
+   3. ![firebase_init_2](img/1562634414666.PNG)
 
-      ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414667.PNG)
+      ![firebase_init_2](img/1562634414667.PNG)
 
-      ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414668.PNG)
+      ![firebase_init_2](img/1562634414668.PNG)
 
       - ### Hosting Setup의 `Public directory`에 주의 하자
 
         - build 된 app의 `index.html` 이 존재하는 `dist` 폴더로 지정한다.
 
-   4. ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414670.PNG)
+   4. ![firebase_init_2](img/1562634414670.PNG)
 
       - `npm run build` 
         - build 명령어
 
-   5. ![firebase_init_2](C:/Users/multicampus/Desktop/img/1562634414671.PNG)
+   5. ![firebase_init_2](img/1562634414671.PNG)
 
       - `firebase deploy`
         - 배포 명령어
@@ -152,15 +152,15 @@
    firebase init
    ```
 
-2. ![firebase_init_2](C:/Users/multicampus/Desktop/img/15628130752834.PNG)
+2. ![firebase_function1](img/firebase_function1.PNG)
 
    - Fireabse Function 초기화
 
-3. ![firebase_init_2](C:/Users/multicampus/Desktop/img/15628130752835.PNG)
+3. ![firebase_function2](img/firebase_function2.PNG)
 
    - Functnion Setup
 
-4. ![firebase_init_2](C:/Users/multicampus/Desktop/img/15628130752836.PNG)
+4. ![firebase_function3](img/firebase_function3.PNG)
 
    - functions 폴더 및 초기화 완료
 
@@ -172,19 +172,21 @@
 
    - 배포 작업을 통해 function을 배포
 
-   ![firebase_init_2](C:/Users/multicampus/Desktop/img/15628130752837.PNG)
+   ![firebase_function4](img/firebase_function4.PNG)
 
    - 배포된 function
 
-   ![firebase_init_2](C:/Users/multicampus/Desktop/img/15628130752838.PNG)
+   ![firebase_function5](img/firebase_function5.PNG)
 
    - 배포된 function의 각각의 url 접속 시 log 기록이 작성 됨
+
+   ![firebase_function6](img/firebase_function6.PNG)
 
 7. Function 동작
 
    - 웹 페이지가 랜더링 or 페이지 로드 버튼을 클릭 시 function url로 요청을 보내어 function이 동작하도록 설정
 
-   ![firebase_init_2](C:/Users/multicampus/Desktop/img/156281307528389.PNG)
+   ![firebase_function7](img/firebase_function7.PNG)
 
 
 
@@ -342,7 +344,6 @@
     ],
   }
 }
-
 ```
 
 
