@@ -58,13 +58,13 @@ export default {
     };
   },
   mounted: function() {
-    this.profileImage = this.$store.state.profileImage;
     const userName = document.querySelector("#user_name");
     const createPost = document.querySelector("#create_post");
     auth.onAuthStateChanged(user => {
       if (user) {
         userName.innerText = user.displayName;
         this.isLogin = true;
+        this.profileImage = user.photoURL;
       } else {
         userName.innerText = "guest";
         this.isLogin = false;
