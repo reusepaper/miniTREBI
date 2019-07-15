@@ -670,3 +670,41 @@ mounted: function() {
 
 => 사용하지 않을 것 같다...
 
+
+
+
+
+
+
+## 프로필 사진 변경
+
+`EditProfileModal.vue`
+
+```js
+  methods: {
+    ...
+    saveData() {
+      this.currentUser.updateProfile({
+        photoURL: this.image
+      })
+      this.$emit("close");
+    }
+  }
+```
+
+currentUser라는 data를 지정한 후, updateProfile을 하여 이미지url 지정.
+
+```js
+  mounted() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.writer = user.displayName;
+        this.currentUser = user;
+        this.image = user.photoURL;
+      }
+    });
+  },
+```
+
+`this.image = user.photoURL;` 를 사용하여 user에 photoURL이 존재하면 this.image에 저장. 
+
