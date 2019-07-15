@@ -8,7 +8,12 @@
           </div>
 
           <div class="modal-body">
-            <slot name="body">이미지 및 이름</slot>
+            <div class="profile-img"></div>
+            <div class="profile-name">
+              <span class="name-text">닉네임 :</span>
+              <input class="name-input" type="text" v-model="writer" />
+            </div>
+            <ImgUpLoad></ImgUpLoad>
           </div>
 
           <div class="modal-footer">
@@ -24,7 +29,25 @@
 </template>
 
 <script>
-export default {};
+import ImgUpLoad from "../components/ImgUpLoad";
+
+export default {
+  components: {
+    ImgUpLoad
+  },
+  data() {
+    return {
+      writer: ""
+    };
+  },
+  mounted() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.writer = user.displayName;
+      }
+    });
+  }
+};
 </script>
 
 <style>
@@ -46,7 +69,7 @@ export default {};
 }
 
 .modal-container {
-  width: 300px;
+  width: 400px;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -54,8 +77,17 @@ export default {};
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.profile-img {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
@@ -63,12 +95,21 @@ export default {};
 
 .modal-body {
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .modal-default-button {
   float: right;
 }
-
+.profile-name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
@@ -77,7 +118,17 @@ export default {};
  * You can easily play with the modal transition by editing
  * these styles.
  */
-
+.name-text {
+  margin-right: 10px;
+}
+.name-input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+.name-input:focus {
+  outline: none;
+}
 .modal-enter {
   opacity: 0;
 }
