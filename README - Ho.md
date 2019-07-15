@@ -354,3 +354,45 @@
 
 * https에서 http로 응답을 받을 때 https 보안문제 발생
 * 응답을 https 로 받아야 한다.
+
+
+
+
+
+> ## Weather 지역 이름 출력 _ Google Geocoding
+
+![google_geocoding](img/google_geocoding.PNG)
+
+```javascript
+// WMFooter.vue
+<script>
+    //(-- 중략 -- )
+methods: {
+    getPosition: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        const lat = position.coords.latitude;
+        const log = position.coords.longitude;
+        this.getWeather(lat, log);
+          
+          // 지역 정보를 가져오는 getLocation 함수를 추가
+        this.getLocation(lat, log);
+      });
+    },
+```
+
+```javascript
+// getLocation
+// getPosition 함수에서 받아온 lat, log 를 google Geocoding API 에 요청하여 지역 정보를 json으로 받아옴
+
+getLocation: function(lat, log) {
+      fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${log}&key=AIzaSyC1x8tesUWMdo3VoAH3zpj56H2qw47PF4k`
+      )
+        .then(response => response.json())
+        .then(
+          json =>
+            (this.place = json.results[0].address_components[3].short_name)
+        );
+    }
+```
+
