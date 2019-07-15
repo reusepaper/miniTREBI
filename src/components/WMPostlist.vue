@@ -38,6 +38,7 @@ export default {
   methods: {
     async getPosts() {
       this.posts = await FirebaseService.getPosts();
+      console.log(this.posts);
     },
     loadMorePosts() {
       this.limits += 4;

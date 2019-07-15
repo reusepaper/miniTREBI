@@ -71,7 +71,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
   - [amchart](https://www.amcharts.com/free-animated-svg-weather-icons/) 에서 제공하는 svg파일로 애니메이션 날씨 아이콘을 구성했음.
 
-  ![1563149764141](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\1563149764141.png)
+  ![1563149764141](img\weathericon.png)
 
 ---
 
@@ -83,7 +83,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
 - git clone을 하고나서 생기는 프로젝트에서 아래의 파일을 webmobile-sub2프로젝트에 넣어줌.
 
-![1563150076745](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\1563150076745.png)
+![1563150076745](img\gitlab01.png)
 
 - 깃랩 그래프 컴포넌트 제작
 
@@ -96,7 +96,7 @@ navigator.geolocation.getCurrentPosition(position => {
     </div>
   ```
 
-![1563150199534](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\1563150199534.png)
+![1563150199534](img\gitlab02.png)
 
 ---
 
@@ -223,3 +223,4 @@ export default {
 ```vue
 upLoadImg(image) { console.log("업로드 : ", image); this.image = image; }
 ```
+
