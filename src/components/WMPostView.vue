@@ -1,5 +1,6 @@
 <template>
   <div style="margin: auto;">
+    {{this.$store.state.seePostId}}
     <p>
       <input
         class="w3-input w3-border"
@@ -39,6 +40,9 @@ export default {
   components: {
     MarkdownItVue
   },
+  mounted() {
+    // console.log(this.$store.state.seePostId);
+  },
   data() {
     return {
       content: this.$store.state.content,
@@ -52,9 +56,6 @@ export default {
         }
       }
     };
-  },
-  mounted() {
-    this.$router;
   }
 };
 </script>

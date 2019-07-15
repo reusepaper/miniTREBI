@@ -12,20 +12,13 @@
       <textarea class="md-text" rows="10" v-model="content"></textarea>
       <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
     </div>
-    <!-- <div class="filebox" v-if="!image">
-      <label for="uploadFile">파일 선택</label>
-      <input type="file" @change="onFileChange" id="uploadFile" />
-    </div>
-    <div v-else>
-      <img :src="image" />
-    </div>-->
+
     <ImgUpLoad v-on:upLoadImg="upLoadImg"></ImgUpLoad>
     <img :src="image" />
     <div>
       <br />
       <button class="button buttonblue" v-on:click="submit()">등록</button>
     </div>
-    <!-- <v-btn @click="submit">등록</v-btn> -->
   </div>
 </template>
 
