@@ -3,14 +3,18 @@
 </template>
 
 <script>
+import FirebaseService from "@/services/FirebaseService";
+
 export default {
   data() {
     return {
+      allUsers: [],
+      isSignedup: false,
       currentUser: {
         uid: "",
         email: "",
         username: ""
-      }
+      },
     };
   },
   methods: {
@@ -47,6 +51,15 @@ export default {
             this.currentUser.uid = authResult.user.uid;
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
+            console.log(authResult.user.uid);
+            this.getUsers();
+            if(this.isSignedup == false){
+              FirebaseService.postPost(
+                authResult.user.uid,
+                authResult.user.displayName,
+                '',
+              );
+            }
             window.location.reload();
             return false;
           }
@@ -60,6 +73,7 @@ export default {
       );
 
       // this.$router.push('/');
+      
     },
     redirect() {
       const { search } = window.location;
@@ -75,9 +89,17 @@ export default {
         const { returnPath } = "/";
         this.$router.push("/");
       }
-    }
+    },
+    async getUsers() {
+      this.allUsers = await FirebaseService.getUsers();
+      await console.log("ok");
+      await console.log(this.allUsers);
+      await console.log(this.allUsers[0].uid);
+      if(this.currentUser.uid == this.allUsers[0].uid) this.isSignedup = true;
+    },
   },
   mounted: function() {
+
     auth.onAuthStateChanged(user => {
       if (user) {
         this.currentUser.uid = user.uid;

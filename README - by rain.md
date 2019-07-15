@@ -123,7 +123,7 @@
 
    components에서 만든 MarkdownEditor를 import 해준다.
 
-   ![1562566607800](img/1562566607800.png)
+   ![1562566607800](img/rain-markdownEditor.png)
 
 
 
@@ -182,7 +182,7 @@
 
 2. 위에 들어갈 내용들은 firebase 프로젝트를 하나 만들고 필요한 부분을 넣어준다.
 
-   ![1562634414663](img/1562634414663.png)
+   ![1562634414663](img/rain-firebaseProject.png)
 
 3. `SignIn.vue`
 
@@ -303,9 +303,9 @@ export default {
 
 
 
-![1562748176924](img/1562748176924.png)
+![1562748176924](img/rain-loginPage.png)
 
-![1562748229409](img/1562748229409.png)
+![1562748229409](img/rain-login.png)
 
 
 
@@ -315,11 +315,11 @@ export default {
 
 1. [facebook for developers](<https://developers.facebook.com/>) 페이지에서 새로운 어플리케이션을 만들고 facebook 로그인 설정을 맞춰준다.
 
-   ![1562811473395](img/1562811473395.png)
+   ![1562811473395](img/rain-facebookLogin.png)
 
 2. firebase authentication의 로그인 방법에서 facebook을 열고 1번의 설정에서 확인할 수 있는 앱 ID와 비밀번호를 등록한다.
 
-   ![1562811617070](img/1562811617070.png)
+   ![1562811617070](img/rain-facebookLogin2.png)
 
    아래에 있는 OAuth 리디렉션 주소를 1번의 유효한 OAuth 리디렉션 URI로 등록해준다.
 
@@ -347,9 +347,9 @@ export default {
 
    firebase 로그인 `signInoptions`에 제공하는 provider를 facebook으로 추가하고, 받아올 scopes로 email과 프로필을 가져온다.
 
-   ![1562811827288](img/1562811827288.png)
+   ![1562811827288](img/rain-loginPage2.png)
 
-   ![1562811934013](img/1562811934013.png)
+   ![1562811934013](img/rain-facebookLoginPage.png)
 
    다음과 같이 로그인을 할 수 있다.
 
@@ -378,7 +378,7 @@ export default {
 
 2. firebase authentication에서 로그인 방법에 google로그인 열기
 
-   ![1562813075283](img/1562813075283.png)
+   ![1562813075283](img/rain-googleLogin.png)
 
    여기에서 나온 웹 클라이언트 ID를 1번의 clientId에 넣기
 
@@ -432,7 +432,7 @@ mounted: function() {
 
 왼쪽 : 로그인 된 상태. 오른쪽 로그인 안된 상태
 
-![1562909131605](img/1562909131605.png)![1562909164095](img/1562909164095.png)
+![1562909131605](img/rain-sidebar1.png)![1562909164095](img/rain-sidebar2.png)
 
 
 
@@ -522,7 +522,7 @@ mounted: function() {
 
 
 
-![1562909954477](img/1562909954477.png)
+![1562909954477](img/rain-postPage.png)
 
 
 
@@ -545,7 +545,7 @@ mounted: function() {
 
 페이지가 로딩될 때 현재 유저가 존재하는지 확인. 아닐경우 알람창 다음에 루트페이지로 이동.
 
-![1562910309091](img/1562910309091.png)
+![1562910309091](img/rain-postWriter.png)
 
 
 
