@@ -1,5 +1,6 @@
 <template>
-  <v-jumbotron :gradient="gradient" src dark>
+  <!-- <v-jumbotron :gradient="gradient" src dark> -->
+  <v-jumbotron v-bind:style="{ 'background-image': 'url(' + image + ')'  }">
     <v-container fill-height>
       <v-layout align-center>
         <v-flex>
@@ -48,7 +49,9 @@
           </v-menu>
           <v-divider class="my-3"></v-divider>
           <div class="title mb-3">{{content_msg}}</div>
-          <v-btn large color="primary" class="mx-0">See more</v-btn>
+          <v-btn large color="primary" class="mx-0">See more</v-btn><br>
+          <v-btn @click="random()" color="primary" class="mx-0">랜덤이미지</v-btn>
+          <v-btn v-if="isLogin" @click="userphoto()" color="primary" class="mx-0">지정이미지</v-btn>
         </v-flex>
       </v-layout>
     </v-container>
@@ -64,7 +67,35 @@ export default {
     message: false,
     hints: true,
     content_msg:
-      "orem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat."
-  })
+      "안녕하세요, 2조 트레비입니다. :)",
+    image: "https://source.unsplash.com/random/1600x900",
+    currentUser: null,
+    isLogin: false
+  }),
+  mounted: function() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.currentUser = user;
+        this.isLogin = true;
+      } else {
+        this.isLogin = false;
+      }
+    });
+  },
+  methods: {
+    random: function(){
+      const axios = require("axios");
+      axios.get('https://api.unsplash.com/random/1000x400/?client_id=ab9087a453d0e9f5b36080f167582d7eab8417474bea4294796c448881c145de')
+        .then(response => {
+            this.image = response.data;
+        })
+        .catch((error) => console.log(error));
+      // this.image = "https://source.unsplash.com/random/1000x400";
+      console.log(this.image)
+    },
+    userphoto: function(){
+      this.image = this.currentUser.photoURL;
+    }
+  }
 };
 </script>

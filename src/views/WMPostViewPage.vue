@@ -15,6 +15,10 @@ export default {
   name: "WMPostViewPage",
   components: {
     WMPostView
+  },
+  mounted() {
+    const { id } = this.$route.params;
+    this.$store.commit("setSeePostId", id);
   }
 };
 </script>
