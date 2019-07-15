@@ -31,7 +31,7 @@ import MarkdownItVue from "../../markdownsrc/markdown-it-vue";
 
 `markdownsrc` 안에 있는 vue 파일에 markdown-it 패키지의 여러 기능들을 적용시키는 js파일들과 npm을 import하여 사용
 
-![markdownsrc 폴더](C:\Users\multicampus\Desktop\캡처.PNG)
+![yeon-1563158428084](img/yeon-1563158428084.png)
 
 ```js
 data() {
