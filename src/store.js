@@ -22,7 +22,6 @@ export default new Vuex.Store({
       state.seePostId = newId;
     }
   },
-  plugins: [createPersistedState()],
-  mutations: {},
-  actions: {}
+  actions: {},
+  plugins: [createPersistedState()]
 });
