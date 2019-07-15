@@ -105,11 +105,11 @@
    firebase init
    ```
 
-   1. ![firebase_init_1](img/1562634414665.PNG)
+   1. ![firebase_hsosting1](img/1562634414665.PNG)
 
       - Y 로 Firebase init을 진행
 
-   2. ![firebase_init_2](img/1562634414669.PNG)
+   2. ![firebase_hsosting2](img/firebase_hsosting2.PNG)
 
       - 사용할 서비스를 선택
         - Firestore
@@ -120,22 +120,22 @@
           - Storage를 사용하면서 선택을 하지 않을 시 storage.rules 관련 오류 발생
           - Firebase 에서도 Storage 를 시작 해 주어야 한다.
 
-   3. ![firebase_init_2](img/1562634414666.PNG)
+   3. ![firebase_hsosting3](img/firebase_hsosting3.PNG)
 
-      ![firebase_init_2](img/1562634414667.PNG)
+      ![firebase_hsosting4](img/firebase_hsosting4.PNG)
 
-      ![firebase_init_2](img/1562634414668.PNG)
+      ![firebase_hsosting5](img/firebase_hsosting5.PNG)
 
       - ### Hosting Setup의 `Public directory`에 주의 하자
 
         - build 된 app의 `index.html` 이 존재하는 `dist` 폴더로 지정한다.
 
-   4. ![firebase_init_2](img/1562634414670.PNG)
+   4. ![firebase_hsosting6](img/firebase_hsosting6.PNG)
 
       - `npm run build` 
         - build 명령어
 
-   5. ![firebase_init_2](img/1562634414671.PNG)
+   5. ![firebase_hsosting7](img/firebase_hsosting7.PNG)
 
       - `firebase deploy`
         - 배포 명령어
