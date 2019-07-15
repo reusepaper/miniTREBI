@@ -1,15 +1,28 @@
 <template>
   <div style="margin: auto;">
     <p>
-      <input class="w3-input w3-border" name="last" type="text" :value="this.$store.state.title" readonly/>
+      <input
+        class="w3-input w3-border"
+        name="last"
+        type="text"
+        :value="this.$store.state.title"
+        readonly
+      />
     </p>
     <p>
-      작성자 : <input class="w3-input w3-border" style="display:inline; width:90%;" name="last" type="text" :value="this.$store.state.postWriter" readonly/>
+      작성자 :
+      <input
+        class="w3-input w3-border"
+        style="display:inline; width:90%;"
+        name="last"
+        type="text"
+        :value="this.$store.state.postWriter"
+        readonly
+      />
     </p>
-    <div v-if="this.$store.state.image === ''">
-    </div>
+    <div v-if="this.$store.state.image === ''"></div>
     <div v-else>
-      <img :src="this.$store.state.image"/>
+      <img :src="this.$store.state.image" />
     </div>
     <div>
       <markdown-it-vue :content="content" :options="options"></markdown-it-vue>
@@ -19,7 +32,7 @@
 
 <script>
 import FirebaseService from "@/services/FirebaseService";
-import MarkdownItVue from '../../markdownsrc/markdown-it-vue'
+import MarkdownItVue from "../../markdownsrc/markdown-it-vue";
 
 export default {
   name: "WMPostView",
@@ -34,12 +47,14 @@ export default {
           linkify: true
         },
         linkAttributes: {
-          target: '_blank',
-          rel: 'noopener'
+          target: "_blank",
+          rel: "noopener"
         }
       }
-    }
+    };
+  },
+  mounted() {
+    this.$router;
   }
-}
-
+};
 </script>
