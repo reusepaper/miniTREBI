@@ -37,7 +37,7 @@ export default {
     return {
       writer: "",
       image: this.$store.state.profileImage,
-      currentUser: ''
+      currentUser: ""
     };
   },
   mounted() {
@@ -56,7 +56,8 @@ export default {
     saveData() {
       this.currentUser.updateProfile({
         photoURL: this.image
-      })
+      });
+      this.$store.commit("setProfileImage", this.image);
       this.$emit("close");
     }
   }

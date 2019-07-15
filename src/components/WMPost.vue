@@ -1,12 +1,12 @@
 <template>
-<v-card hover @click="viewPage()">
-  <v-img :src="image" height="200px"></v-img>
-  <v-card-title primary-title>
-    <div>
-      <div>{{ title }}</div>
-    </div>
-  </v-card-title>
-</v-card>
+  <v-card hover @click="viewPage()">
+    <v-img :src="image" height="200px"></v-img>
+    <v-card-title primary-title>
+      <div>
+        <div>{{ title }}</div>
+      </div>
+    </v-card-title>
+  </v-card>
 </template>
 
 <script>
@@ -37,11 +37,11 @@ export default {
   },
   methods: {
     viewPage() {
-      this.$store.state.title = this.title,
-      this.$store.state.postWriter = this.postWriter,
-      this.$store.state.content = this.content,
-      this.$store.state.image = this.image
-      this.$router.push("/postview")
+      (this.$store.state.title = this.title),
+        (this.$store.state.postWriter = this.postWriter),
+        (this.$store.state.content = this.content),
+        (this.$store.state.image = this.image);
+      this.$router.push("/postview");
     }
   }
 };

@@ -54,7 +54,7 @@ export default {
       mini: true,
       right: null,
       isLogin: false,
-      profileImage: ""
+      profileImage: this.$store.state.profileImage
     };
   },
   mounted: function() {
