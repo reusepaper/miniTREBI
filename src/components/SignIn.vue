@@ -51,16 +51,11 @@ export default {
             this.currentUser.uid = authResult.user.uid;
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
-            console.log(authResult.user.uid);
+            // console.log(authResult.user.uid);
             this.getUsers();
-            if(this.isSignedup == false){
-              FirebaseService.postPost(
-                authResult.user.uid,
-                authResult.user.displayName,
-                '',
-              );
-            }
-            window.location.reload();
+            
+
+            
             return false;
           }
         }
@@ -91,11 +86,29 @@ export default {
       }
     },
     async getUsers() {
+      // await alert("in");
       this.allUsers = await FirebaseService.getUsers();
-      await console.log("ok");
-      await console.log(this.allUsers);
-      await console.log(this.allUsers[0].uid);
-      if(this.currentUser.uid == this.allUsers[0].uid) this.isSignedup = true;
+      // await console.log(this.allUsers);
+      // await console.log(this.allUsers[0].uid);
+      // await alert("ok");
+      // if(this.currentUser.uid == this.allUsers[0].uid) {
+      //   this.isSignedup = await true;
+      // }
+      for (let i=0; i<this.allUsers.length; i++){
+        if(this.currentUser.uid == this.allUsers[i].uid){
+          this.isSignedup = await true;
+          break;
+        }
+      }
+      // await alert(this.isSignedup);
+      if(this.isSignedup == false){
+        await FirebaseService.createUser(
+          this.currentUser.uid,
+          this.currentUser.username,
+          '',
+        );
+      }
+      await window.location.reload();
     },
   },
   mounted: function() {

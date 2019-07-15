@@ -151,8 +151,8 @@
    ```
    ```html
      <!-- firebaseui-web -->
-       <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
-       <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.css" />
+       <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+       <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
    ```
    
    `index.html`
@@ -197,6 +197,7 @@
    export default {
      data() {
        return {
+         // currentUser를 당장 사용하지는 않지만 이후에 사용할 예정으로 넣어두었다.
          currentUser: {
            uid: "",
            email: "",
@@ -206,10 +207,14 @@
      },
      methods: {
        initUI: function() {
+         // template에 존재하는 div에 ui.start 명령어를 사용하면 firebaseui가 알아서 그려준다.
          ui.start("#firebaseui-auth-container", {
+           // 현재 사용하는 옵션은 이메일 로그인만 사용한다.
            signInoptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
            callbacks: {
+             // 로그인이 성공하면,
              signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+               // 로그인 정보를 각각의 data에 저장한다.
                this.currentUser.uid = authResult.user.uid;
                this.currentUser.email = authResult.user.email;
                this.currentUser.username = authResult.user.displayName;
@@ -222,12 +227,14 @@
        
      },
      mounted: function() {
+       // 현재 로그인한 회원의 정보를 알 수 있는 함수이다. 존재하면 딕셔너리가, 아니면 null값이 나온다.
        auth.onAuthStateChanged((user) =>{
            if (user) {
                this.currentUser.uid = user.uid
                this.currentUser.email = user.email
                this.currentUser.username = user.displayName
            }
+           //현재 유저가 존재하지 않으면 로그인창을 보여준다.
            this.initUI()
        })
      }
@@ -251,6 +258,8 @@
 <div class="hide-overflow" style="position: relative;">
     ...
         <!-- 로그인 다이얼로그 활성화 -->
+    	<!-- isLogin 변수를 만들어 로그인이 되어있는지를 확인한다. 
+				true라면 로그아웃버튼 및 로그아웃 함수를 보여준다. -->
         <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
         <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
           <v-dialog v-model="login_btn" max-width="290">
@@ -283,10 +292,12 @@ export default {
           email: '',
           displayName: ''
       }
+      // 로그아웃을 위한 함수는 아래 한줄이면 충분하다.
       auth.signOut()
     }
   },
   mounted: function(){
+    // mounted 함수를 통해 현재 로그인이 되어있는지 아닌지 파악한다.
     auth.onAuthStateChanged(user => {
       if (user) this.isLogin=true;
       else this.isLogin=false;
@@ -331,8 +342,12 @@ export default {
          ui.start("#firebaseui-auth-container", {
            signInoptions: [
              firebase.auth.EmailAuthProvider.PROVIDER_ID,
+              
+               
+              // 페이스북 로그인을 위한 provider이다. 
              {
                provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+               // facebook에서 제공받을 정보들이다. 여기서는 기본 프로필과 이메일 정보를 받는다.
                scopes: [
                  'public_profile',
                  'email',
@@ -340,17 +355,17 @@ export default {
                customParameters: {
                  // Forces password re-entry.
                  auth_type: 'reauthenticate'
-               }
+            }
              },
-           ],
+        ],
    ```
 
    firebase 로그인 `signInoptions`에 제공하는 provider를 facebook으로 추가하고, 받아올 scopes로 email과 프로필을 가져온다.
 
    ![1562811827288](img/rain-loginPage2.png)
-
+   
    ![1562811934013](img/rain-facebookLoginPage.png)
-
+   
    다음과 같이 로그인을 할 수 있다.
 
 
@@ -369,6 +384,8 @@ export default {
          ui.start("#firebaseui-auth-container", {
            signInoptions: [
              firebase.auth.EmailAuthProvider.PROVIDER_ID,
+               
+             // 구글 로그인을 위한 provider. 제공 방법 및 클라이언트 아이디를 작성하면된다.
              {
                provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                authMethod: 'https://accounts.google.com',
@@ -396,7 +413,9 @@ export default {
 
 ```html
           <v-list-tile-content>
+              <!-- user_name을 id로 주어 innerText로 변경한다. -->
             <v-list-tile-title><span id="user_name"></span>님 환영합니다!</v-list-tile-title>
+            <!-- isLogin 변수를 사용. 로그인시만 글쓰기 버튼이 렌더링되게 만든다. -->
             <v-list-tile-title v-if="isLogin" @click="$router.push('create')" id="create_post_button"><button id="createButton">글쓰기!</button></v-list-tile-title>
           </v-list-tile-content>
 
@@ -546,6 +565,108 @@ mounted: function() {
 페이지가 로딩될 때 현재 유저가 존재하는지 확인. 아닐경우 알람창 다음에 루트페이지로 이동.
 
 ![1562910309091](img/rain-postWriter.png)
+
+
+
+
+
+
+
+
+
+## 사용자 회원가입시(첫 로그인 시) 기본 정보 저장.
+
+1. 함수 생성
+
+   `FirebaseService.js`
+
+   ```js
+   const USERS = 'Users'
+   ...
+   
+   export default {
+    ...
+     getUsers(){
+       const usersList = firestore.collection(USERS)
+       return usersList
+       .get()
+       .then((docSnapshots) => {
+         return docSnapshots.docs.map((doc) => {
+           let data = doc.data()
+           return data
+         })
+       })
+     },
+     createUser(uid, nickname, profileImg) {
+       return firestore.collection(USERS).add({
+         uid,
+         nickname,
+         profileImg,
+       })
+     },
+   }
+   
+   ```
+
+   + user 정보에 들어갈 uid, 닉네임, 프로필사진을 기본으로 넣는다.
+
+2. `SignIn.vue`
+
+   ```js
+   import FirebaseService from "@/services/FirebaseService";
+   ...
+     methods: {
+         ...
+       // 비동기. 순서대로 처리하기위해 async 사용.
+       async getUsers() {
+         // firebase에 저장된 정보를 allUsers에 저장.
+         this.allUsers = await FirebaseService.getUsers();
+         // 저장된 allUsers를 돌며, 현재 로그인 정보를 체크.
+         // this.currentUser.uid 부분은 initUI의 콜백에 존재한다.
+         for (let i=0; i<this.allUsers.length; i++){
+           // 현재 로그인 유저의 uid와 가입된 user의 uid가 같은것이 있다면 isSignedup 변수를 true로 둔다.
+           if(this.currentUser.uid == this.allUsers[i].uid){
+             this.isSignedup = await true;
+             break;
+           }
+         }
+         // 만약 회원가입 유저(처음 로그인한 유저)라면 firebase에 uid와 username(닉네임), 기본 프로필 이미지를 '' 로 저장한다.
+         if(this.isSignedup == false){
+           await FirebaseService.createUser(
+             this.currentUser.uid,
+             this.currentUser.username,
+             '',
+           );
+         }
+         await window.location.reload();
+       },
+   ```
+
+   
+
+   ```js
+     methods: {
+       initUI: function() {
+         ui.start("#firebaseui-auth-container", {
+           signInoptions: [
+               ...
+           callbacks: {
+             signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+               this.currentUser.uid = authResult.user.uid;
+               this.currentUser.email = authResult.user.email;
+               this.currentUser.username = authResult.user.displayName;
+               // 상단에서 만든 getUsers()를 실행시킨다.
+               this.getUsers();
+               
+               return false;
+             }
+           }
+         });
+   ```
+
+   
+
+
 
 
 
