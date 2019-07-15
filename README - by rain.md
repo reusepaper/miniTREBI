@@ -708,3 +708,58 @@ currentUser라는 data를 지정한 후, updateProfile을 하여 이미지url �
 
 `this.image = user.photoURL;` 를 사용하여 user에 photoURL이 존재하면 this.image에 저장. 
 
+
+
+
+
+
+
+
+
+## 이미지 배너 랜덤이미지
+
+`HJ.vue`
+
+```html
+<template>
+  <!-- <v-jumbotron :gradient="gradient" src dark> -->
+  <v-jumbotron v-bind:style="{ 'background-image': 'url(' + image + ')'  }">
+    <v-container fill-height>
+      <v-layout align-center>
+
+```
+
+```js
+  data: () => ({
+    ...
+    image: "https://source.unsplash.com/random/1600x900",
+    currentUser: null,
+    isLogin: false
+  }),
+      ...
+  methods: {
+    random: function(){
+      let random_id = Math.floor(Math.random() * 1000) + 1;
+      this.image = `https://picsum.photos/id/${random_id}/1000/400`;
+      console.log(this.image)
+    },
+    userphoto: function(){
+      this.image = this.currentUser.photoURL;
+    }
+  },
+  mounted: function() {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        this.currentUser = user;
+        this.isLogin = true;
+      } else {
+        this.isLogin = false;
+      }
+    });
+  },
+```
+
+
+
+
+
