@@ -235,3 +235,42 @@ export default {
 upLoadImg(image) { console.log("업로드 : ", image); this.image = image; }
 ```
 
+
+
+
+
+> ### repository 명 자동개행 시키기 
+
+
+
+repository 명이 아래와 같이 overflow되는 이슈가 있었음. 
+
+![1563168847529](img/1563168847529.png)
+
+ 	
+
+* 해결책 
+
+  ```vue
+  <template>
+    <div class="py-3">
+          <a target="_blank" v-bind:href="repos.http_url_to_repo">
+            <h2 class="repoTitle font-weight-regular">{{repos.path_with_namespace}}</h2>
+          </a>
+    </div>
+  </template>
+  
+  (...중략...)
+  
+  <style scoped >
+  
+  .repoTitle {
+    word-break: break-all;
+  }
+  </style>
+  
+  ```
+
+  repoTitle 클래스를 주고 `word-break: break-all` 속성을 주어서 해결했음.  해당 속성은 띄어쓰기가 없더라도 강제로 개행을 해주는 기능을 함.  
+
+  ![1563169114806](img/1563169114806.png)

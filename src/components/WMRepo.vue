@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex xs8>
         <a target="_blank" v-bind:href="repos.http_url_to_repo">
-          <h2 class="font-weight-regular">{{repos.path_with_namespace}}</h2>
+          <h2 class="repoTitle font-weight-regular">{{repos.path_with_namespace}}</h2>
         </a>
         <p
           class="repository--name subheading mb-1 grey--text text--darken-1 font-weight-light"
@@ -50,5 +50,9 @@ a {
 }
 a:hover {
   color: rgba(0, 0, 0, 0.5);
+}
+
+.repoTitle {
+  word-break: break-all;
 }
 </style>
