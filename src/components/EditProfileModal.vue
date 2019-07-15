@@ -8,12 +8,11 @@
           </div>
 
           <div class="modal-body">
-            <div class="profile-img"></div>
+            <div class="profile-img" v-bind:style="{ 'background-image': 'url(' + image + ')'  }"></div>
             <div class="profile-name">
-              <span class="name-text">닉네임 :</span>
               <input class="name-input" type="text" v-model="writer" />
             </div>
-            <ImgUpLoad></ImgUpLoad>
+            <ImgUpLoad v-on:upLoadImg="upLoadImg"></ImgUpLoad>
           </div>
 
           <div class="modal-footer">
@@ -37,7 +36,8 @@ export default {
   },
   data() {
     return {
-      writer: ""
+      writer: "",
+      image: this.$store.state.profileImage
     };
   },
   mounted() {
@@ -46,6 +46,12 @@ export default {
         this.writer = user.displayName;
       }
     });
+  },
+  methods: {
+    upLoadImg(image) {
+      this.image = image;
+      this.$store.state.profileImage = this.image;
+    }
   }
 };
 </script>
@@ -82,11 +88,12 @@ export default {
   align-items: center;
 }
 .profile-img {
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
   border-radius: 50px;
+  background-size: cover;
 }
 .modal-header h3 {
   margin-top: 0;
@@ -122,9 +129,9 @@ export default {
   margin-right: 10px;
 }
 .name-input {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   padding: 10px 5px;
+  text-align: center;
 }
 .name-input:focus {
   outline: none;

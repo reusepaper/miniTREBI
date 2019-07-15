@@ -1,11 +1,8 @@
 <template>
   <div>
-    <div class="filebox" v-if="!image">
+    <div class="filebox">
       <label for="uploadFile">파일 선택</label>
       <input type="file" @change="onFileChange" id="uploadFile" />
-    </div>
-    <div v-else>
-      <img :src="image" />
     </div>
   </div>
 </template>

@@ -4,7 +4,7 @@
       <v-list class="pa-0 pb-5 mt-5">
         <v-list-tile avatar>
           <v-list-tile-avatar>
-            <img src />
+            <img :src="profileImage" />
           </v-list-tile-avatar>
 
           <v-list-tile-content class="sidebar-title">
@@ -12,8 +12,8 @@
               <span id="user_name"></span>님 환영합니다!
             </v-list-tile-title>
             <v-list-tile-sub-title>
-              <button id="editProfileBtn" v-if="isLogin" @click="editProfile">프로필 수정</button>
               <button id="createButton" v-if="isLogin" @click="$router.push('create')">글쓰기!</button>
+              <button id="editProfileBtn" v-if="isLogin" @click="editProfile">프로필 수정</button>
             </v-list-tile-sub-title>
           </v-list-tile-content>
 
@@ -53,10 +53,12 @@ export default {
       ],
       mini: true,
       right: null,
-      isLogin: false
+      isLogin: false,
+      profileImage: ""
     };
   },
   mounted: function() {
+    this.profileImage = this.$store.state.profileImage;
     const userName = document.querySelector("#user_name");
     const createPost = document.querySelector("#create_post");
     auth.onAuthStateChanged(user => {
