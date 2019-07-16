@@ -32,7 +32,12 @@ export default new Router({
       component: CreatePost
     },
     {
-      path: "/postlist",
+      path: "/test",
+      name: "test",
+      component: Test
+    },
+    {
+      path: "/postlist-*",
       name: "postlist",
       component: WMPostPage
     },
