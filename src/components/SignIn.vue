@@ -1,26 +1,27 @@
 <template>
   <div>
     <div id="firebaseui-auth-container"></div>
-    <LoadingPage></LoadingPage>
+    <!-- <LoadingPage id='loader'></LoadingPage> -->
   </div>
 </template>
 
 <script>
-import LoadingPage from "../components/LoadingPage";
+// import LoadingPage from "../components/LoadingPage";
 
 export default {
   data() {
     return {
     };
   },
-  components: {
-    LoadingPage
-  },
+  // components: {
+  //   LoadingPage
+  // },
   methods: {
     initUI: function() {
       console.log("hi")
       ui.start("#firebaseui-auth-container", {
-        signInSuccessUrl: '/loading',
+        // signInSuccessUrl: '/loading',
+        // signInSuccessUrl: '/',
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
@@ -47,21 +48,28 @@ export default {
         ],
         // Required to enable one-tap sign-up credential helper.
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
-        
-        // callbacks: {
-        //   signInSuccessWithAuthResult: (authResult, redirectUrl) => {
-        //     // this.$store.state.user = authResult
-        //     // auth.onAuthStateChanged(user => {
-        //     //   this.$store.commit("setUser", user);
-        //     //   this.$store.commit("setProfileImage", user.photoURL);
-        //     // });
+        callbacks: {
+          signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+            // this.$store.state.user = authResult
+            // auth.onAuthStateChanged(user => {
+            //   this.$store.commit("setUser", user);
+            //   this.$store.commit("setProfileImage", user.photoURL);
+            // });
 
-        //     // this.$store.commit("setUser", id);
-        //     // window.location.reload();
-        //     window.location.assign("/loading");
-        //     return false;
-        //   }
-        // }
+            // this.$store.commit("setUser", id);
+            // window.location.reload();
+            window.location.assign("/loading");
+            // this.$router.push('/loading');
+            // history.go(-1);
+            return false;
+          },
+          // uiShown: function() {
+          //   // The widget is rendered.
+          //   // Hide the loader.
+          //   // document.getElementById('loader');
+          //    $("#loader").hide();
+          // }
+        }
       });
 
       const axios = require("axios");
