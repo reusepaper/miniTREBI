@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
   <v-app>
     <v-content>
       <WMHeader></WMHeader>
-      <router-view />
+      <router-view :key="$route.fullPath"></router-view>
       <back-to-top text="Back to top" visibleoffset="100">
         <button
           type="button"
