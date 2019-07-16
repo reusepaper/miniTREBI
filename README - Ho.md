@@ -396,3 +396,24 @@ getLocation: function(lat, log) {
     }
 ```
 
+
+
+
+
+> ## Console Error 해결
+
+#### 1. v-jumbotron warning해결
+
+```javascript
+[Vuetify] 'v-jumbotron' is deprecated, use 'v-responsive' instead
+```
+
+`v-jumbotron` 을 `v-responsive`로 변경
+
+
+
+#### 2. `network.bundle.js` not define error
+
+* gitlab graph 구현에 사용된 `newtwork.bundle.js` 의 함수에서  not define 발생
+* 정의되지 않은 함수를 수정하여 해결
+
