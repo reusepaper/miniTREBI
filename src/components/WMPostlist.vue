@@ -28,7 +28,6 @@ export default {
   data() {
     return {
       posts: [],
-      nowWriter: this.$store.state.writer
     };
   },
   components: {
@@ -39,19 +38,21 @@ export default {
   },
   methods: {
     async getPosts() {
-      if(this.nowWriter == "All"){
+      // console.log("UID::" + this.$store.state.writerUid);
+      if(this.$store.state.writerUid == ""){
         this.posts = await FirebaseService.getPosts();
       } else {
         let allPosts = await FirebaseService.getPosts();
         for(var i = 0; i < allPosts.length; i++){
           console.log('hhh');
-          if(allPosts[i].postWriter == this.nowWriter){
+          if(allPosts[i].writerUid == this.$store.state.writerUid){
             this.posts.push(allPosts[i]);
           }
         }
       }
       // this.posts = await FirebaseService.getPosts();
       console.log(this.posts);
+      console.log("UID::" + this.$store.state.writerUid);
     },
     loadMorePosts() {
       this.limits += 4;
