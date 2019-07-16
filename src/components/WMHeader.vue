@@ -54,7 +54,7 @@ export default {
   name: "WMHeader",
   data: () => ({
     items: [
-      { title: "All"},
+      { title: "All" },
       { title: "Ho" },
       { title: "ydk" },
       { title: "연지" },
@@ -94,7 +94,6 @@ export default {
     },
 
     homelog: function() {
-      location.reload();
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
