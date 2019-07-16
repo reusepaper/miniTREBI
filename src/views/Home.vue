@@ -21,7 +21,7 @@
             <v-flex xs12>
               <!-- Gitlab Graph 컴포넌트 호출  -->
               <h2 class="headline my-5 text-xs-center">Gitlab Graph</h2>
-              <GitlabGraph></GitlabGraph>
+              <!-- <GitlabGraph></GitlabGraph> -->
             </v-flex>
           </v-layout>
 
