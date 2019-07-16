@@ -21,7 +21,6 @@
             v-for="(item, index) in items"
             :key="index"
             @click="selectWriter(item.title)"
-            to="/postlist"
           >
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile>
@@ -55,11 +54,12 @@ export default {
   name: "WMHeader",
   data: () => ({
     items: [
+      { title: "All"},
       { title: "Ho" },
       { title: "ydk" },
-      { title: "yeon" },
-      { title: "mansub" },
-      { title: "rain" }
+      { title: "연지" },
+      { title: "한만섭" },
+      { title: "한단비" }
     ],
     dialog: false,
     login_btn: false,
@@ -87,7 +87,10 @@ export default {
       window.location.reload();
     },
     selectWriter: function(s_writer) {
+      console.log(s_writer);
       this.$store.state.writer = s_writer;
+      // this.$store.commit('setWriter', s_writer);
+      this.$router.push(`/postlist-${s_writer}`);
     },
 
     homelog: function() {
