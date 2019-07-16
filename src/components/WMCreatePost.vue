@@ -55,15 +55,13 @@ export default {
     };
   },
   mounted: function() {
-    auth.onAuthStateChanged(user => {
-      if (user == null) {
-        alert("로그인이 필요합니다.");
-        window.location.assign("/");
-      } else {
-        this.postWriter = user.displayName;
-        this.writerUid = user.uid;
-      }
-    });
+    if (this.$store.state.user == null) {
+      alert("로그인이 필요합니다.");
+      window.location.assign("/");
+    } else {
+      this.postWriter = this.$store.state.user.displayName;
+      this.writerUid = this.$store.state.user.uid;
+    }
   },
   methods: {
     submit() {

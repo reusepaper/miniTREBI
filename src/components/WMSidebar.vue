@@ -60,16 +60,15 @@ export default {
   mounted: function() {
     const userName = document.querySelector("#user_name");
     const createPost = document.querySelector("#create_post");
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        userName.innerText = user.displayName;
-        this.isLogin = true;
-        this.profileImage = user.photoURL;
-      } else {
-        userName.innerText = "guest";
-        this.isLogin = false;
-      }
-    });
+    if (this.$store.state.user) {
+      userName.innerText = this.$store.state.user.displayName;
+      this.isLogin = true;
+      this.profileImage = user.photoURL;
+    } else {
+      userName.innerText = "guest";
+      this.isLogin = false;
+    }
+    
   },
   methods: {
     editProfile() {
