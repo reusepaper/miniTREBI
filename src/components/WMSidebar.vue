@@ -4,16 +4,19 @@
       <v-list class="pa-0 pb-5 mt-5">
         <v-list-tile avatar>
           <v-list-tile-avatar>
-            <img :src="this.$store.state.profileImage" />
+            <img v-if="this.$store.state.user === null" :src="this.$store.state.defaultImage" />
+            <img v-if="this.$store.state.user !== null" :src="this.$store.state.user.photoURL" />
           </v-list-tile-avatar>
 
           <v-list-tile-content class="sidebar-title">
-            <v-list-tile-title>
-              <span id="user_name"></span>님 환영합니다!
-            </v-list-tile-title>
+            <v-list-tile-title>{{this.$store.state.user === null ? "guest" : this.$store.state.user.displayName}}님 환영합니다.</v-list-tile-title>
             <v-list-tile-sub-title>
-              <button id="createButton" v-if="isLogin" @click="$router.push('create')">글쓰기!</button>
-              <button id="editProfileBtn" v-if="isLogin" @click="editProfile">프로필 수정</button>
+              <button
+                id="createButton"
+                v-if="username !== 'guest'"
+                @click="$router.push('create')"
+              >글쓰기!</button>
+              <button id="editProfileBtn" v-if="username !== 'guest'" @click="editProfile">프로필 수정</button>
             </v-list-tile-sub-title>
           </v-list-tile-content>
 
@@ -48,28 +51,19 @@ export default {
   data() {
     return {
       drawer: true,
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ],
+      items: this.$store.state.items,
       mini: true,
       right: null,
-      isLogin: false
+      isLogin: false,
+      username:
+        this.$store.state.user !== null
+          ? this.$store.state.user.displayName
+          : "guest",
+      profileImage:
+        this.$store.state.user !== null
+          ? this.$store.state.user.photoURL
+          : this.$store.state.defaultImage
     };
-  },
-  mounted: function() {
-    const userName = document.querySelector("#user_name");
-    const createPost = document.querySelector("#create_post");
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        userName.innerText = user.displayName;
-        this.isLogin = true;
-        this.profileImage = user.photoURL;
-      } else {
-        userName.innerText = "guest";
-        this.isLogin = false;
-      }
-    });
   },
   methods: {
     editProfile() {
