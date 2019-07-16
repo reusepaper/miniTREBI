@@ -55,6 +55,7 @@ export default {
             
             // this.$store.commit("setUser", id);
             window.location.reload();
+
             return false;
           }
         }
@@ -80,7 +81,7 @@ export default {
         const { returnPath } = "/";
         this.$router.push("/");
       }
-    },
+    }
     // async getUsers() {
     //   // await alert("in");
     //   this.allUsers = await FirebaseService.getUsers();
