@@ -19,6 +19,9 @@ export default {
     postWriter: {
       type: String
     },
+    category: {
+      type: String
+    },
     content: {
       type: String
     },
@@ -39,6 +42,7 @@ export default {
     viewPage() {
       (this.$store.state.title = this.title),
         (this.$store.state.postWriter = this.postWriter),
+        (this.$store.state.category = this.category),
         (this.$store.state.content = this.content),
         (this.$store.state.image = this.image);
       this.$router.push("/postview");
