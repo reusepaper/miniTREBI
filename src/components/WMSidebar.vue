@@ -51,10 +51,7 @@ export default {
   data() {
     return {
       drawer: true,
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ],
+      items: this.$store.state.items,
       mini: true,
       right: null,
       isLogin: false,
