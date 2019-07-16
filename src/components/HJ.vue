@@ -85,8 +85,8 @@ export default {
   methods: {
     random: function() {
       let random_id = Math.floor(Math.random() * 1000) + 1;
-      this.image = `https://picsum.photos/id/${random_id}/1000/400`;
-      console.log(this.image);
+      this.image = `https://picsum.photos/id/${random_id}/1200/400`;
+      console.log(this.image)
     },
     userphoto: function() {
       this.image = this.currentUser.photoURL;
