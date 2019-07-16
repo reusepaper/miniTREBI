@@ -1,8 +1,6 @@
 <template>
   <div>
-    <v-container mt-5>
-      <LoadingPage></LoadingPage>
-    </v-container>
+    <LoadingPage></LoadingPage>
   </div>
 </template>
 

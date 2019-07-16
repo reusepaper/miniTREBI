@@ -55,9 +55,11 @@ export default {
     },
     saveData() {
       this.currentUser.updateProfile({
-        photoURL: this.image
+        photoURL: this.image,
+        displayName: this.writer
       });
-      this.$store.commit("setProfileImage", this.image);
+      this.$store.commit("setUserImage", this.image);
+      this.$store.commit("setUserDisplayName", this.writer);
       this.$emit("close");
     }
   }

@@ -1,18 +1,26 @@
 <template>
-  <div id="firebaseui-auth-container"></div>
+  <div>
+    <div id="firebaseui-auth-container"></div>
+    <LoadingPage></LoadingPage>
+  </div>
 </template>
 
 <script>
-import FirebaseService from "@/services/FirebaseService";
+import LoadingPage from "../components/LoadingPage";
 
 export default {
   data() {
     return {
     };
   },
+  components: {
+    LoadingPage
+  },
   methods: {
     initUI: function() {
+      console.log("hi")
       ui.start("#firebaseui-auth-container", {
+        signInSuccessUrl: '/loading',
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
@@ -39,19 +47,21 @@ export default {
         ],
         // Required to enable one-tap sign-up credential helper.
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
-        callbacks: {
-          signInSuccessWithAuthResult: (authResult, redirectUrl) => {
-            // this.$store.state.user = authResult
-            auth.onAuthStateChanged(user => {
-              this.$store.commit("setUser", user);
-              this.$store.commit("setProfileImage", user.photoURL);
-            });
+        
+        // callbacks: {
+        //   signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+        //     // this.$store.state.user = authResult
+        //     // auth.onAuthStateChanged(user => {
+        //     //   this.$store.commit("setUser", user);
+        //     //   this.$store.commit("setProfileImage", user.photoURL);
+        //     // });
 
-            // this.$store.commit("setUser", id);
-            window.location.reload();
-            return false;
-          }
-        }
+        //     // this.$store.commit("setUser", id);
+        //     // window.location.reload();
+        //     window.location.assign("/loading");
+        //     return false;
+        //   }
+        // }
       });
 
       const axios = require("axios");

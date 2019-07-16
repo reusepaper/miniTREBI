@@ -8,6 +8,16 @@
       </label>
       <input class="w3-input w3-border" name="last" type="text" v-model="title" />
     </p>
+    <p>
+      <label class="w3-text-blue">
+        <b>Category</b>
+      </label>
+      <v-layout wrap align-center>
+        <v-flex xs12 sm6 d-flex>
+          <v-select v-model="category" :items="categories" label="Solo field" solo></v-select>
+        </v-flex>
+      </v-layout>
+    </p>
     <div class="container">
       <textarea class="md-text" rows="10" v-model="content"></textarea>
       <markdown-it-vue class="md-body" :content="content" :options="options"></markdown-it-vue>
@@ -51,7 +61,9 @@ export default {
           target: "_blank",
           rel: "noopener"
         }
-      }
+      },
+      categories: this.$store.state.categories,
+      category: 0
     };
   },
   mounted: function() {
@@ -69,6 +81,8 @@ export default {
         alert("제목을 입력하세요");
       } else if (this.content == "") {
         alert("내용을 입력하세요");
+      } else if (this.category == 0) {
+        alert("카테고리를 입력하세요");
       } else {
         FirebaseService.postPost(
           this.title,
@@ -82,10 +96,9 @@ export default {
         this.title = "";
         this.postWriter = "";
         this.writerUid = "";
-        this.category = "",
-        this.image = "";
+        (this.category = ""), (this.image = "");
         this.content = "";
-        window.location.assign('/postlist');
+        window.location.assign("/postlist");
       }
     },
     removeImage() {
