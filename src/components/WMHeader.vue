@@ -77,6 +77,8 @@ export default {
         email: "",
         displayName: ""
       };
+      this.isLogin = false;
+      this.$store.commit("setUser", null);
       auth.signOut();
     },
     selectWriter: function(s_writer) {
@@ -92,11 +94,9 @@ export default {
     }
   },
   mounted: function() {
-    auth.onAuthStateChanged(user => {
-      console.log(user);
-      if (user) this.isLogin = true;
-      else this.isLogin = false;
-    });
+    if (this.$store.state.user) this.isLogin = true;
+    else this.isLogin = false;
+    // console.log(this.$store.state.user)
   }
 };
 </script>
