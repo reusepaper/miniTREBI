@@ -42,6 +42,7 @@
   </v-navigation-drawer>
 </template>
 
+
 <script>
 export default {
   data() {
@@ -54,7 +55,7 @@ export default {
       mini: true,
       right: null,
       isLogin: false,
-      profileImage: this.$store.state.profileImage
+      profileImage: ""
     };
   },
   mounted: function() {

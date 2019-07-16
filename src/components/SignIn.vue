@@ -52,7 +52,7 @@ export default {
             this.currentUser.email = authResult.user.email;
             this.currentUser.username = authResult.user.displayName;
             // console.log(authResult.user.uid);
-            // this.getUsers();
+            window.location.reload();
             return false;
           }
         }
