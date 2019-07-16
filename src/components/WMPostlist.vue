@@ -26,7 +26,8 @@ export default {
   },
   data() {
     return {
-      posts: []
+      posts: [],
+      nowWriter: this.$store.state.writer
     };
   },
   components: {
@@ -37,13 +38,13 @@ export default {
   },
   methods: {
     async getPosts() {
-      if(this.$store.state.writer == "All"){
+      if(this.nowWriter == "All"){
         this.posts = await FirebaseService.getPosts();
       } else {
         let allPosts = await FirebaseService.getPosts();
         for(var i = 0; i < allPosts.length; i++){
-          console.log('hhh')
-          if(allPosts[i].postWriter == this.$store.state.writer){
+          console.log('hhh');
+          if(allPosts[i].postWriter == this.nowWriter){
             this.posts.push(allPosts[i]);
           }
         }

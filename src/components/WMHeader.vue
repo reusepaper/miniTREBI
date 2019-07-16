@@ -82,7 +82,8 @@ export default {
     selectWriter: function(s_writer) {
       console.log(s_writer);
       this.$store.state.writer = s_writer;
-      this.$router.push('/postlist');
+      // this.$store.commit('setWriter', s_writer);
+      this.$router.push(`/postlist-${s_writer}`);
     },
 
     homelog: function() {
