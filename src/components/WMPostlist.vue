@@ -37,7 +37,18 @@ export default {
   },
   methods: {
     async getPosts() {
-      this.posts = await FirebaseService.getPosts();
+      if(this.$store.state.writer == "All"){
+        this.posts = await FirebaseService.getPosts();
+      } else {
+        let allPosts = await FirebaseService.getPosts();
+        for(var i = 0; i < allPosts.length; i++){
+          console.log('hhh')
+          if(allPosts[i].postWriter == this.$store.state.writer){
+            this.posts.push(allPosts[i]);
+          }
+        }
+      }
+      // this.posts = await FirebaseService.getPosts();
       console.log(this.posts);
     },
     loadMorePosts() {
