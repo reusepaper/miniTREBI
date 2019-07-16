@@ -1,6 +1,6 @@
 <template>
   <!-- <v-jumbotron :gradient="gradient" src dark> -->
-  <v-jumbotron v-bind:style="{ 'background-image': 'url(' + image + ')'  }">
+  <v-responsive v-bind:style="{ 'background-image': 'url(' + image + ')'  }">
     <v-container fill-height>
       <v-layout align-center>
         <v-flex>
@@ -49,13 +49,14 @@
           </v-menu>
           <v-divider class="my-3"></v-divider>
           <div class="title mb-3">{{content_msg}}</div>
-          <v-btn large color="primary" class="mx-0">See more</v-btn><br>
+          <v-btn large color="primary" class="mx-0">See more</v-btn>
+          <br />
           <v-btn @click="random()" color="primary" class="mx-0">랜덤이미지</v-btn>
           <v-btn v-if="isLogin" @click="userphoto()" color="primary" class="mx-0">지정이미지</v-btn>
         </v-flex>
       </v-layout>
     </v-container>
-  </v-jumbotron>
+  </v-responsive>
 </template>
 
 <script>
@@ -66,8 +67,7 @@ export default {
     menu: false,
     message: false,
     hints: true,
-    content_msg:
-      "안녕하세요, 2조 트레비입니다. :)",
+    content_msg: "안녕하세요, 2조 트레비입니다. :)",
     image: "https://source.unsplash.com/random/1600x900",
     currentUser: null,
     isLogin: false
@@ -83,12 +83,12 @@ export default {
     });
   },
   methods: {
-    random: function(){
+    random: function() {
       let random_id = Math.floor(Math.random() * 1000) + 1;
       this.image = `https://picsum.photos/id/${random_id}/1000/400`;
-      console.log(this.image)
+      console.log(this.image);
     },
-    userphoto: function(){
+    userphoto: function() {
       this.image = this.currentUser.photoURL;
     }
   }

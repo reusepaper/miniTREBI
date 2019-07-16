@@ -6,8 +6,12 @@ const bodyParser = require('body-parser');
       <WMHeader></WMHeader>
       <router-view />
       <back-to-top text="Back to top" visibleoffset="100">
-        <button type='button' style='bottom:120px;' class='ydk v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--dark light-blue'>
-          <i aria-hidden='true' class='v-icon material-icons theme--dark'>keyboard_arrow_up</i>
+        <button
+          type="button"
+          style="bottom:120px;"
+          class="ydk v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--dark light-blue"
+        >
+          <i aria-hidden="true" class="v-icon material-icons theme--dark">keyboard_arrow_up</i>
         </button>
       </back-to-top>
       <WMFooter></WMFooter>
@@ -22,7 +26,7 @@ import WMFooter from "./components/WMFooter";
 
 export default {
   name: "App",
-  components:{
+  components: {
     WMHeader,
     WMFooter
   },
@@ -34,12 +38,14 @@ export default {
   },
   beforeCreate() {
     // eslint-disable-next-line
-    if (browser !== "Chrome") {
+    var is_chrome =
+      navigator.userAgent.toLowerCase().indexOf("chrome") > -1 &&
+      navigator.vendor.toLowerCase().indexOf("google") > -1;
+    if (is_chrome != 1) {
       alert("본 사이트는 크롬버전에 최적화되어있습니다.");
     }
   }
 };
 </script>
 <style>
-
 </style>
