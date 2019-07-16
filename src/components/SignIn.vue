@@ -14,7 +14,7 @@ export default {
         uid: "",
         email: "",
         username: ""
-      },
+      }
     };
   },
   methods: {
@@ -53,6 +53,7 @@ export default {
             this.currentUser.username = authResult.user.displayName;
             // console.log(authResult.user.uid);
             window.location.reload();
+
             return false;
           }
         }
@@ -65,7 +66,6 @@ export default {
       );
 
       // this.$router.push('/');
-      
     },
     redirect() {
       const { search } = window.location;
@@ -81,7 +81,7 @@ export default {
         const { returnPath } = "/";
         this.$router.push("/");
       }
-    },
+    }
     // async getUsers() {
     //   // await alert("in");
     //   this.allUsers = await FirebaseService.getUsers();
@@ -109,13 +109,11 @@ export default {
     // },
   },
   mounted: function() {
-
     auth.onAuthStateChanged(user => {
       if (user) {
         this.currentUser.uid = user.uid;
         this.currentUser.email = user.email;
         this.currentUser.username = user.displayName;
-        
       } else {
         // console.log(user)
         this.initUI();
