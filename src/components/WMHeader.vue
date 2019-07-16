@@ -84,7 +84,6 @@ export default {
         "https://scontent-nrt1-1.cdninstagram.com/vp/14e487ffcb73b4d07dd6cf3dd7688afb/5DA39AF1/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"
       );
       auth.signOut();
-      window.location.reload();
     },
     selectWriter: function(uid) {
       console.log(uid);
@@ -94,7 +93,6 @@ export default {
     },
 
     homelog: function() {
-      location.reload();
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
