@@ -36,6 +36,7 @@ export default {
     return {
       title: "",
       postWriter: "",
+      writerUid: "",
       content: "# 이곳에 게시글을 작성해보세요! 8-)",
       image: "",
       configs: {
@@ -59,6 +60,7 @@ export default {
         window.location.assign("/");
       } else {
         this.postWriter = user.displayName;
+        this.writerUid = user.uid;
       }
     });
   },
@@ -72,14 +74,17 @@ export default {
         FirebaseService.postPost(
           this.title,
           this.postWriter,
+          this.writerUid,
           this.content,
           this.image
         );
         alert("업로드 되었습니다");
         this.title = "";
         this.postWriter = "";
+        this.writerUid = "";
         this.image = "";
         this.content = "";
+        window.location.assign('/postlist');
       }
     },
     removeImage() {
