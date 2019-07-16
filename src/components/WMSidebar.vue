@@ -59,11 +59,10 @@ export default {
   },
   mounted: function() {
     const userName = document.querySelector("#user_name");
-    const createPost = document.querySelector("#create_post");
     if (this.$store.state.user) {
       userName.innerText = this.$store.state.user.displayName;
       this.isLogin = true;
-      this.profileImage = user.photoURL;
+      this.profileImage = this.$store.state.user.photoURL;
     } else {
       userName.innerText = "guest";
       this.isLogin = false;
