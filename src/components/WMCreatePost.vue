@@ -37,6 +37,7 @@ export default {
       title: "",
       postWriter: "",
       writerUid: "",
+      category: "",
       content: "# 이곳에 게시글을 작성해보세요! 8-)",
       image: "",
       configs: {
@@ -75,6 +76,7 @@ export default {
           this.title,
           this.postWriter,
           this.writerUid,
+          this.category,
           this.content,
           this.image
         );
@@ -82,6 +84,7 @@ export default {
         this.title = "";
         this.postWriter = "";
         this.writerUid = "";
+        this.category = "",
         this.image = "";
         this.content = "";
         window.location.assign('/postlist');

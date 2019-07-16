@@ -4,7 +4,7 @@
       <v-list class="pa-0 pb-5 mt-5">
         <v-list-tile avatar>
           <v-list-tile-avatar>
-            <img :src="profileImage" />
+            <img :src="this.$store.state.profileImage" />
           </v-list-tile-avatar>
 
           <v-list-tile-content class="sidebar-title">

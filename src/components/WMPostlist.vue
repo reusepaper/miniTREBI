@@ -5,6 +5,7 @@
         class="ma-3"
         :title="posts[i-1].title"
         :postWriter="posts[i-1].postWriter"
+        :category="posts[i-1].category"
         :content="posts[i-1].content"
         :image="posts[i-1].image"
       ></WMPost>
