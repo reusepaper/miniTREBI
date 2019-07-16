@@ -100,7 +100,7 @@ export default {
   mounted: function() {
     if (this.$store.state.user) this.isLogin = true;
     else this.isLogin = false;
-    // console.log(this.$store.state.user)
+    console.log(this.$store.state.user);
   }
 };
 </script>

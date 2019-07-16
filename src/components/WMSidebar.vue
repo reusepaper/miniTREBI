@@ -54,8 +54,7 @@ export default {
       ],
       mini: true,
       right: null,
-      isLogin: false,
-      profileImage: ""
+      isLogin: false
     };
   },
   mounted: function() {

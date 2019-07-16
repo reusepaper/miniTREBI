@@ -51,11 +51,11 @@ export default {
             // this.$store.state.user = authResult
             auth.onAuthStateChanged(user => {
               this.$store.commit("setUser", user);
+              this.$store.commit("setProfileImage", user.photoURL);
             });
-            
+
             // this.$store.commit("setUser", id);
             window.location.reload();
-
             return false;
           }
         }
@@ -65,7 +65,6 @@ export default {
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
       );
-      
     },
     redirect() {
       const { search } = window.location;
@@ -122,7 +121,7 @@ export default {
     //     this.currentUser.uid = user.uid;
     //     this.currentUser.email = user.email;
     //     this.currentUser.username = user.displayName;
-        
+
     //   } else {
     //     // console.log(user)
     //     this.initUI();
