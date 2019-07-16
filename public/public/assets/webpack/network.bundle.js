@@ -10690,7 +10690,7 @@ $(function() {
     ref: $(".network-graph").attr('data-ref'),
     commit_id: $(".network-graph").attr('data-commit-id')
   });
-  return new ShortcutsNetwork(network_graph.branch_graph);
+  return network_graph.branch_graph;
 });
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
