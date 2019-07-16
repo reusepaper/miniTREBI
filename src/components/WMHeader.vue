@@ -77,6 +77,8 @@ export default {
         email: "",
         displayName: ""
       };
+      this.isLogin = false;
+      this.$store.commit("setUser", null);
       this.$store.commit(
         "setProfileImage",
         "https://scontent-nrt1-1.cdninstagram.com/vp/14e487ffcb73b4d07dd6cf3dd7688afb/5DA39AF1/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"
@@ -99,11 +101,9 @@ export default {
     }
   },
   mounted: function() {
-    auth.onAuthStateChanged(user => {
-      console.log(user);
-      if (user) this.isLogin = true;
-      else this.isLogin = false;
-    });
+    if (this.$store.state.user) this.isLogin = true;
+    else this.isLogin = false;
+    console.log(this.$store.state.user);
   }
 };
 </script>

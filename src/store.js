@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import createPersistedState from 'vuex-persistedstate';
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -21,6 +21,9 @@ export default new Vuex.Store({
     },
     setSeePostId(state, newId) {
       state.seePostId = newId;
+    },
+    setUser(state, currentUser) {
+      state.user = currentUser;
     }
   },
   actions: {},
