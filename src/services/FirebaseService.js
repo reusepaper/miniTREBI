@@ -17,11 +17,12 @@ export default {
         })
       })
   },
-  postPost(title, postWriter, writerUid, content, image) {
+  postPost(title, postWriter, writerUid, category, content, image) {
     return firestore.collection(POSTS).add({
       title,
       postWriter,
       writerUid,
+      category,
       content,
       image,
     })
