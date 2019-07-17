@@ -32,7 +32,7 @@
     <v-list class="pt-0 mt-5" dense>
       <v-divider></v-divider>
 
-      <v-list-tile v-for="item in items" :key="item.title" @click>
+      <v-list-tile v-for="item in items" :key="item.title" @click="categoryClick(item.title)">
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-tile-action>
@@ -47,6 +47,8 @@
 
 
 <script>
+import FirebaseService from "@/services/FirebaseService";
+
 export default {
   data() {
     return {
@@ -68,6 +70,11 @@ export default {
   methods: {
     editProfile() {
       this.$emit("editProfile");
+    },
+    categoryClick(title) {
+      const uid = this.$store.state.writerUid;
+      this.$store.commit("setSelectedCategory", title);
+      this.$router.push(`/postlist/${this.$route.params.pathMatch}/${title}`);
     }
   }
 };
