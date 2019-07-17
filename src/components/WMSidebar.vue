@@ -72,9 +72,12 @@ export default {
       this.$emit("editProfile");
     },
     categoryClick(title) {
+      console.log(this.$route.params.pathMatch.split("/"));
       const uid = this.$store.state.writerUid;
       this.$store.commit("setSelectedCategory", title);
-      this.$router.push(`/postlist/${this.$route.params.pathMatch}/${title}`);
+      this.$router.push(
+        `/postlist/${this.$route.params.pathMatch.split("/")[0]}/${title}`
+      );
     }
   }
 };
