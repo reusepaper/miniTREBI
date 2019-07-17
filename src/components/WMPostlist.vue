@@ -1,5 +1,8 @@
 <template>
   <v-layout mt-5 wrap>
+    <v-flex xs12>
+      <h2 class="text-xs-center">{{this.$store.state.selectedCategory}}</h2>
+    </v-flex>
     <v-flex v-for="i in posts.length > limits ? limits : posts.length" xs12 sm6 md3>
       <WMPost
         class="ma-3"
@@ -28,7 +31,7 @@ export default {
   },
   data() {
     return {
-      posts: [],
+      posts: []
     };
   },
   components: {
@@ -41,16 +44,25 @@ export default {
   methods: {
     async getPosts() {
       console.log("***UID::" + this.$store.state.writerUid);
-      if(this.$store.state.writerUid === "all"){
+      if (this.$store.state.writerUid === "all") {
         this.posts = await FirebaseService.getPosts();
       } else {
-        let allPosts = await FirebaseService.getPosts();
-        for(var i = 0; i < allPosts.length; i++){
-          if(allPosts[i].writerUid === this.$store.state.writerUid){
-            this.posts.push(allPosts[i]);
-          }
+        const category = this.$store.state.selectedCategory;
+        const uid = this.$store.state.writerUid;
+        if (category === "All") {
+          this.posts = await FirebaseService.getPostsById(uid);
+        } else {
+          this.posts = await FirebaseService.getPostsByCategory(category, uid);
         }
+        // let allPosts = await FirebaseService.getPosts();
+        // for(var i = 0; i < allPosts.length; i++){
+        //   console.log('hhh');
+        //   if(allPosts[i].writerUid === this.$store.state.writerUid){
+        //     this.posts.push(allPosts[i]);
+        //   }
+        // }
       }
+
       // this.posts = await FirebaseService.getPosts();
       console.log(this.posts);
       console.log("UID::" + this.$store.state.writerUid);

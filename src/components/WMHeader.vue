@@ -87,8 +87,9 @@ export default {
       window.location.reload();
     },
     selectWriter: function(uid, s_writer) {
-      this.$store.commit('setWriterUid', uid);
-      this.$router.push(`/postlist-${s_writer}`);
+      this.$store.commit("setWriterUid", uid);
+      this.$store.commit("setSelectedCategory", "All");
+      this.$router.push(`/postlist/${s_writer}`);
     },
 
     homelog: function() {
