@@ -39,6 +39,9 @@ export default new Vuex.Store({
     },
     setUserDisplayName(state, newName) {
       state.user.displayName = newName;
+    },
+    setWriterUid(state, newWriterUid) {
+      state.writerUid = newWriterUid;
     }
   },
   actions: {},
