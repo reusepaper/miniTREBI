@@ -54,12 +54,12 @@ export default {
   name: "WMHeader",
   data: () => ({
     items: [
-      { title: "All", uid:"all"},
-      { title: "Ho", uid:"ZTYM5VCPpIbvndytDt2cwlflv6E2" },
-      { title: "ydk", uid:"NF8MhC7OKgXylePRyVUz9Ov539l1" },
-      { title: "yeon", uid:"zqaDXS0la7TmeUKl6aypj3dkQYQ2" },
-      { title: "mansub", uid:"3YjEtT966mWsTcuEZzI6tUC1L423" },
-      { title: "rain", uid:"xgc441Z24EfgMDTxhEkAuw2VaWD3" }
+      { title: "All", uid: "all" },
+      { title: "Ho", uid: "ZTYM5VCPpIbvndytDt2cwlflv6E2" },
+      { title: "ydk", uid: "NF8MhC7OKgXylePRyVUz9Ov539l1" },
+      { title: "yeon", uid: "zqaDXS0la7TmeUKl6aypj3dkQYQ2" },
+      { title: "mansub", uid: "3YjEtT966mWsTcuEZzI6tUC1L423" },
+      { title: "rain", uid: "xgc441Z24EfgMDTxhEkAuw2VaWD3" }
     ],
     dialog: false,
     login_btn: false,
@@ -87,9 +87,7 @@ export default {
       window.location.reload();
     },
     selectWriter: function(uid, s_writer) {
-      console.log("Header:" + uid);
-      this.$store.state.writerUid = uid;
-      // this.$store.commit('setWriter', s_writer);
+      this.$store.commit('setWriterUid', uid);
       this.$router.push(`/postlist-${s_writer}`);
     },
 
@@ -103,7 +101,6 @@ export default {
   mounted: function() {
     if (this.$store.state.user) this.isLogin = true;
     else this.isLogin = false;
-    console.log(this.$store.state.user);
   }
 };
 </script>
