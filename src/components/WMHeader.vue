@@ -20,7 +20,7 @@
           <v-list-tile
             v-for="(item, index) in items"
             :key="index"
-            @click="selectWriter(item.title)"
+            @click="selectWriter(item.uid, item.title)"
           >
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile>
@@ -54,12 +54,12 @@ export default {
   name: "WMHeader",
   data: () => ({
     items: [
-      { title: "All" },
-      { title: "Ho" },
-      { title: "ydk" },
-      { title: "연지" },
-      { title: "한만섭" },
-      { title: "한단비" }
+      { title: "All", uid:"all"},
+      { title: "Ho", uid:"ZTYM5VCPpIbvndytDt2cwlflv6E2" },
+      { title: "ydk", uid:"NF8MhC7OKgXylePRyVUz9Ov539l1" },
+      { title: "yeon", uid:"zqaDXS0la7TmeUKl6aypj3dkQYQ2" },
+      { title: "mansub", uid:"3YjEtT966mWsTcuEZzI6tUC1L423" },
+      { title: "rain", uid:"xgc441Z24EfgMDTxhEkAuw2VaWD3" }
     ],
     dialog: false,
     login_btn: false,
@@ -85,9 +85,9 @@ export default {
       );
       auth.signOut();
     },
-    selectWriter: function(s_writer) {
-      console.log(s_writer);
-      this.$store.state.writer = s_writer;
+    selectWriter: function(uid, s_writer) {
+      console.log("Header:" + uid);
+      this.$store.state.writerUid = uid;
       // this.$store.commit('setWriter', s_writer);
       this.$router.push(`/postlist-${s_writer}`);
     },
