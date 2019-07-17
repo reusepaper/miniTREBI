@@ -101,7 +101,6 @@ export default {
   mounted: function() {
     if (this.$store.state.user) this.isLogin = true;
     else this.isLogin = false;
-    console.log("헤더마운트::"+this.$store.state.writerUid);
   }
 };
 </script>
