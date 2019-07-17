@@ -143,4 +143,14 @@ export default {
   display: flex;
   align-items: center;
 }
+.goog-te-gadget-simple{
+  background-color: rgba( 255, 255, 255, 0 ) !important;
+  border: 1px solid rgba(255, 255, 255, 0) !important;
+  
+}
+*, ::before, ::after{
+  color: white !important;
+  font-weight: bold;
+}
+
 </style>
