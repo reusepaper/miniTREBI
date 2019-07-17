@@ -5,6 +5,7 @@
         class="ma-3"
         :title="posts[i-1].title"
         :postWriter="posts[i-1].postWriter"
+        :writerUid="posts[i-1].writerUid"
         :category="posts[i-1].category"
         :content="posts[i-1].content"
         :image="posts[i-1].image"
@@ -34,18 +35,19 @@ export default {
     WMPost
   },
   mounted() {
+    console.log("mount UID::" + this.$store.state.writerUid);
     this.getPosts();
   },
   methods: {
     async getPosts() {
-      // console.log("UID::" + this.$store.state.writerUid);
-      if(this.$store.state.writerUid == ""){
+      console.log("***UID::" + this.$store.state.writerUid);
+      if(this.$store.state.writerUid === "all"){
         this.posts = await FirebaseService.getPosts();
       } else {
         let allPosts = await FirebaseService.getPosts();
         for(var i = 0; i < allPosts.length; i++){
           console.log('hhh');
-          if(allPosts[i].writerUid == this.$store.state.writerUid){
+          if(allPosts[i].writerUid === this.$store.state.writerUid){
             this.posts.push(allPosts[i]);
           }
         }
