@@ -46,7 +46,6 @@ export default {
       } else {
         let allPosts = await FirebaseService.getPosts();
         for(var i = 0; i < allPosts.length; i++){
-          console.log('hhh');
           if(allPosts[i].writerUid === this.$store.state.writerUid){
             this.posts.push(allPosts[i]);
           }
