@@ -39,7 +39,7 @@
     <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
   </v-toolbar>
 
-  <v-navigation-drawer app right disable-resize-watcher v-model="drawer" class="primary lighten-3">
+  <v-navigation-drawer app right disable-resize-watcher v-model="drawer" class="hidden-sm-and-up primary lighten-3">
     <v-list class="white--text">
       <v-list-group>
         <template v-slot:activator>
