@@ -5,6 +5,7 @@
         class="ma-3"
         :title="posts[i-1].title"
         :postWriter="posts[i-1].postWriter"
+        :writerUid="posts[i-1].writerUid"
         :category="posts[i-1].category"
         :content="posts[i-1].content"
         :image="posts[i-1].image"
@@ -28,30 +29,32 @@ export default {
   data() {
     return {
       posts: [],
-      nowWriter: this.$store.state.writer
     };
   },
   components: {
     WMPost
   },
   mounted() {
+    console.log("mount UID::" + this.$store.state.writerUid);
     this.getPosts();
   },
   methods: {
     async getPosts() {
-      if(this.nowWriter == "All"){
+      console.log("***UID::" + this.$store.state.writerUid);
+      if(this.$store.state.writerUid === "all"){
         this.posts = await FirebaseService.getPosts();
       } else {
         let allPosts = await FirebaseService.getPosts();
         for(var i = 0; i < allPosts.length; i++){
           console.log('hhh');
-          if(allPosts[i].postWriter == this.nowWriter){
+          if(allPosts[i].writerUid === this.$store.state.writerUid){
             this.posts.push(allPosts[i]);
           }
         }
       }
       // this.posts = await FirebaseService.getPosts();
       console.log(this.posts);
+      console.log("UID::" + this.$store.state.writerUid);
     },
     loadMorePosts() {
       this.limits += 4;

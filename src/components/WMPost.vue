@@ -19,6 +19,9 @@ export default {
     postWriter: {
       type: String
     },
+    writerUid : {
+      type: String
+    },
     category: {
       type: String
     },
@@ -42,6 +45,7 @@ export default {
     viewPage() {
       (this.$store.state.title = this.title),
         (this.$store.state.postWriter = this.postWriter),
+        (this.$store.state.writerUid = this.writerUid),
         (this.$store.state.category = this.category),
         (this.$store.state.content = this.content),
         (this.$store.state.image = this.image);
