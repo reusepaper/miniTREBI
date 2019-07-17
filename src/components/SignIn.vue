@@ -20,8 +20,9 @@ export default {
     initUI: function() {
       console.log("hi")
       ui.start("#firebaseui-auth-container", {
-        // signInSuccessUrl: '/loading',
-        // signInSuccessUrl: '/',
+        signInSuccessUrl: '/loading',
+        // signInSuccessUrl: './#',
+        signInFlow: 'popup',
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
@@ -34,7 +35,8 @@ export default {
             // This can be obtained from the Credentials page of the Google APIs
             // console.
             clientId:
-              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com"
+              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com",
+            
           },
           // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
@@ -60,7 +62,6 @@ export default {
             // window.location.reload();
             window.location.assign("/loading");
             // this.$router.push('/loading');
-            // history.go(-1);
             return false;
           },
           // uiShown: function() {
