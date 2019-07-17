@@ -763,3 +763,101 @@ currentUser라는 data를 지정한 후, updateProfile을 하여 이미지url �
 
 
 
+
+
+## 로딩페이지 구현
+
+`components/LoadingPage.vue`
+
+[로딩 페이지 예제](<https://codepen.io/IBNELARABY1/pen/LOQyjy>) 사용
+
+```html
+<template>
+  <div class="parent">
+    <div class="main">
+      <div class="wings"></div>
+      <div class="wings"></div>
+      <span class="hatch"></span>
+      <div class="back">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+아래를 css와 js로 채운다.
+
+
+
+`router.js`
+
+```js
+,
+    {
+      path: "/loading",
+      name: "loading",
+      component: Loading
+    }
+```
+
+loading 추가
+
+
+
+`view/Loading.vue`
+
+```html
+<template>
+  <div>
+    <LoadingPage></LoadingPage>
+  </div>
+</template>
+```
+
+```js
+<script>
+import LoadingPage from "../components/LoadingPage";
+export default {
+  components: {
+    LoadingPage
+  },
+  mounted: function() {
+    auth.onAuthStateChanged((user) => {
+      if(user) {
+        this.$store.commit("setUser", user);
+        this.$store.commit("setProfileImage", user.photoURL);
+        history.go(-1);
+      }
+    });
+  },
+};
+</script>
+
+```
+
+auth 로그인 체크를 Loading 페이지에서 하게 만든다.
+
+
+
+`SignIn.vue`
+
+```js
+        credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
+        callbacks: {
+          signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+            
+            window.location.assign("/loading");
+            return false;
+          },
+```
+
+로그인시 페이지를 로딩으로 옮겨버린다.
+
+
+
+
+
+
+

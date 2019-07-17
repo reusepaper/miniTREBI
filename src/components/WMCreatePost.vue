@@ -98,7 +98,8 @@ export default {
         this.writerUid = "";
         (this.category = ""), (this.image = "");
         this.content = "";
-        window.location.assign("/postlist");
+        history.go(-1);
+        // window.location.assign("/postlist");
       }
     },
     removeImage() {
