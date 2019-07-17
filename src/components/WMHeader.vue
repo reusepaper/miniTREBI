@@ -84,6 +84,7 @@ export default {
         "https://scontent-nrt1-1.cdninstagram.com/vp/14e487ffcb73b4d07dd6cf3dd7688afb/5DA39AF1/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"
       );
       auth.signOut();
+      window.location.reload();
     },
     selectWriter: function(uid, s_writer) {
       this.$store.commit('setWriterUid', uid);

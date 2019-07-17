@@ -69,18 +69,14 @@ export default {
     hints: true,
     content_msg: "안녕하세요, 2조 트레비입니다. :)",
     image: "https://source.unsplash.com/random/1600x900",
-    currentUser: null,
     isLogin: false
   }),
   mounted: function() {
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        this.currentUser = user;
-        this.isLogin = true;
-      } else {
-        this.isLogin = false;
-      }
-    });
+    if (this.$store.state.user) {
+      this.isLogin = true;
+    } else {
+      this.isLogin = false;
+    }
   },
   methods: {
     random: function() {
@@ -89,7 +85,7 @@ export default {
       console.log(this.image);
     },
     userphoto: function() {
-      this.image = this.currentUser.photoURL;
+      this.image = this.$store.state.user.photoURL;
     }
   }
 };

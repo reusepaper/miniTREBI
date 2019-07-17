@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import CreatePost from "./views/WMCreatePostPage.vue";
-import Test from "./views/Test.vue";
+import Loading from "./views/Loading.vue";
 import WMPostPage from "./views/WMPostPage.vue";
 import WMPostViewPage from "./views/WMPostViewPage.vue";
 import Temp from "./views/Temp";
@@ -32,11 +32,6 @@ export default new Router({
       component: CreatePost
     },
     {
-      path: "/test",
-      name: "test",
-      component: Test
-    },
-    {
       path: "/postlist-*",
       name: "postlist",
       component: WMPostPage
@@ -45,6 +40,11 @@ export default new Router({
       path: "/postview",
       name: "postview",
       component: WMPostViewPage
+    },
+    {
+      path: "/loading",
+      name: "loading",
+      component: Loading
     }
     // {
     //   path: "/postlist/:id",
