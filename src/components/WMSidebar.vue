@@ -14,7 +14,7 @@
               <button
                 id="createButton"
                 v-if="username !== 'guest'"
-                @click="$router.push('create')"
+                @click="$router.push('/create')"
               >글쓰기!</button>
               <button id="editProfileBtn" v-if="username !== 'guest'" @click="editProfile">프로필 수정</button>
             </v-list-tile-sub-title>
@@ -72,9 +72,12 @@ export default {
       this.$emit("editProfile");
     },
     categoryClick(title) {
+      console.log(this.$route.params.pathMatch.split("/"));
       const uid = this.$store.state.writerUid;
       this.$store.commit("setSelectedCategory", title);
-      this.$router.push(`/postlist/${this.$route.params.pathMatch}/${title}`);
+      this.$router.push(
+        `/postlist/${this.$route.params.pathMatch.split("/")[0]}/${title}`
+      );
     }
   }
 };
