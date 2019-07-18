@@ -64,11 +64,15 @@ export default {
     console.log(this.$route.name);
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   created() {
 =======
   methods: {},
   beforeCreate() {
 >>>>>>> 1e9a45b32ce59fa8974088a606693b872490df4c
+=======
+  created() {
+>>>>>>> 1cdd1e589b6fa49599e6de8106bd6659bece3bc8
     // eslint-disable-next-line
     var is_chrome =
       navigator.userAgent.toLowerCase().indexOf("chrome") > -1 &&
