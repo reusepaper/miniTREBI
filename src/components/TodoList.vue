@@ -5,7 +5,7 @@
                 <span class='checkBtn'
                     v-on:click="toggleComplete(todoItem,index)"
                     v-bind:class="{checkBtnCompleted : todoItem.completed}">
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check" v-bind:class="{checkBtnCompleted : todoItem.completed}"></i>
                 </span>
                 <span v-bind:class='{textCompleted : todoItem.completed}'>{{todoItem.item}}</span>
                 <span class='removeBtn' 
@@ -44,9 +44,11 @@ export default {
         },
         toggleComplete:function(todoItem,index){
             console.log(todoItem,index);
-            todoItem.completed != todoItem.completed;
+            todoItem.completed = !todoItem.completed;
+            console.log(todoItem.completed);
             localStorage.removeItem(todoItem.item,index);
             localStorage.setItem(todoItem.item,JSON.stringify(todoItem));
+            console.log(todoItem.completed);
         }
     }
 }
