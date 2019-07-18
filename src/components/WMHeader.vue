@@ -1,10 +1,15 @@
 <template>
-  <v-container>
-    <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white" @click="homelog">
-        <v-icon>home</v-icon>
-      </v-btn>
-      <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
+<v-container>
+  <v-toolbar fixed color="primary lighten-3">
+    <v-btn flat icon to="/" color="white" @click="homelog">
+      <v-icon>home</v-icon>
+    </v-btn>
+    <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <!-- 번역 -->
+    <v-toolbar-items class="hidden-xs-only">
+      <div id="google_translate_element"></div>
+    </v-toolbar-items>
 
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -165,7 +170,13 @@ export default {
   color: white !important;
   font-weight: bold;
 }
+<<<<<<< HEAD
+.skiptranslate{
+  background-color: rgba( 255, 255, 255, 0 ) !important;
+  top: 48px !important;
+=======
 .goog-te-menu2 {
   background-color: white;
+>>>>>>> 763a7fd42eaa1d3033d23e0dd829b63a5c92133a
 }
 </style>

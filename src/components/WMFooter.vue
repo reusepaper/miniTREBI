@@ -120,13 +120,12 @@ export default {
 <style scoped>
 .footer-info-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
 }
 
 .weather-container {
   display: flex;
-  position: absolute;
   align-items: center;
   right: 20px;
 }
