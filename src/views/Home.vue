@@ -32,6 +32,21 @@
               <WMRepoList></WMRepoList>-->
             </v-flex>
           </v-layout>
+
+          <v-layout>
+            <v-flex xs12>
+              <!-- 우리에게 연락하고 싶다면 -->
+              <h2 class="headline my-5 text-xs-center">Contact Us</h2>
+              <ContactUs></ContactUs>
+            </v-flex>
+          </v-layout>
+          <v-layout>
+            <v-flex xs12>
+              <!-- 우리가 하는 일 추가하기 -->
+              <h2 class="headline my-5 text-xs-center">What we do</h2>
+              <Todo></Todo>
+            </v-flex>
+          </v-layout>
         </v-container>
       </div>
     </v-flex>
@@ -43,13 +58,15 @@ import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
 import GitlabGraph from "../components/GitlabGraph";
 import WMRepoList from "../components/WMRepoList";
+import Todo from "../components/Todo";
 export default {
   components: {
     // WMSidebar,
     HJ,
     PFShow,
     GitlabGraph,
-    WMRepoList
+    WMRepoList,
+    Todo
   },
   mounted: function() {
     const axios = require("axios");

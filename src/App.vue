@@ -63,8 +63,7 @@ export default {
     $("#page").hide();
     console.log(this.$route.name);
   },
-  methods: {},
-  beforeCreate() {
+  created() {
     // eslint-disable-next-line
     var is_chrome =
       navigator.userAgent.toLowerCase().indexOf("chrome") > -1 &&
