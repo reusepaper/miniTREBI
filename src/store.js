@@ -22,7 +22,8 @@ export default new Vuex.Store({
       { title: "취미", icon: "camera_alt" },
       { title: "여행", icon: "tram" },
       { title: "요리", icon: "local_dining" }
-    ]
+    ],
+    todoList:[]
   },
 
   mutations: {
@@ -46,6 +47,12 @@ export default new Vuex.Store({
     },
     setWriterUid(state, newWriterUid) {
       state.writerUid = newWriterUid;
+    },
+    setTodoList(state, updateList) {
+      state.todoList = updateList;
+    },
+    upTodoList(state, addTodo){
+      state.todoList.push(addTodo);
     }
   },
   actions: {},

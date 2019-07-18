@@ -7,11 +7,7 @@ const bodyParser = require('body-parser');
       <WMHeader></WMHeader>
       <router-view :key="$route.fullPath"></router-view>
       <back-to-top text="Back to top" visibleoffset="100">
-        <button
-          type="button"
-          style="bottom:120px;"
-          class="ydk v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--dark light-blue"
-        >
+        <button id="topButton" type="button" v-bind:style="styleObject">
           <i aria-hidden="true" class="v-icon material-icons theme--dark">keyboard_arrow_up</i>
         </button>
       </back-to-top>
@@ -29,9 +25,13 @@ import LoadingPage from "./components/LoadingPage";
 // document.addEventListener('DOMContentLoaded', function() {
 //   $('#loading').hide();
 // }, false);
-$(window).on("load", function() {
+// $(window).on("load", function() {
+//   $("#loading").hide();
+// });
+window.onload = function() {
   $("#loading").hide();
-});
+  $("#page").show();
+};
 
 export default {
   name: "App",
@@ -43,14 +43,24 @@ export default {
   store,
   data() {
     return {
-      //
+      styleObject: {
+        bottom: `${window.innerHeight / 2}px`,
+        position: "fixed",
+        "background-color": "#b3d4fc"
+      }
     };
   },
+  computed: {
+    style() {
+      return "bottom: ${window.innerHeight / 2}px !important";
+    }
+  },
   mounted() {
+    $("#page").hide();
     console.log(this.$route.name);
   },
   methods: {},
-  beforeCreate() {
+  created() {
     // eslint-disable-next-line
     var is_chrome =
       navigator.userAgent.toLowerCase().indexOf("chrome") > -1 &&

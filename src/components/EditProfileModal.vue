@@ -144,9 +144,9 @@ export default {
 }
 .saveBtn,
 .cancelBtn {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 5px 10px;
+  border: 1px solid #8ac5ff;
   border-radius: 5px;
+  padding: 5px 10px;
 }
 .name-input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);

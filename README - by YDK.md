@@ -23,13 +23,19 @@
 
 
 
-## Nodemailer 
+## Nodemailer
 
-1. > npm install --save express body-parser express-handlebars nodemailer
-   >
-   > npm install -g nodemon
-
-2. app.js 파일 생성 후 코드 입력
+1.  
+   ```bash
+npm install --save express body-parser express-handlebars nodemailer
+   npm install -g nodemon
+   ```
+   
+   명령어를 bash에 입력해주세요 .
+   
+   
+   
+2. `app.js` 파일 생성 후 코드 입력
 
    ```js
    const express= require('express');
@@ -54,7 +60,7 @@
    app.listen(3000,()=> console.log('Server started...'));
    ```
 
-3. > node app.js 입력하여 결과 확인하기
+3. > node app.js 를 bash에 입력하여 결과 확인하기
 
    ![mailer1](./img/mailer1.PNG)
 
@@ -131,7 +137,7 @@
 
 10. app.js 수정
 
-    ```html
+    ```js
     const express= require('express');
     const bodyParser = require('body-parser');
     const exphbs = require('express-handlebars');
