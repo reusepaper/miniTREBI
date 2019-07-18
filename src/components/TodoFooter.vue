@@ -1,6 +1,6 @@
 <template>
     <div>
-        this is todo Footer
+        
     </div>
 </template>
 
