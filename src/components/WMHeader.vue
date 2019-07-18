@@ -1,15 +1,16 @@
 <template>
-  <v-container>
-    <v-toolbar fixed color="primary lighten-3">
-      <v-btn flat icon to="/" color="white" @click="homelog">
-        <v-icon>home</v-icon>
-      </v-btn>
-      <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
-      <v-spacer></v-spacer>
+<v-container>
+  <v-toolbar fixed color="primary lighten-3">
+    <v-btn flat icon to="/" color="white" @click="homelog">
+      <v-icon>home</v-icon>
+    </v-btn>
+    <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-items class="hidden-xs-only">
+      <div id="google_translate_element"></div>
+    </v-toolbar-items>
 
-      <v-toolbar-items>
-        <div id="google_translate_element"></div>
-      </v-toolbar-items>
+    <v-toolbar-items class="hidden-xs-only">
 
       <!-- sdfsdfsdfsdfsd-->
       <v-menu offset-y>
@@ -17,33 +18,45 @@
           <v-btn v-on="on" flat color="white">Writer</v-btn>
         </template>
         <v-list>
-          <v-list-tile
-            v-for="(item, index) in items"
-            :key="index"
-            @click="selectWriter(item.title)"
-            to="/postlist"
-          >
+          <v-list-tile v-for="(item, index) in items" :key="index" @click="selectWriter(item.uid, item.title)">
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
 
-      <v-toolbar-items class="hidden-xs-only">
-        <!-- 로그인 다이얼로그 활성화 -->
-        <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
-        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-        <v-dialog v-model="login_btn" max-width="290">
-          <v-card>
-            <v-card-title class="headline">Log in</v-card-title>
-            <v-card-text>
-              <SignIn></SignIn>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-      </v-toolbar-items>
-      <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
-    </v-toolbar>
-  </v-container>
+      <!-- 로그인 다이얼로그 활성화 -->
+      <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
+      <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
+      <v-dialog v-model="login_btn" max-width="290">
+        <v-card>
+          <v-card-title class="headline">Log in</v-card-title>
+          <v-card-text>
+            <SignIn></SignIn>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-toolbar-items>
+    <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
+  </v-toolbar>
+
+  <v-navigation-drawer app right disable-resize-watcher v-model="drawer" class="hidden-sm-and-up primary lighten-3">
+    <v-list class="white--text">
+      <v-list-group>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-title>Writer</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list>
+          <v-list-tile v-for="(item, index) in items" :key="index" @click="selectWriter(item.uid, item.title)">
+            <v-list-tile-title class="white--text">{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-list-group>
+    </v-list>
+  </v-navigation-drawer>
+
+</v-container>
 </template>
 
 <script>
@@ -54,13 +67,32 @@ export default {
   },
   name: "WMHeader",
   data: () => ({
-    items: [
-      { title: "Ho" },
-      { title: "ydk" },
-      { title: "yeon" },
-      { title: "mansub" },
-      { title: "rain" }
+    items: [{
+        title: "All",
+        uid: "all"
+      },
+      {
+        title: "Ho",
+        uid: "ZTYM5VCPpIbvndytDt2cwlflv6E2"
+      },
+      {
+        title: "ydk",
+        uid: "NF8MhC7OKgXylePRyVUz9Ov539l1"
+      },
+      {
+        title: "yeon",
+        uid: "zqaDXS0la7TmeUKl6aypj3dkQYQ2"
+      },
+      {
+        title: "mansub",
+        uid: "3YjEtT966mWsTcuEZzI6tUC1L423"
+      },
+      {
+        title: "rain",
+        uid: "xgc441Z24EfgMDTxhEkAuw2VaWD3"
+      }
     ],
+    drawer:false,
     dialog: false,
     login_btn: false,
     isLogin: false
@@ -77,14 +109,22 @@ export default {
         email: "",
         displayName: ""
       };
+      this.isLogin = false;
+      this.$store.commit("setUser", null);
+      this.$store.commit(
+        "setProfileImage",
+        "https://scontent-nrt1-1.cdninstagram.com/vp/14e487ffcb73b4d07dd6cf3dd7688afb/5DA39AF1/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"
+      );
       auth.signOut();
+      window.location.reload();
     },
-    selectWriter: function(s_writer) {
-      this.$store.state.writer = s_writer;
+    selectWriter: function(uid, s_writer) {
+      this.$store.commit("setWriterUid", uid);
+      this.$store.commit("setSelectedCategory", "All");
+      this.$router.push(`/postlist/${s_writer}`);
     },
 
     homelog: function() {
-      location.reload();
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
@@ -92,11 +132,8 @@ export default {
     }
   },
   mounted: function() {
-    auth.onAuthStateChanged(user => {
-      console.log(user);
-      if (user) this.isLogin = true;
-      else this.isLogin = false;
-    });
+    if (this.$store.state.user) this.isLogin = true;
+    else this.isLogin = false;
   }
 };
 </script>
@@ -106,4 +143,14 @@ export default {
   display: flex;
   align-items: center;
 }
+.goog-te-gadget-simple{
+  background-color: rgba( 255, 255, 255, 0 ) !important;
+  border: 1px solid rgba(255, 255, 255, 0) !important;
+  
+}
+*, ::before, ::after{
+  color: white !important;
+  font-weight: bold;
+}
+
 </style>

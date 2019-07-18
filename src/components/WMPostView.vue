@@ -1,12 +1,22 @@
 <template>
   <div style="margin: auto;">
-    {{this.$store.state.seePostId}}
     <p>
       <input
         class="w3-input w3-border"
         name="last"
         type="text"
         :value="this.$store.state.title"
+        readonly
+      />
+    </p>
+    <p>
+      카테고리 :
+      <input
+        class="w3-input w3-border"
+        style="display:inline; width:90%;"
+        name="last"
+        type="text"
+        :value="this.$store.state.category"
         readonly
       />
     </p>

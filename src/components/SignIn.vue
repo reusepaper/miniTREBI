@@ -1,25 +1,28 @@
 <template>
-  <div id="firebaseui-auth-container"></div>
+  <div>
+    <div id="firebaseui-auth-container"></div>
+    <!-- <LoadingPage id='loader'></LoadingPage> -->
+  </div>
 </template>
 
 <script>
-import FirebaseService from "@/services/FirebaseService";
+// import LoadingPage from "../components/LoadingPage";
 
 export default {
   data() {
     return {
-      allUsers: [],
-      isSignedup: false,
-      currentUser: {
-        uid: "",
-        email: "",
-        username: ""
-      },
     };
   },
+  // components: {
+  //   LoadingPage
+  // },
   methods: {
     initUI: function() {
+      console.log("hi")
       ui.start("#firebaseui-auth-container", {
+        signInSuccessUrl: '/loading',
+        // signInSuccessUrl: './#',
+        signInFlow: 'popup',
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
@@ -32,7 +35,8 @@ export default {
             // This can be obtained from the Credentials page of the Google APIs
             // console.
             clientId:
-              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com"
+              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com",
+            
           },
           // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
@@ -48,84 +52,43 @@ export default {
         credentialHelper: [firebaseui.auth.CredentialHelper.NONE],
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => {
-            this.currentUser.uid = authResult.user.uid;
-            this.currentUser.email = authResult.user.email;
-            this.currentUser.username = authResult.user.displayName;
-            // console.log(authResult.user.uid);
-            window.location.reload();
+            // this.$store.state.user = authResult
+            // auth.onAuthStateChanged(user => {
+            //   this.$store.commit("setUser", user);
+            //   this.$store.commit("setProfileImage", user.photoURL);
+            // });
+
+            // this.$store.commit("setUser", id);
+            // window.location.reload();
+            window.location.assign("/loading");
+            // this.$router.push('/loading');
             return false;
-          }
+          },
+          // uiShown: function() {
+          //   // The widget is rendered.
+          //   // Hide the loader.
+          //   // document.getElementById('loader');
+          //    $("#loader").hide();
+          // }
         }
-        // signInSuccessUrl: '/'
       });
 
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
       );
+    },
 
-      // this.$router.push('/');
-      
-    },
-    redirect() {
-      const { search } = window.location;
-      if (search === "") {
-        this.$router.push("/");
-      } else {
-        const tokens = search.replace(/^\?/, "").split("&");
-        // const {returnPath} = tokens.reduce((qs, tkn) => {
-        //   const pair = tkn.split('=')
-        //   qs[pair[0]] = decodeURIComponent(pair[1])
-        //   return qs
-        // }, {})
-        const { returnPath } = "/";
-        this.$router.push("/");
-      }
-    },
-    // async getUsers() {
-    //   // await alert("in");
-    //   this.allUsers = await FirebaseService.getUsers();
-    //   // await console.log(this.allUsers);
-    //   // await console.log(this.allUsers[0].uid);
-    //   // await alert("ok");
-    //   // if(this.currentUser.uid == this.allUsers[0].uid) {
-    //   //   this.isSignedup = await true;
-    //   // }
-    //   for (let i=0; i<this.allUsers.length; i++){
-    //     if(this.currentUser.uid == this.allUsers[i].uid){
-    //       this.isSignedup = await true;
-    //       break;
-    //     }
-    //   }
-    //   // await alert(this.isSignedup);
-    //   if(this.isSignedup == false){
-    //     await FirebaseService.createUser(
-    //       this.currentUser.uid,
-    //       this.currentUser.username,
-    //       '',
-    //     );
-    //   }
-    //   await window.location.reload();
-    // },
   },
   mounted: function() {
+    if (this.$store.state.user == null) {
+      this.initUI();
+    }
+    const axios = require("axios");
+    axios.get(
+      "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
+    );
 
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        this.currentUser.uid = user.uid;
-        this.currentUser.email = user.email;
-        this.currentUser.username = user.displayName;
-        
-      } else {
-        // console.log(user)
-        this.initUI();
-      }
-
-      const axios = require("axios");
-      axios.get(
-        "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
-      );
-    });
   }
 };
 </script>
