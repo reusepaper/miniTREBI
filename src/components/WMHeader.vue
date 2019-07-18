@@ -182,4 +182,10 @@ export default {
 .v-menu__content.theme--light.v-menu__content--fixed {
   z-index: 99999999 !important;
 }
+
+.goog-te-banner-frame {
+  /* display: none; */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border: none;
+}
 </style>
