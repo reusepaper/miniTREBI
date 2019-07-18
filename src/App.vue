@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 <template>
   <v-app>
     <LoadingPage id="loading"></LoadingPage>
-    <v-content id="page" >
+    <v-content id="page">
       <WMHeader></WMHeader>
       <router-view :key="$route.fullPath"></router-view>
       <back-to-top text="Back to top" visibleoffset="100">
@@ -29,9 +29,9 @@ import LoadingPage from "./components/LoadingPage";
 // document.addEventListener('DOMContentLoaded', function() {
 //   $('#loading').hide();
 // }, false);
- $(window).on('load', function () {
-      $('#loading').hide();
- });
+$(window).on("load", function() {
+  $("#loading").hide();
+});
 
 export default {
   name: "App",
@@ -46,9 +46,7 @@ export default {
       //
     };
   },
-  methods: {
-
-  },
+  methods: {},
   beforeCreate() {
     // eslint-disable-next-line
     var is_chrome =
