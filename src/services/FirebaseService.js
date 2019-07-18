@@ -4,7 +4,7 @@ import "firebase/auth";
 
 const POSTS = "Posts";
 const USERS = "Users";
-
+const TODO = "ToDo";
 export default {
   getPosts() {
     const postsCollection = firestore.collection(POSTS);
@@ -13,6 +13,16 @@ export default {
         let data = doc.data();
         return data;
       });
+    });
+  },
+  postPost(title, postWriter, writerUid, category, content, image) {
+    return firestore.collection(POSTS).add({
+      title,
+      postWriter,
+      writerUid,
+      category,
+      content,
+      image
     });
   },
   getPostsByCategory(category, uid) {
@@ -41,16 +51,6 @@ export default {
         });
       });
   },
-  postPost(title, postWriter, writerUid, category, content, image) {
-    return firestore.collection(POSTS).add({
-      title,
-      postWriter,
-      writerUid,
-      category,
-      content,
-      image
-    });
-  },
   getUsers() {
     const usersList = firestore.collection(USERS);
     return usersList.get().then(docSnapshots => {
@@ -66,5 +66,20 @@ export default {
       nickname,
       profileImg
     });
+  },
+  getToDo() {
+    const postsCollection = firestore.collection(TODO);
+    return postsCollection.get().then(docSnapshots => {
+      return docSnapshots.docs.map(doc => {
+        let data = doc.data();
+        return data;
+      });
+    });
+  },
+  createToDo(completed, item){
+    return firestore.collection(TODO).add({
+      completed,
+      item
+    })
   }
 };
