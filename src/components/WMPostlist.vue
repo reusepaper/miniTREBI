@@ -3,6 +3,7 @@
     <v-flex xs12>
       <h2 class="text-xs-center">{{this.$store.state.selectedCategory}}</h2>
     </v-flex>
+
     <v-flex v-for="i in posts.length > limits ? limits : posts.length" xs12 sm6 md3>
       <WMPost
         class="ma-3"
@@ -14,7 +15,7 @@
         :image="posts[i-1].image"
       ></WMPost>
     </v-flex>
-    <v-flex xs12 text-xs-center round my-5 v-if="loadMore">
+    <v-flex xs12 text-xs-center round my-5 v-if="posts.length>4 && posts.length >= limits   ">
       <v-btn v-on:click="loadMorePosts">더 보기</v-btn>
     </v-flex>
   </v-layout>
@@ -54,17 +55,10 @@ export default {
         } else {
           this.posts = await FirebaseService.getPostsByCategory(category, uid);
         }
-        // let allPosts = await FirebaseService.getPosts();
-        // for(var i = 0; i < allPosts.length; i++){
-        //   console.log('hhh');
-        //   if(allPosts[i].writerUid === this.$store.state.writerUid){
-        //     this.posts.push(allPosts[i]);
-        //   }
-        // }
       }
 
       // this.posts = await FirebaseService.getPosts();
-      console.log(this.posts);
+      console.log(this.posts.length);
       console.log("UID::" + this.$store.state.writerUid);
     },
     loadMorePosts() {
