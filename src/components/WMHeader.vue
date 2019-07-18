@@ -75,14 +75,9 @@
 
 <script>
 import SignIn from "./SignIn";
-import push from './Menu/push';
-import Menu from './Menu';
-
 export default {
   components: {
-    SignIn,
-    push,
-    Menu
+    SignIn
   },
   name: "WMHeader",
   data: () => ({
