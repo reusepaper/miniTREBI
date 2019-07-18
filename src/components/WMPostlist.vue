@@ -18,6 +18,9 @@
     <v-flex xs12 text-xs-center round my-5 v-if="posts.length>4 && posts.length >= limits   ">
       <v-btn v-on:click="loadMorePosts">더 보기</v-btn>
     </v-flex>
+    <v-flex v-if="posts.length == 0" mt-5>
+      <h2 class="text-xs-center">현재 카테고리에 작성된 글이 없습니다.</h2>
+    </v-flex>
   </v-layout>
 </template>
 
@@ -32,7 +35,8 @@ export default {
   },
   data() {
     return {
-      posts: []
+      posts: null,
+      postCount: -1
     };
   },
   components: {
