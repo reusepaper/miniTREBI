@@ -6,6 +6,7 @@
     </v-btn>
     <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
     <v-spacer></v-spacer>
+    <!-- 번역 -->
     <v-toolbar-items class="hidden-xs-only">
       <div id="google_translate_element"></div>
     </v-toolbar-items>
@@ -152,7 +153,8 @@ export default {
   color: white !important;
   font-weight: bold;
 }
-.goog-te-menu2{
-  background-color: white;
+.skiptranslate{
+  background-color: rgba( 255, 255, 255, 0 ) !important;
+  top: 48px !important;
 }
 </style>
