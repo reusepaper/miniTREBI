@@ -32,7 +32,6 @@
               <WMRepoList></WMRepoList>-->
             </v-flex>
           </v-layout>
-
           <v-layout>
             <v-flex xs12>
               <!-- 우리에게 연락하고 싶다면 -->
