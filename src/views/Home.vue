@@ -32,14 +32,6 @@
               <WMRepoList></WMRepoList>-->
             </v-flex>
           </v-layout>
-
-          <v-layout>
-            <v-flex xs12>
-              <!-- 우리에게 연락하고 싶다면 -->
-              <h2 class="headline my-5 text-xs-center">Contact Us</h2>
-              <ContactUs></ContactUs>
-            </v-flex>
-          </v-layout>
         </v-container>
       </div>
     </v-flex>
@@ -49,7 +41,6 @@
 // import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
-import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 import WMRepoList from "../components/WMRepoList";
 export default {
@@ -57,7 +48,6 @@ export default {
     // WMSidebar,
     HJ,
     PFShow,
-    ContactUs,
     GitlabGraph,
     WMRepoList
   },
