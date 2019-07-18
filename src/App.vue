@@ -1,21 +1,5 @@
 <template>
   <v-app>
-    <v-container grid-list-xl>
-      <v-layout>
-        <v-flex>
-          test
-        </v-flex>
-        <v-flex>
-          test
-        </v-flex>
-        <v-flex>
-          test
-        </v-flex>
-        <v-flex>
-          test
-        </v-flex>
-      </v-layout>
-    </v-container>
     <LoadingPage id="loading"></LoadingPage>
     <v-content id="page">
       <WMHeader></WMHeader>

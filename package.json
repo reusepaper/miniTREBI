@@ -47,6 +47,7 @@
     "vue-axios": "^2.1.4",
     "vue-backtotop": "^1.6.1",
     "vue-browser-detect-plugin": "^0.1.2",
+    "vue-burger-menu": "^2.0.2",
     "vue-cli": "^2.9.6",
     "vue-router": "^3.0.3",
     "vue-simplemde": "^0.5.2",
