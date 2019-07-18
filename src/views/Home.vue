@@ -32,7 +32,6 @@
               <WMRepoList></WMRepoList>-->
             </v-flex>
           </v-layout>
-
           <v-layout>
             <v-flex xs12>
               <!-- 우리에게 연락하고 싶다면 -->
@@ -56,7 +55,6 @@
 // import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
-import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 import WMRepoList from "../components/WMRepoList";
 import Todo from "../components/Todo";
@@ -65,7 +63,6 @@ export default {
     // WMSidebar,
     HJ,
     PFShow,
-    ContactUs,
     GitlabGraph,
     WMRepoList,
     Todo
