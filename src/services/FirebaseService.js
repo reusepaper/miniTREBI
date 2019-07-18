@@ -25,10 +25,23 @@ export default {
       image
     });
   },
-  getPostsByCategory(category, uid) {
+  getPostsByCategoryId(category, uid) {
     return firestore
       .collection(POSTS)
       .where("writerUid", "==", uid)
+      .where("category", "==", category)
+      .get()
+      .then(docSnapshots => {
+        return docSnapshots.docs.map(doc => {
+          let data = doc.data();
+          // console.log(data);
+          return data;
+        });
+      });
+  },
+  getPostsByCategory(category) {
+    return firestore
+      .collection(POSTS)
       .where("category", "==", category)
       .get()
       .then(docSnapshots => {
@@ -76,10 +89,10 @@ export default {
       });
     });
   },
-  createToDo(completed, item){
+  createToDo(completed, item) {
     return firestore.collection(TODO).add({
       completed,
       item
-    })
+    });
   }
 };
