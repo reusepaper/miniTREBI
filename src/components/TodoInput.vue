@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import FirebaseService from "@/services/FirebaseService";
+
 export default {
     data:function(){
         return {
@@ -24,12 +26,21 @@ export default {
                 completed:false,
                 item:this.newTodoItem
             }
-            localStorage.setItem(this.newTodoItem, JSON.stringify(obj)); 
+            FirebaseService.createToDo(
+                false,
+                this.newTodoItem
+            );
+            this.$store.commit("upTodoList", JSON.parse (JSON.stringify (obj)));
+            console.log(this.$store.state.todoList);
             this.clearInput();
             }
         },
         clearInput:function(){
             this.newTodoItem='';
+        },
+        async getToDo(){
+            this.todoItems = await FirebaseService.getToDo();
+            this.$store.commit("setTodoList", this.todoItems);
         }
     }
 }

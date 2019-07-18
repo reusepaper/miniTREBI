@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-            <li v-for="(todoItem,index) in todoItems" v-bind:key="todoItem.item" class='shadow'>
+            <li v-for="(todoItem,index) in this.$store.state.todoList" v-bind:key="todoItem.item" class='shadow'>
                 <span class='checkBtn'
                     v-on:click="toggleComplete(todoItem,index)"
                     v-bind:class="{checkBtnCompleted : todoItem.completed}">
@@ -19,22 +19,30 @@
 </template>
 
 <script>
+import FirebaseService from "@/services/FirebaseService";
+
 export default {
     data:function(){
         return {
-            todoItems:[]
+            todoItems:[],
         }
     },
     created:function(){
-        if(localStorage.length>0){
-            for(var i =0;i<localStorage.length;i++){
-                if(localStorage.key(i) !== "loglevel:webpack-dev-server"
-                    && localStorage.key(i) !== "firebase:previous_websocket_failure"
-                    && localStorage.key(i) !== "firebase:host:webmobile-sub2-510fa.firebaseio.com"){
-                    this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-                }
-            }
-        }
+        this.getToDo();
+        // if(this.doneItems.length>0){
+        //     for(let i=0; i<this.doneItems.length; i++){
+        //         this.todoItems
+        //     }
+        // }
+        // if(localStorage.length>0){
+        //     for(var i =0;i<localStorage.length;i++){
+        //         if(localStorage.key(i) !== "loglevel:webpack-dev-server"
+        //             && localStorage.key(i) !== "firebase:previous_websocket_failure"
+        //             && localStorage.key(i) !== "firebase:host:webmobile-sub2-510fa.firebaseio.com"){
+        //             this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        //         }
+        //     }
+        // }
     },
     methods:{
         removeTodo:function(todoItem,index){
@@ -49,6 +57,12 @@ export default {
             localStorage.removeItem(todoItem.item,index);
             localStorage.setItem(todoItem.item,JSON.stringify(todoItem));
             console.log(todoItem.completed);
+        },
+        async getToDo(){
+            this.todoItems = await FirebaseService.getToDo();
+            this.$store.commit("setTodoList", this.todoItems);
+            
+            await console.log(this.todoItems);
         }
     }
 }

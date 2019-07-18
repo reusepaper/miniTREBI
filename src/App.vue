@@ -5,11 +5,7 @@
       <WMHeader></WMHeader>
       <router-view :key="$route.fullPath"></router-view>
       <back-to-top text="Back to top" visibleoffset="100">
-        <button
-          id="topButton"
-          type="button"
-          v-bind:style="styleObject"
-        >
+        <button id="topButton" type="button" v-bind:style="styleObject">
           <i aria-hidden="true" class="v-icon material-icons theme--dark">keyboard_arrow_up</i>
         </button>
       </back-to-top>
@@ -30,10 +26,10 @@ import LoadingPage from "./components/LoadingPage";
 // $(window).on("load", function() {
 //   $("#loading").hide();
 // });
-window.onload=function(){
+window.onload = function() {
   $("#loading").hide();
   $("#page").show();
-}
+};
 
 export default {
   name: "App",
@@ -44,17 +40,17 @@ export default {
   },
   store,
   data() {
-    return{
+    return {
       styleObject: {
         bottom: `${window.innerHeight / 2}px`,
         position: "fixed",
-        "background-color": "#b3d4fc",
+        "background-color": "#b3d4fc"
       }
-    }
+    };
   },
   computed: {
-    style () {
-      return 'bottom: ${window.innerHeight / 2}px !important';
+    style() {
+      return "bottom: ${window.innerHeight / 2}px !important";
     }
   },
   mounted() {
