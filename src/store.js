@@ -18,10 +18,10 @@ export default new Vuex.Store({
     user: null,
     categories: ["개발", "취미", "여행", "요리"],
     items: [
-      { title: "개발", icon: "dashboard" },
-      { title: "취미", icon: "question_answer" },
-      { title: "여행", icon: "question_answer" },
-      { title: "요리", icon: "question_answer" }
+      { title: "개발", icon: "laptop_mac" },
+      { title: "취미", icon: "camera_alt" },
+      { title: "여행", icon: "tram" },
+      { title: "요리", icon: "local_dining" }
     ]
   },
 
