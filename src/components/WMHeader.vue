@@ -148,9 +148,11 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0) !important;
   
 }
-*, ::before, ::after{
+.goog-te-gadget-simple .goog-te-menu-value span {
   color: white !important;
   font-weight: bold;
 }
-
+.goog-te-menu2{
+  background-color: white;
+}
 </style>
