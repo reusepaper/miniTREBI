@@ -4,22 +4,7 @@
     <v-container fill-height>
       <v-layout align-center>
         <v-flex>
-          <h3 class="display-3">
-            <svg viewBox="0 0 800 600">
-              <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="35%" class="text--line">Team</text>
-                <text text-anchor="middle" x="50%" y="68%" class="text--line2">Trebi</text>
-              </symbol>
-
-              <g class="g-ants">
-                <use xlink:href="#s-text" class="text-copy" />
-                <use xlink:href="#s-text" class="text-copy" />
-                <use xlink:href="#s-text" class="text-copy" />
-                <use xlink:href="#s-text" class="text-copy" />
-                <use xlink:href="#s-text" class="text-copy" />
-              </g>
-            </svg>
-          </h3>
+          <h3 class="display-3">Team TREBI</h3>
           <span class="subheading">2반 연지 주호 단비 만섭</span>
           <v-menu :close-on-content-click="false" :nudge-width="200" v-model="menu" offset-x>
             <span slot="activator" class="subheading">동관</span>
@@ -105,42 +90,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.text--line {
-  font-size: 0.5em;
-}
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-$max: 5;
-$stroke-step: 7%;
-.text-copy {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
-  stroke-width: 3px;
-
-  animation: stroke-offset 9s infinite linear;
-
-  @for $item from 1 through $max {
-    $stroke-color: nth($colors, $item);
-
-    &:nth-child(#{$item}) {
-      stroke: $stroke-color;
-      stroke-dashoffset: $stroke-step * $item;
-    }
-  }
-}
-
-@keyframes stroke-offset {
-  50% {
-    stroke-dashoffset: $stroke-step * $max;
-    stroke-dasharray: 0 $stroke-step * $max * 2.5;
-  }
-}
-</style>

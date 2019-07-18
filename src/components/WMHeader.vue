@@ -11,53 +11,65 @@
         <div id="google_translate_element"></div>
       </v-toolbar-items>
 
-    <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-xs-only">
+        <!-- sdfsdfsdfsdfsd-->
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on" flat color="white">Writer</v-btn>
+          </template>
+          <v-list>
+            <v-list-tile
+              v-for="(item, index) in items"
+              :key="index"
+              @click="selectWriter(item.uid, item.title)"
+            >
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
 
-      <!-- sdfsdfsdfsdfsd-->
-      <v-menu offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn v-on="on" flat color="white">Writer</v-btn>
-        </template>
-        <v-list>
-          <v-list-tile v-for="(item, index) in items" :key="index" @click="selectWriter(item.uid, item.title)">
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
+        <!-- 로그인 다이얼로그 활성화 -->
+        <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
+        <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
+        <v-dialog v-model="login_btn" max-width="290">
+          <v-card>
+            <v-card-title class="headline">Log in</v-card-title>
+            <v-card-text>
+              <SignIn></SignIn>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+      </v-toolbar-items>
+      <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
+    </v-toolbar>
 
-      <!-- 로그인 다이얼로그 활성화 -->
-      <v-btn flat color="white" v-if="isLogin" @click="logout">Logout</v-btn>
-      <v-btn flat color="white" v-else @click.stop="login_btn = true">Login</v-btn>
-      <v-dialog v-model="login_btn" max-width="290">
-        <v-card>
-          <v-card-title class="headline">Log in</v-card-title>
-          <v-card-text>
-            <SignIn></SignIn>
-          </v-card-text>
-        </v-card>
-      </v-dialog>
-    </v-toolbar-items>
-    <v-toolbar-side-icon class="hidden-sm-and-up white--text" @click="drawer = !drawer"></v-toolbar-side-icon>
-  </v-toolbar>
-
-  <v-navigation-drawer app right disable-resize-watcher v-model="drawer" class="hidden-sm-and-up primary lighten-3">
-    <v-list class="white--text">
-      <v-list-group>
-        <template v-slot:activator>
-          <v-list-tile>
-            <v-list-tile-title>Writer</v-list-tile-title>
-          </v-list-tile>
-        </template>
-        <v-list>
-          <v-list-tile v-for="(item, index) in items" :key="index" @click="selectWriter(item.uid, item.title)">
-            <v-list-tile-title class="white--text">{{ item.title }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-list-group>
-    </v-list>
-  </v-navigation-drawer>
-
-</v-container>
+    <v-navigation-drawer
+      app
+      right
+      disable-resize-watcher
+      v-model="drawer"
+      class="hidden-sm-and-up primary lighten-3"
+    >
+      <v-list class="white--text">
+        <v-list-group>
+          <template v-slot:activator>
+            <v-list-tile>
+              <v-list-tile-title>Writer</v-list-tile-title>
+            </v-list-tile>
+          </template>
+          <v-list>
+            <v-list-tile
+              v-for="(item, index) in items"
+              :key="index"
+              @click="selectWriter(item.uid, item.title)"
+            >
+              <v-list-tile-title class="white--text">{{ item.title }}</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-list-group>
+      </v-list>
+    </v-navigation-drawer>
+  </v-container>
 </template>
 
 <script>
@@ -68,7 +80,8 @@ export default {
   },
   name: "WMHeader",
   data: () => ({
-    items: [{
+    items: [
+      {
         title: "All",
         uid: "all"
       },
@@ -93,7 +106,7 @@ export default {
         uid: "xgc441Z24EfgMDTxhEkAuw2VaWD3"
       }
     ],
-    drawer:false,
+    drawer: false,
     dialog: false,
     login_btn: false,
     isLogin: false
@@ -144,20 +157,14 @@ export default {
   display: flex;
   align-items: center;
 }
-.goog-te-gadget-simple{
-  background-color: rgba( 255, 255, 255, 0 ) !important;
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0) !important;
   border: 1px solid rgba(255, 255, 255, 0) !important;
-  
 }
 .goog-te-gadget-simple .goog-te-menu-value span {
   color: white !important;
   font-weight: bold;
 }
-<<<<<<< HEAD
-.skiptranslate {
-  background-color: rgba(255, 255, 255, 0) !important;
-  top: 48px !important;
-=======
 
 .skiptranslate {
   top: 64px !important;
@@ -172,8 +179,7 @@ export default {
     top: 56px !important;
   }
 }
-.v-menu__content.theme--light.v-menu__content--fixed{  
+.v-menu__content.theme--light.v-menu__content--fixed {
   z-index: 99999999 !important;
->>>>>>> 51f2da674ba13b4a727cd90f5b901a5e35616c4b
 }
 </style>
