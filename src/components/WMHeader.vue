@@ -170,13 +170,8 @@ export default {
   color: white !important;
   font-weight: bold;
 }
-<<<<<<< HEAD
 .skiptranslate{
   background-color: rgba( 255, 255, 255, 0 ) !important;
   top: 48px !important;
-=======
-.goog-te-menu2 {
-  background-color: white;
->>>>>>> 763a7fd42eaa1d3033d23e0dd829b63a5c92133a
 }
 </style>
