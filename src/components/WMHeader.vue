@@ -153,8 +153,21 @@ export default {
   color: white !important;
   font-weight: bold;
 }
-.skiptranslate{
-  background-color: rgba( 255, 255, 255, 0 ) !important;
-  top: 48px !important;
+
+.skiptranslate {
+  top: 64px !important;
+}
+@media screen and (max-width: 959px) {
+  .skiptranslate {
+    top: 48px !important;
+  }
+}
+@media screen and (max-width: 715px) {
+  .skiptranslate {
+    top: 56px !important;
+  }
+}
+.v-menu__content.theme--light.v-menu__content--fixed{  
+  z-index: 99999999 !important;
 }
 </style>
