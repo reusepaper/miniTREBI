@@ -49,7 +49,7 @@ export default {
   methods: {
 
   },
-  beforeCreate() {
+  created() {
     // eslint-disable-next-line
     var is_chrome =
       navigator.userAgent.toLowerCase().indexOf("chrome") > -1 &&
