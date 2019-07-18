@@ -56,7 +56,6 @@
 // import WMSidebar from "../components/WMSidebar";
 import HJ from "../components/HJ";
 import PFShow from "../components/PFShow";
-import ContactUs from "../components/ContactUs";
 import GitlabGraph from "../components/GitlabGraph";
 import WMRepoList from "../components/WMRepoList";
 import Todo from "../components/Todo";
@@ -65,7 +64,6 @@ export default {
     // WMSidebar,
     HJ,
     PFShow,
-    ContactUs,
     GitlabGraph,
     WMRepoList,
     Todo

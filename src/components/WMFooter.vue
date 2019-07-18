@@ -3,6 +3,7 @@
   <v-footer dark height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
+        <contactModal></contactModal>
         <div class="button">
           <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
             <!-- <v-icon size="24px">{{ icon }}</v-icon> -->
@@ -40,6 +41,7 @@
             </template>
           </div>
         </div>
+
         <!-- <strong class="subheading">Get connected with us on social networks!</strong> -->
       </v-card-title>
 
@@ -56,6 +58,8 @@
 import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
+import contactModal from "./contactModal";
+
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 
 export default {
@@ -69,7 +73,8 @@ export default {
   components: {
     Clear,
     Cloudy,
-    Rainy
+    Rainy,
+    contactModal
   },
   mounted() {
     this.getPosition();
@@ -115,13 +120,12 @@ export default {
 <style scoped>
 .footer-info-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
 }
 
 .weather-container {
   display: flex;
-  position: absolute;
   align-items: center;
   right: 20px;
 }

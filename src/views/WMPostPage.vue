@@ -4,7 +4,7 @@
       <EditProfileModal v-if="showModal" @close="showModal = false" />
       <v-layout>
         <WMSidebar v-on:editProfile="editProfile"></WMSidebar>
-        <v-flex xs12>
+        <v-flex xs12 style="min-height : 65vh;     margin-left: 80px;">
           <WMPostlist :limits="4" :load-more="true"></WMPostlist>
         </v-flex>
       </v-layout>
