@@ -29,7 +29,7 @@
           <i aria-hidden="true" class="v-icon material-icons theme--dark">keyboard_arrow_up</i>
         </button>
       </back-to-top>
-      <WMFooter></WMFooter>
+      <WMFooter v-bind:class="{margin : this.$route.name === 'postlist'}"></WMFooter>
     </v-content>
   </v-app>
 </template>
@@ -60,6 +60,9 @@ export default {
       //
     };
   },
+  mounted() {
+    console.log(this.$route.name);
+  },
   methods: {},
   beforeCreate() {
     // eslint-disable-next-line
@@ -73,4 +76,7 @@ export default {
 };
 </script>
 <style>
+.margin {
+  margin-left: 80px;
+}
 </style>
