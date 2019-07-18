@@ -23,6 +23,8 @@ import store from "./store";
 import WMHeader from "./components/WMHeader";
 import WMFooter from "./components/WMFooter";
 import LoadingPage from "./components/LoadingPage";
+import push from './components/Menu/push';
+import Menu from './components/Menu';
 
 // document.addEventListener('DOMContentLoaded', function() {
 //   $('#loading').hide();
@@ -36,7 +38,9 @@ export default {
   components: {
     WMHeader,
     WMFooter,
-    LoadingPage
+    LoadingPage,
+    push,
+    Menu
   },
   store,
   data() {
