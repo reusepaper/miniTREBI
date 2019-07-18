@@ -50,14 +50,22 @@ export default {
     async getPosts() {
       console.log("***UID::" + this.$store.state.writerUid);
       if (this.$store.state.writerUid === "all") {
-        this.posts = await FirebaseService.getPosts();
+        const category = this.$store.state.selectedCategory;
+        if (category === "All") {
+          this.posts = await FirebaseService.getPosts();
+        } else {
+          this.posts = await FirebaseService.getPostsByCategory(category);
+        }
       } else {
         const category = this.$store.state.selectedCategory;
         const uid = this.$store.state.writerUid;
         if (category === "All") {
           this.posts = await FirebaseService.getPostsById(uid);
         } else {
-          this.posts = await FirebaseService.getPostsByCategory(category, uid);
+          this.posts = await FirebaseService.getPostsByCategoryId(
+            category,
+            uid
+          );
         }
       }
 

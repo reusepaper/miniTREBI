@@ -99,10 +99,11 @@ export default {
 #createButton,
 #editProfileBtn {
   font-size: 12px;
+  font-weight: 400;
   float: right;
   padding: 3px 5px;
-  border: 1px solid pink;
-  border-radius: 16px;
+  border: 1px solid #8ac5ff;
+  border-radius: 5px;
   /* padding: 3px; */
 }
 
