@@ -165,14 +165,27 @@ export default {
   color: white !important;
   font-weight: bold;
 }
+
 .skiptranslate {
-  background-color: rgba(255, 255, 255, 0) !important;
-  top: 48px !important;
+  top: 64px !important;
 }
-iframe {
+@media screen and (max-width: 959px) {
+  .skiptranslate {
+    top: 48px !important;
+  }
+}
+@media screen and (max-width: 715px) {
+  .skiptranslate {
+    top: 56px !important;
+  }
+}
+.v-menu__content.theme--light.v-menu__content--fixed {
+  z-index: 99999999 !important;
+}
+
+.goog-te-banner-frame {
   /* display: none; */
-}
-tbody {
-  /* display: block; */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border: none;
 }
 </style>
