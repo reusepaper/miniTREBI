@@ -12,7 +12,6 @@
       </v-toolbar-items>
 
       <v-toolbar-items class="hidden-xs-only">
-        <!-- sdfsdfsdfsdfsd-->
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>

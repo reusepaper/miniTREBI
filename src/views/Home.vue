@@ -32,13 +32,13 @@
               <WMRepoList></WMRepoList>
             </v-flex>
           </v-layout>
-          <v-layout>
+          <!-- 우리에게 연락하고 싶다면 -->
+          <!-- <v-layout>
             <v-flex xs12>
-              <!-- 우리에게 연락하고 싶다면 -->
               <h2 class="headline my-5 text-xs-center">Contact Us</h2>
               <ContactUs></ContactUs>
             </v-flex>
-          </v-layout>
+          </v-layout>-->
           <v-layout>
             <v-flex xs12>
               <!-- 우리가 하는 일 추가하기 -->

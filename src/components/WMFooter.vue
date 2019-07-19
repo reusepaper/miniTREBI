@@ -3,7 +3,7 @@
   <v-footer dark height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
-        <contactModal></contactModal>
+        <contactModal style="z-index: 100;"></contactModal>
         <div class="button">
           <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
             <!-- <v-icon size="24px">{{ icon }}</v-icon> -->
