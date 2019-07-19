@@ -1,5 +1,3 @@
-const express=require('express');
-const bodyParser = require('body-parser');
 <template>
   <v-app>
     <LoadingPage id="loading"></LoadingPage>

@@ -5,6 +5,7 @@
         <v-icon>home</v-icon>
       </v-btn>
       <v-toolbar-title class="white--text">TREBI</v-toolbar-title>
+
       <v-spacer></v-spacer>
       <!-- 번역 -->
       <v-toolbar-items class="hidden-xs-only">
@@ -153,6 +154,45 @@ export default {
 </script>
 
 <style>
+/* *,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0px;
+}
+#app {
+  height: 100%;
+} */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+.bm-burger-bars {
+  background: #373a47;
+}
+.bm-morph-shape {
+  fill: #373a47;
+}
+.bm-menu {
+  background: #373a47;
+  a {
+    color: #b8b7ad;
+    &:hover,
+    &:focus {
+      color: #c94e50;
+    }
+  }
+}
 #google_translate_element {
   display: flex;
   align-items: center;
