@@ -20,25 +20,25 @@
           <v-layout class="mobile-hidden">
             <v-flex xs12>
               <!-- Gitlab Graph 컴포넌트 호출  -->
-              <!-- <h2 class="headline my-5 text-xs-center">Gitlab Graph</h2>
-              <GitlabGraph></GitlabGraph>-->
+              <h2 class="headline my-5 text-xs-center">Gitlab Graph</h2>
+              <GitlabGraph></GitlabGraph>
             </v-flex>
           </v-layout>
 
           <v-layout>
             <v-flex xs12>
               <!-- Gitlab Repo 컴포넌트 호출  -->
-              <!-- <h2 class="headline my-5 text-xs-center">Gitlab Repo</h2>
-              <WMRepoList></WMRepoList>-->
+              <h2 class="headline my-5 text-xs-center">Gitlab Repo</h2>
+              <WMRepoList></WMRepoList>
             </v-flex>
           </v-layout>
-          <v-layout>
+          <!-- 우리에게 연락하고 싶다면 -->
+          <!-- <v-layout>
             <v-flex xs12>
-              <!-- 우리에게 연락하고 싶다면 -->
               <h2 class="headline my-5 text-xs-center">Contact Us</h2>
               <ContactUs></ContactUs>
             </v-flex>
-          </v-layout>
+          </v-layout>-->
           <v-layout>
             <v-flex xs12>
               <!-- 우리가 하는 일 추가하기 -->

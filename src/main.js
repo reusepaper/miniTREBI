@@ -19,6 +19,7 @@ import BackToTop from "vue-backtotop";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import * as VueGoogleMaps from "vue2-google-maps";
+import VuePullRefresh from "vue-pull-refresh";
 
 Vue.use(VueAxios, axios);
 Vue.use(BackToTop);
@@ -40,5 +41,21 @@ Vue.use(VueGoogleMaps, {
 new Vue({
   router,
   store,
+  components: {
+    "vue-pull-refresh": VuePullRefresh
+  },
+  data: function() {
+    return {};
+  },
+  methods: {
+    onRefresh: function() {
+      return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          resolve();
+        }, 1000);
+      });
+    }
+  },
+  template: '<vue-pull-refresh :on-refresh="onRefresh"></vue-pull-refresh>',
   render: h => h(App)
 }).$mount("#app");
