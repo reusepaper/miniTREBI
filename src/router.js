@@ -5,7 +5,6 @@ import CreatePost from "./views/WMCreatePostPage.vue";
 import Loading from "./views/Loading.vue";
 import WMPostPage from "./views/WMPostPage.vue";
 import WMPostViewPage from "./views/WMPostViewPage.vue";
-
 Vue.use(Router);
 
 export default new Router({
