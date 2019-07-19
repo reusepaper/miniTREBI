@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout row wrap>
-      <v-flex xs3 v-for="(item, index) in items" :key="index">
+      <v-flex xs12 sm6 md3 v-for="(item, index) in items" :key="index">
         <v-card hover class="card-img-1" @click="selectWriter(item.uid, item.title)">
           <v-img :src="require(`../assets/${item.img}`)" aspect-ratio="1" position="center bottom"></v-img>
           <v-card-title primary-title>
