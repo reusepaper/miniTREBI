@@ -31,7 +31,7 @@ export default {
                 this.newTodoItem
             );
             this.$store.commit("upTodoList", JSON.parse (JSON.stringify (obj)));
-            console.log(this.$store.state.todoList);
+            // console.log(this.$store.state.todoList);
             this.clearInput();
             }
         },
