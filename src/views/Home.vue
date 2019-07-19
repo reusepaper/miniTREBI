@@ -6,7 +6,7 @@
           <v-layout>
             <v-flex xs12>
               <!--jumbotron page 호출! -->
-              <HJ></HJ>
+              <Banner></Banner>
             </v-flex>
           </v-layout>
 
@@ -53,15 +53,15 @@
 </template>
 <script>
 // import WMSidebar from "../components/WMSidebar";
-import HJ from "../components/HJ";
+import Banner from "../components/Banner";
 import PFShow from "../components/PFShow";
 import GitlabGraph from "../components/GitlabGraph";
 import WMRepoList from "../components/WMRepoList";
-import Todo from "../components/Todo";
+import Todo from "../components/todoComponents/Todo";
 export default {
   components: {
     // WMSidebar,
-    HJ,
+    Banner,
     PFShow,
     GitlabGraph,
     WMRepoList,

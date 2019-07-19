@@ -9,7 +9,6 @@
 </template>
 <script>
 import GitlabService from "../services/GitlabService";
-import ApexChart from "./ApexChart";
 import WMRepo from "./WMRepo";
 export default {
   name: "WMRepoList",
@@ -18,7 +17,6 @@ export default {
     loadMore: { type: Boolean, default: false }
   },
   components: {
-    ApexChart,
     WMRepo
   },
   data() {
