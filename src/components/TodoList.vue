@@ -29,11 +29,6 @@ export default {
     },
     created:function(){
         this.getToDo();
-        // if(this.doneItems.length>0){
-        //     for(let i=0; i<this.doneItems.length; i++){
-        //         this.todoItems
-        //     }
-        // }
         // if(localStorage.length>0){
         //     for(var i =0;i<localStorage.length;i++){
         //         if(localStorage.key(i) !== "loglevel:webpack-dev-server"
