@@ -1,21 +1,4 @@
 <template>
-    <div class='inputBox shadow'>
-        <!-- 엔터를 쳤을 때도 특정 로직이 실행되도록 돕는 v-on:keyup.enter 함수 -->
-        <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
-        <!-- <button v-on:click="addTodo">add</button> -->
-        <span class="addContainer" v-on:click="addTodo">
-            <i class="fas fa-plus addBtn"></i>
-        </span>
-        <modal-components v-if="showModal" @close="showModal = false">
-        <!--
-        you can use custom content here to overwrite
-        default content
-        -->
-        <h3 slot="header">경고!
-            <i class="closeModalBtn fas fa-times" @click="showModal=false"></i>
-        </h3>
-        <div slot="body">할 일을 입력해주세요.</div>
-        </modal-components>
     <div>
         <div v-if="isAdmin" class='inputBox shadow'>
             <!-- 엔터를 쳤을 때도 특정 로직이 실행되도록 돕는 v-on:keyup.enter 함수 -->
@@ -24,8 +7,19 @@
             <span class="addContainer" v-on:click="addTodo">
                 <i class="fas fa-plus addBtn"></i>
             </span>
+            <modal-components v-if="showModal" @close="showModal = false">
+            <!--
+            you can use custom content here to overwrite
+            default content
+            -->
+            <h3 slot="header">경고!
+                <i class="closeModalBtn fas fa-times" @click="showModal=false"></i>
+            </h3>
+            <div slot="body">할 일을 입력해주세요.</div>
+            </modal-components>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -36,11 +30,7 @@ export default {
     data:function(){
         return {
             newTodoItem:'',
-            showModal:false
-        }
-    },
-    components:{
-        'modal-components':Modal
+            showModal:false,
             admin: [
                 '3YjEtT966mWsTcuEZzI6tUC1L423',
                 'zqaDXS0la7TmeUKl6aypj3dkQYQ2',
@@ -50,6 +40,9 @@ export default {
             ],
             isAdmin:false,
         }
+    },
+    components:{
+        'modal-components':Modal
     },
     mounted: function() {
         for(let admin_cnt=0; admin_cnt<5; admin_cnt++){
