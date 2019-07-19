@@ -3,7 +3,7 @@
   <v-footer dark height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="grey darken-3 bottom-fixed footer-info-container">
-        <contactModal style="z-index: 100;"></contactModal>
+        <contactModal></contactModal>
         <div class="button">
           <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
             <!-- <v-icon size="24px">{{ icon }}</v-icon> -->
@@ -58,7 +58,7 @@
 import Clear from "./WeatherCondition/Clear";
 import Cloudy from "./WeatherCondition/Cloudy";
 import Rainy from "./WeatherCondition/Rainy";
-import contactModal from "./contactModal";
+import contactModal from "./contactComponents/contactModal";
 
 const APPKEY = "abbc68919e6b6d4296b60cafacd58803";
 

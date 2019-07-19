@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       allUsers: [],
-      isSignedup: false,
+      isSignedup: false
     };
   },
   // components: {
@@ -20,11 +20,11 @@ export default {
   // },
   methods: {
     initUI: function() {
-      console.log("hi")
+      console.log("hi");
       ui.start("#firebaseui-auth-container", {
-        signInSuccessUrl: '/loading',
+        signInSuccessUrl: "/loading",
         // signInSuccessUrl: './#',
-        signInFlow: 'popup',
+        signInFlow: "popup",
         signInoptions: [
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           {
@@ -37,8 +37,7 @@ export default {
             // This can be obtained from the Credentials page of the Google APIs
             // console.
             clientId:
-              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com",
-            
+              "69251272917-2i4rh8vhu923bth3ps4rr0rmm3dfjs9k.apps.googleusercontent.com"
           },
           // firebase.auth.GithubAuthProvider.PROVIDER_ID,
           {
@@ -65,7 +64,7 @@ export default {
             // window.location.assign("/loading");
             // this.$router.push('/loading');
             return false;
-          },
+          }
           // uiShown: function() {
           //   // The widget is rendered.
           //   // Hide the loader.
@@ -85,26 +84,25 @@ export default {
       this.allUsers = await FirebaseService.getUsers();
       // 저장된 allUsers를 돌며, 현재 로그인 정보를 체크.
       // this.currentUser.uid 부분은 initUI의 콜백에 존재한다.
-      for (let i=0; i<this.allUsers.length; i++){
+      for (let i = 0; i < this.allUsers.length; i++) {
         // 현재 로그인 유저의 uid와 가입된 user의 uid가 같은것이 있다면 isSignedup 변수를 true로 둔다.
-        if(this.$store.state.user.uid == this.allUsers[i].uid){
+        if (this.$store.state.user.uid == this.allUsers[i].uid) {
           this.isSignedup = await true;
           break;
         }
       }
       // 만약 회원가입 유저(처음 로그인한 유저)라면 firebase에 uid와 username(닉네임), 기본 프로필 이미지를 '' 로 저장한다.
-      if(this.$store.state.user && this.isSignedup == false){
+      if (this.$store.state.user && this.isSignedup == false) {
         await FirebaseService.createUser(
           this.$store.state.user.uid,
           this.$store.state.user.displayName,
           this.$store.state.user.email,
-          'guest',
-          new Date(),
+          "guest",
+          new Date()
         );
       }
       await window.location.reload();
-    },
-
+    }
   },
   mounted: function() {
     if (this.$store.state.user == null) {
@@ -114,7 +112,6 @@ export default {
     axios.get(
       "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
     );
-
   }
 };
 </script>
