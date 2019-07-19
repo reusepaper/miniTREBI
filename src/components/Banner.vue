@@ -4,9 +4,11 @@
     <v-container fill-height>
       <v-layout align-center>
         <v-flex>
-          <h3 class="display-3">Team TREBI</h3>
-          <span class="subheading">2반 연지 주호 단비 만섭</span>
-          <v-menu :close-on-content-click="false" :nudge-width="200" v-model="menu" offset-x>
+          <div class="content">
+            <h3 class="display-3">Team TREBI</h3>
+            <span class="subheading">2반 연지 주호 단비 만섭 동관</span>
+          </div>
+          <!-- <v-menu :close-on-content-click="false" :nudge-width="200" v-model="menu" offset-x>
             <span slot="activator" class="subheading">동관</span>
             <v-card>
               <v-list>
@@ -46,10 +48,9 @@
                 <v-btn color="primary" flat @click="menu = false">Save</v-btn>
               </v-card-actions>
             </v-card>
-          </v-menu>
+          </v-menu>-->
           <v-divider class="my-3"></v-divider>
-          <div class="title mb-3">{{content_msg}}</div>
-          <v-btn large color="primary" class="mx-0">See more</v-btn>
+          <!-- <div class="title mb-3">{{content_msg}}</div> -->
           <br />
           <v-btn @click="random()" color="primary" class="mx-0">랜덤이미지</v-btn>
           <v-btn v-if="isLogin" @click="userphoto()" color="primary" class="mx-0">지정이미지</v-btn>
@@ -90,3 +91,12 @@ export default {
   }
 };
 </script>
+<style>
+.content {
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+</style>

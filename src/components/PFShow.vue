@@ -28,35 +28,35 @@ export default {
       {
         title: "Ho",
         writer: "이주호",
-        img: 'togepi.jpg',
+        img: "togepi.jpg",
         uid: "ZTYM5VCPpIbvndytDt2cwlflv6E2"
       },
       {
         title: "ydk",
         writer: "유동관",
-        img: 'goubook1.png',
+        img: "goubook1.png",
         uid: "NF8MhC7OKgXylePRyVUz9Ov539l1"
       },
       {
         title: "yeon",
         writer: "임연지",
-        img: 'hesee.jpg',
+        img: "hesee.jpg",
         uid: "zqaDXS0la7TmeUKl6aypj3dkQYQ2"
       },
       {
         title: "mansub",
         writer: "한만섭",
-        img: 'jammanbo.jpg',
+        img: "jammanbo.jpg",
         uid: "3YjEtT966mWsTcuEZzI6tUC1L423"
       },
       {
         title: "rain",
         writer: "한단비",
-        img: 'pikachu.jpg',
+        img: "pikachu.jpg",
         uid: "xgc441Z24EfgMDTxhEkAuw2VaWD3"
       }
     ],
-    card_text: "안녕하세요",
+    card_text: "안녕하세요"
   }),
   methods: {
     selectWriter: function(uid, s_writer) {

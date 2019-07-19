@@ -1,6 +1,12 @@
 <template>
   <div>
-    <v-dialog style="z-index:10000" v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+    <v-dialog
+      style="z-index:10000"
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
       <template v-slot:activator="{ on }">
         <v-btn flat large color="white" dark v-on="on">Contact Us</v-btn>
       </template>
@@ -41,7 +47,7 @@ export default {
 };
 </script>
 <style>
-.v-dialog__content.v-dialog__content--active{
-  z-index:10000 !important;
+.v-dialog__content.v-dialog__content--active {
+  z-index: 10000 !important;
 }
 </style>

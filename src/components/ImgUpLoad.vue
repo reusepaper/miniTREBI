@@ -46,7 +46,6 @@ export default {
         .then(response => response.json())
         .then(success => {
           this.image = success.data.link;
-          console.log(this.image);
           this.$emit("upLoadImg", this.image);
         })
         .catch();
