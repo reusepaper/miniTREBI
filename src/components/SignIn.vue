@@ -11,6 +11,8 @@
 export default {
   data() {
     return {
+      allUsers: [],
+      isSignedup: false,
     };
   },
   // components: {
@@ -57,7 +59,7 @@ export default {
               this.$store.commit("setUser", user);
               this.$store.commit("setProfileImage", user.photoURL);
             });
-
+            this.getUsers();
             // this.$store.commit("setUser", id);
             window.location.reload();
             // window.location.assign("/loading");
@@ -77,6 +79,30 @@ export default {
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/login"
       );
+    },
+    async getUsers() {
+      // firebase에 저장된 정보를 allUsers에 저장.
+      this.allUsers = await FirebaseService.getUsers();
+      // 저장된 allUsers를 돌며, 현재 로그인 정보를 체크.
+      // this.currentUser.uid 부분은 initUI의 콜백에 존재한다.
+      for (let i=0; i<this.allUsers.length; i++){
+        // 현재 로그인 유저의 uid와 가입된 user의 uid가 같은것이 있다면 isSignedup 변수를 true로 둔다.
+        if(this.$store.state.user.uid == this.allUsers[i].uid){
+          this.isSignedup = await true;
+          break;
+        }
+      }
+      // 만약 회원가입 유저(처음 로그인한 유저)라면 firebase에 uid와 username(닉네임), 기본 프로필 이미지를 '' 로 저장한다.
+      if(this.$store.state.user && this.isSignedup == false){
+        await FirebaseService.createUser(
+          this.$store.state.user.uid,
+          this.$store.state.user.displayName,
+          this.$store.state.user.email,
+          'guest',
+          new Date(),
+        );
+      }
+      await window.location.reload();
     },
 
   },
