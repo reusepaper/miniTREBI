@@ -6,17 +6,32 @@
         <span class="addContainer" v-on:click="addTodo">
             <i class="fas fa-plus addBtn"></i>
         </span>
+        <modal-components v-if="showModal" @close="showModal = false">
+        <!--
+        you can use custom content here to overwrite
+        default content
+        -->
+        <h3 slot="header">경고!
+            <i class="closeModalBtn fas fa-times" @click="showModal=false"></i>
+        </h3>
+        <div slot="body">할 일을 입력해주세요.</div>
+        </modal-components>
     </div>
 </template>
 
 <script>
 import FirebaseService from "@/services/FirebaseService";
+import Modal from "./common/Modal.vue";
 
 export default {
     data:function(){
         return {
-            newTodoItem:''
+            newTodoItem:'',
+            showModal:false
         }
+    },
+    components:{
+        'modal-components':Modal
     },
     methods:{
         addTodo:function(){
@@ -31,8 +46,10 @@ export default {
                 this.newTodoItem
             );
             this.$store.commit("upTodoList", JSON.parse (JSON.stringify (obj)));
-            // console.log(this.$store.state.todoList);
+            console.log(this.$store.state.todoList);
             this.clearInput();
+            }else{
+                this.showModal = !this.showModal;
             }
         },
         clearInput:function(){
