@@ -73,11 +73,13 @@ export default {
       });
     });
   },
-  createUser(uid, nickname, profileImg) {
+  createUser(uid, nickname, eamil, level, createdAt) {
     return firestore.collection(USERS).add({
       uid,
       nickname,
-      profileImg
+      eamil,
+      level,
+      createdAt,
     });
   },
   getToDo() {
