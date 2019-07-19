@@ -1,11 +1,13 @@
 <template>
-    <div class='inputBox shadow'>
-        <!-- 엔터를 쳤을 때도 특정 로직이 실행되도록 돕는 v-on:keyup.enter 함수 -->
-        <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
-        <!-- <button v-on:click="addTodo">add</button> -->
-        <span class="addContainer" v-on:click="addTodo">
-            <i class="fas fa-plus addBtn"></i>
-        </span>
+    <div>
+        <div v-if="isAdmin" class='inputBox shadow'>
+            <!-- 엔터를 쳤을 때도 특정 로직이 실행되도록 돕는 v-on:keyup.enter 함수 -->
+            <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
+            <!-- <button v-on:click="addTodo">add</button> -->
+            <span class="addContainer" v-on:click="addTodo">
+                <i class="fas fa-plus addBtn"></i>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -15,8 +17,25 @@ import FirebaseService from "@/services/FirebaseService";
 export default {
     data:function(){
         return {
-            newTodoItem:''
+            newTodoItem:'',
+            admin: [
+                '3YjEtT966mWsTcuEZzI6tUC1L423',
+                'zqaDXS0la7TmeUKl6aypj3dkQYQ2',
+                'xgc441Z24EfgMDTxhEkAuw2VaWD3',
+                'ZTYM5VCPpIbvndytDt2cwlflv6E2',
+                'NF8MhC7OKgXylePRyVUz9Ov539l1'
+            ],
+            isAdmin:false,
         }
+    },
+    mounted: function() {
+        for(let admin_cnt=0; admin_cnt<5; admin_cnt++){
+            if(this.$store.state.user.uid == this.admin[admin_cnt]){
+                this.isAdmin = true;
+                break;
+            }
+        }
+        
     },
     methods:{
         addTodo:function(){
