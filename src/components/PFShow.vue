@@ -56,7 +56,7 @@ export default {
         uid: "xgc441Z24EfgMDTxhEkAuw2VaWD3"
       }
     ],
-    card_text: "안녕하세요",
+    card_text: "안녕하세요"
   }),
   methods: {
     selectWriter: function(uid, s_writer) {
