@@ -53,14 +53,14 @@ export default {
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => {
             // this.$store.state.user = authResult
-            // auth.onAuthStateChanged(user => {
-            //   this.$store.commit("setUser", user);
-            //   this.$store.commit("setProfileImage", user.photoURL);
-            // });
+            auth.onAuthStateChanged(user => {
+              this.$store.commit("setUser", user);
+              this.$store.commit("setProfileImage", user.photoURL);
+            });
 
             // this.$store.commit("setUser", id);
-            // window.location.reload();
-            window.location.assign("/loading");
+            window.location.reload();
+            // window.location.assign("/loading");
             // this.$router.push('/loading');
             return false;
           },
