@@ -46,7 +46,7 @@ export default {
     },
     mounted: function() {
         for(let admin_cnt=0; admin_cnt<5; admin_cnt++){
-            if(this.$store.state.user.uid == this.admin[admin_cnt]){
+            if(this.$store.state.user && this.$store.state.user.uid == this.admin[admin_cnt]){
                 this.isAdmin = true;
                 break;
             }
