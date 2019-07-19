@@ -13,7 +13,6 @@
       </v-toolbar-items>
 
       <v-toolbar-items class="hidden-xs-only">
-        <!-- sdfsdfsdfsdfsd-->
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" flat color="white">Writer</v-btn>
@@ -140,6 +139,7 @@ export default {
     },
 
     homelog: function() {
+      location.reload();
       const axios = require("axios");
       axios.get(
         "https://us-central1-webmobile-sub2-510fa.cloudfunctions.net/home"
