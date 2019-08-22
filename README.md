@@ -484,7 +484,7 @@ export default {
 
 
 
-![1562748176924](./rain-loginPage.png)
+![1562748176924](./img/rain-loginPage.png)
 
 ![1562748229409](./img/rain-login.png)
 
@@ -794,7 +794,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
 ##### Weather 지역 이름 출력 _ Google Geocoding
 
-![google_geocoding](C./img/google_geocoding.PNG)
+![google_geocoding](./img/google_geocoding.PNG)
 
 ```javascript
 // WMFooter.vue
@@ -2136,7 +2136,7 @@ import MarkdownItVue from "../../markdownsrc/markdown-it-vue";
 
 `markdownsrc` 안에 있는 vue 파일에 markdown-it 패키지의 여러 기능들을 적용시키는 js파일들과 npm을 import하여 사용
 
-![yeon-1563158428084](C:/Users/multicampus/Desktop/ssafy_pjt/pjt1/2%EC%A3%BC%EC%B0%A8%20%ED%98%91%EB%8F%99%20pjt/webmobile-sub2/img/yeon-1563158428084.png)
+![yeon-1563158428084](img/yeon-1563158428084.png)
 
 ```js
 data() {
