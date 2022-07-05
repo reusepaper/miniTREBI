@@ -40,7 +40,7 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-toc-and-anchor": "^4.2.0",
-    "mermaid": "^8.1.0",
+    "mermaid": "^9.1.2",
     "popper.js": "^1.15.0",
     "shortcuts": "^1.2.0",
     "vue": "^2.6.10",
